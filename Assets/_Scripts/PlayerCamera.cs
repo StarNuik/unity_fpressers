@@ -13,6 +13,8 @@ public class PlayerCamera : MonoBehaviour
 	private Vector2 lastMouse;
 	private float targetX;
 	private float targetY;
+	
+	private bool isSuppressed => AppState.SuppressPlayer;
 
 	private void Start()
 	{
@@ -27,6 +29,9 @@ public class PlayerCamera : MonoBehaviour
 			lastMouse = Input.mousePosition;
 			return;
 		}
+
+		if (isSuppressed)
+			return;
 		
 		var now = Input.mousePosition.ToXY();
 		var delta = now - lastMouse;

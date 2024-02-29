@@ -10,8 +10,13 @@ public class PlayerMovement : MonoBehaviour
 	[Editor] NavMeshAgent navAgent;
 	[Editor] float moveSpeed = 1f;
 
+	private bool isSuppressed => AppState.SuppressPlayer;
+
 	private void Update()
 	{
+		if (isSuppressed)
+			return;
+			
 		var move = Vector3.zero;
 		move.z += Input.GetKey(KeyCode.W) ? 1f : 0f;
 		move.z += Input.GetKey(KeyCode.S) ? -1f : 0f;
