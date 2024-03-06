@@ -1,4 +1,6 @@
-public static class AppState
+public class AppState
 {
-	public static bool SuppressPlayer { get; set; } = false;
+	public bool SuppressPlayer { get; set; } = false;
+	public float MilkStrength { get; set; } = 0f;
+	public float FogMilkRatio { get; set; } = 0f;
 }

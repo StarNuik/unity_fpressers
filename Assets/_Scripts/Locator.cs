@@ -4,6 +4,6 @@ using UnityEngine;
 
 public static class Locator
 {
-	//
 	public static CutscenesContainer Cutscenes;
+	public static AppState State;
 }

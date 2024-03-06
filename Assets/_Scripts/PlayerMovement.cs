@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
 	[Editor] NavMeshAgent navAgent;
 	[Editor] float moveSpeed = 1f;
 
-	private bool isSuppressed => AppState.SuppressPlayer;
+	private bool isSuppressed => Locator.State.SuppressPlayer;
 
 	private void Update()
 	{

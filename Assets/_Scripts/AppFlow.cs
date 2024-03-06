@@ -5,16 +5,18 @@ using UnityEngine;
 
 public class AppFlow : CoroutineFsm
 {
-	protected override Func<IEnumerator> Entry => StartCutscene;
+	protected override Func<IEnumerator> Entry => LoadGame;
 
-	// private IEnumerator LoadGame()
-	// {
-	// 	yield return TransitionTo(StartCutscene);
-	// }
+	private IEnumerator LoadGame()
+	{
+		Locator.State = new();
+
+		yield return TransitionTo(StartCutscene);
+	}
 
 	private IEnumerator StartCutscene()
 	{
-		AppState.SuppressPlayer = true;
+		Locator.State.SuppressPlayer = true;
 		Debug.Log("[AppFlow.StartCutscene] entry");
 
 		var cutscene = Locator.Cutscenes.GameStart;
@@ -27,7 +29,7 @@ public class AppFlow : CoroutineFsm
 		}
 
 		Debug.Log("[AppFlow.StartCutscene] exit");
-		AppState.SuppressPlayer = false;
+		Locator.State.SuppressPlayer = false;
 	}
 
 	private IEnumerator FreeRoam()
