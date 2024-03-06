@@ -73,7 +73,7 @@ public class InteractionHandle : MonoBehaviour
 		isEnabled = f > 0.0001f;
 	}
 
-	private void OnDrawGizmos()
+	private void OnDrawGizmosSelected()
 	{
 		var pos = transform.position;
 		pos.y = 0f;
