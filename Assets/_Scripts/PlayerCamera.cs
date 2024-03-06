@@ -10,7 +10,6 @@ public class PlayerCamera : MonoBehaviour
 	[Editor] Transform rotationTargetX;
 	[Editor] float mouseSensitivity = 1f;
 
-	private Vector2 lastMouse;
 	private float targetX;
 	private float targetY;
 	
@@ -24,17 +23,10 @@ public class PlayerCamera : MonoBehaviour
 
 	private void Update()
 	{
-		if (Time.frameCount < 5)
-		{
-			lastMouse = Input.mousePosition;
-			return;
-		}
-
 		if (isSuppressed)
 			return;
 		
-		var now = Input.mousePosition.ToXY();
-		var delta = now - lastMouse;
+		var delta = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
 
 		// camera Y
 		targetY = Mathf.Repeat(targetY + delta.x * mouseSensitivity, 360f);
@@ -51,8 +43,5 @@ public class PlayerCamera : MonoBehaviour
 			euler.x = targetX;
 			rotationTargetX.localEulerAngles = euler;
 		}
-
-		// 
-		lastMouse = now;
 	}
 }
