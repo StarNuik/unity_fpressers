@@ -2,22 +2,32 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Editor = UnityEngine.SerializeField;
 
 public class AppFlow : CoroutineFsm
 {
+	[Editor] bool skipIntro;
+
 	protected override Func<IEnumerator> Entry => LoadGame;
 
 	private IEnumerator LoadGame()
 	{
 		Locator.State = new();
 
-		yield return TransitionTo(StartCutscene);
+		yield return TransitionTo(IntroCutscene);
 	}
 
-	private IEnumerator StartCutscene()
+	private IEnumerator IntroCutscene()
 	{
+		#if UNITY_EDITOR
+		if (skipIntro)
+		{
+			yield return TransitionTo(FreeRoam);
+			yield break;
+		}
+		#endif
+
 		Locator.State.SuppressPlayer = true;
-		Debug.Log("[AppFlow.StartCutscene] entry");
 
 		var cutscene = Locator.Cutscenes.GameStart;
 		cutscene.Play();
@@ -28,8 +38,9 @@ public class AppFlow : CoroutineFsm
 			yield return new WaitWhile(() => wait);
 		}
 
-		Debug.Log("[AppFlow.StartCutscene] exit");
 		Locator.State.SuppressPlayer = false;
+
+		yield return TransitionTo(FreeRoam);
 	}
 
 	private IEnumerator FreeRoam()
