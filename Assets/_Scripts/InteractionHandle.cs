@@ -7,6 +7,7 @@ public class InteractionHandle : MonoBehaviour
 {
 	// refs
 	[Editor] Outline outline;
+	[Editor] Cutscene cutscene;
 
 	// props
 	[Min(0.01f)]
@@ -16,6 +17,22 @@ public class InteractionHandle : MonoBehaviour
 
 	private float distToPlayer = float.MaxValue;
 	private float startWidth;
+	private bool wasPlayed;
+	
+	private Collider collider => GetComponent<Collider>();
+
+	private bool isEnabled
+	{
+		set
+		{
+			//? I earn for fsms
+			if (wasPlayed)
+				return;
+
+			collider.enabled = value;
+			outline.enabled = value;
+		}
+	}
 
 	public void RegisterPlayerPosition(Vector3 world)
 	{
@@ -27,7 +44,13 @@ public class InteractionHandle : MonoBehaviour
 
 	public void Activate()
 	{
-		Debug.Log($"[InteractionHandle.Activate] who: [{outline.name}]");
+		var state = Locator.State;
+		if (state.PendingInteraction != null)
+			return;
+		
+		state.PendingInteraction = cutscene;
+		isEnabled = false;
+		wasPlayed = true;
 	}
 
 	private void Awake()
@@ -47,7 +70,7 @@ public class InteractionHandle : MonoBehaviour
 		var f = Mathf.InverseLerp(visibilityFarRadius, visibilityNearRadius, dist);
 
 		outline.OutlineWidth = Mathf.Lerp(0f, startWidth, f);
-		outline.enabled = f > 0.0001f;
+		isEnabled = f > 0.0001f;
 	}
 
 	private void OnDrawGizmos()

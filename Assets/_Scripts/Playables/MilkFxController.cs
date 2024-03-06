@@ -1,17 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 using UnityEngine.Experimental.Rendering.Universal;
-using UnityEngine.Rendering.Universal;
 using Editor = UnityEngine.SerializeField;
 
 public class MilkFxController : MonoBehaviour
 {
 	[Editor] RenderObjects milkFx;
 
-	private Material lastMaterial;
-	private Material currentMaterial;
+	private ReplacedMaterial material;
 	
 	public static void ApplyTo(Material target, float strength, float ratio)
 	{
@@ -24,19 +19,19 @@ public class MilkFxController : MonoBehaviour
 
 	private void OnEnable()
 	{
-		lastMaterial = milkFx.settings.overrideMaterial;
-		currentMaterial = new(lastMaterial);
-		milkFx.settings.overrideMaterial = currentMaterial;
+		material = new(() => milkFx.settings.overrideMaterial, val => milkFx.settings.overrideMaterial = val);
 	}
 
 	private void OnDisable()
 	{
-		milkFx.settings.overrideMaterial = lastMaterial;
+		material.Return();
 	}
 
 	private void LateUpdate()
 	{
 		var state = Locator.State;
-		ApplyTo(currentMaterial, state.MilkStrength, state.FogMilkRatio);
+		ApplyTo(material, state.MilkStrength, state.FogMilkRatio);
 	}
+
+	
 }

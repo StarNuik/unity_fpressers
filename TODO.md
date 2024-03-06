@@ -1,11 +1,15 @@
 ## v1
-[] Interactions
+[x] room
+	[x] lighting
+	[] fixes (floor, walls, lamp, cigs, books?, the door)
+[x] Interactions
 	[] Bed
 	[] Window
 	[] Poster
 	[] Cigarettes
-	[] PC
-[] Interactions hint
+	[x] PC
+[x] Interactions hint
+	[] Hint disappears after interaction
 [] Neutral ending
 
 

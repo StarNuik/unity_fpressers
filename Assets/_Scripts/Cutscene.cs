@@ -9,15 +9,28 @@ public class Cutscene : MonoBehaviour
 {
 	[Editor] PlayableDirector track;
 
-	public Action Finished;
+	// public Action Finished;
 
-	private void Awake()
-	{
-		track.stopped += _ => Finished?.Invoke();
-	}
+	// private void Awake()
+	// {
+	// 	track.stopped += _ => Finished?.Invoke();
+	// }
 
 	public void Play()
 	{
 		track.Play();
+	}
+
+	public IEnumerator WaitForEnd()
+	{
+		var wait = true;
+		track.stopped += _ => wait = false;
+		yield return new WaitWhile(() => wait);
+	}
+
+	public IEnumerator PlayAndWait()
+	{
+		Play();
+		yield return WaitForEnd();
 	}
 }

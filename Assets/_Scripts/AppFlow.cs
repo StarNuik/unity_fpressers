@@ -10,6 +10,8 @@ public class AppFlow : CoroutineFsm
 
 	protected override Func<IEnumerator> Entry => LoadGame;
 
+	private AppState state => Locator.State;
+
 	private IEnumerator LoadGame()
 	{
 		yield return TransitionTo(IntroCutscene);
@@ -25,24 +27,42 @@ public class AppFlow : CoroutineFsm
 		}
 		#endif
 
-		Locator.State.SuppressPlayer = true;
-
-		var cutscene = Locator.Cutscenes.GameStart;
-		cutscene.Play();
-
-		{
-			var wait = true;
-			cutscene.Finished += () => wait = false;
-			yield return new WaitWhile(() => wait);
-		}
-
-		Locator.State.SuppressPlayer = false;
+		yield return PlayAndWaitCutscene(Locator.Cutscenes.GameStart);
 
 		yield return TransitionTo(FreeRoam);
 	}
 
 	private IEnumerator FreeRoam()
 	{
-		yield break;
+		var @true = true;
+		while (@true)
+		{
+			yield return null;
+
+			if (Locator.State.PendingInteraction != null)
+			{
+				yield return TransitionTo(InteractionCutscene);
+				yield break;
+			}
+		}
+	}
+
+	private IEnumerator InteractionCutscene()
+	{
+		yield return PlayAndWaitCutscene(state.PendingInteraction);
+
+		state.PendingInteraction = null;
+
+		yield return TransitionTo(FreeRoam);
+	}
+
+	// helpers
+	private IEnumerator PlayAndWaitCutscene(Cutscene cutscene)
+	{
+		state.SuppressPlayer = true;
+
+		yield return cutscene.PlayAndWait();
+
+		state.SuppressPlayer = false;
 	}
 }
