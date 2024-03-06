@@ -12,8 +12,6 @@ public class AppFlow : CoroutineFsm
 
 	private IEnumerator LoadGame()
 	{
-		Locator.State = new();
-
 		yield return TransitionTo(IntroCutscene);
 	}
 
