@@ -6,7 +6,9 @@ using Editor = UnityEngine.SerializeField;
 public class CutscenesContainer : MonoBehaviour
 {
 	[field: Editor]
-	public Cutscene GameStart { get; private set; }
+	public Cutscene Intro { get; private set; }
+	[field: Editor]
+	public Cutscene MainEnding { get; private set; }
 	
 	private void Awake()
 	{

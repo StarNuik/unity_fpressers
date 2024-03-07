@@ -17,7 +17,6 @@ public class InteractionHandle : MonoBehaviour
 
 	private float distToPlayer = float.MaxValue;
 	private float startWidth;
-	private bool wasPlayed;
 	
 	private Collider collider => GetComponent<Collider>();
 
@@ -25,10 +24,6 @@ public class InteractionHandle : MonoBehaviour
 	{
 		set
 		{
-			//? I earn for fsms
-			if (wasPlayed)
-				return;
-
 			collider.enabled = value;
 			outline.enabled = value;
 		}
@@ -49,8 +44,9 @@ public class InteractionHandle : MonoBehaviour
 			return;
 		
 		state.PendingInteraction = cutscene;
-		isEnabled = false;
-		wasPlayed = true;
+		outline.enabled = false;
+		Destroy(outline);
+		Destroy(this);
 	}
 
 	private void Awake()

@@ -11,6 +11,7 @@ public class AppFlow : CoroutineFsm
 	protected override Func<IEnumerator> Entry => LoadGame;
 
 	private AppState state => Locator.State;
+	private int interactionsLeft => Locator.InteractionHandles.Count;
 
 	private IEnumerator LoadGame()
 	{
@@ -27,24 +28,26 @@ public class AppFlow : CoroutineFsm
 		}
 		#endif
 
-		yield return PlayAndWaitCutscene(Locator.Cutscenes.GameStart);
+		yield return PlayAndWaitCutscene(Locator.Cutscenes.Intro);
 
 		yield return TransitionTo(FreeRoam);
 	}
 
 	private IEnumerator FreeRoam()
 	{
-		var @true = true;
-		while (@true)
+		while (interactionsLeft > 0)
 		{
 			yield return null;
 
+			// technically, this is a sub-fsm
 			if (Locator.State.PendingInteraction != null)
 			{
 				yield return TransitionTo(InteractionCutscene);
 				yield break;
 			}
 		}
+
+		yield return TransitionTo(MainEnding);
 	}
 
 	private IEnumerator InteractionCutscene()
@@ -54,6 +57,13 @@ public class AppFlow : CoroutineFsm
 		state.PendingInteraction = null;
 
 		yield return TransitionTo(FreeRoam);
+	}
+
+	private IEnumerator MainEnding()
+	{
+		Debug.Log("HEllo edning");
+		// the lack of player suppression is on purpose
+		yield return Locator.Cutscenes.MainEnding.PlayAndWait();
 	}
 
 	// helpers
