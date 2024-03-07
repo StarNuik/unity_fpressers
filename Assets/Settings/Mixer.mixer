@@ -16,14 +16,12 @@ AudioMixerController:
   m_EnableSuspend: 1
   m_UpdateMode: 0
   m_ExposedParameters:
-  - guid: befe2fc95743e0d44a2a7eebe0406651
-    name: ReverbVolume.BGM
   - guid: ce804a2d269e5e64da2f215f9003ffe8
     name: DecayTime.BGM
-  - guid: 227ff43679d72ba439051265f494cc75
-    name: OverlayVolume.BGM
   - guid: 6afc35cea65d18b2eba3250f5c0aedf0
     name: Volume.Master
+  - guid: 40c5faa60a05acd46a672262a397c089
+    name: Wet.BGM
   m_AudioMixerGroupViews:
   - guids:
     - 0696a3eb452b78af682da9d0687cf418
@@ -76,14 +74,14 @@ AudioMixerSnapshotController:
   m_SnapshotID: 05b2794188698ab6880ec99733dc2a80
   m_FloatValues:
     6479ab93bfd69dd46baaa1db85adaa5c: 100
-    227ff43679d72ba439051265f494cc75: 0
-    40c5faa60a05acd46a672262a397c089: 0
+    227ff43679d72ba439051265f494cc75: -2500
+    40c5faa60a05acd46a672262a397c089: -80
     6dce61b99258d24408f10170868384e2: 0
     befe2fc95743e0d44a2a7eebe0406651: 0
     5b1b322b997f6a24ca32a2c7cea780ad: 100
     31c7a16bb50418b4f906bccbec2dbed0: 0
     0994e72c5a2a537448a7622432ffec0e: -10000
-    ce804a2d269e5e64da2f215f9003ffe8: 10
+    ce804a2d269e5e64da2f215f9003ffe8: 0.1
   m_TransitionOverrides: {}
 --- !u!243 &8204173247485219611
 AudioMixerGroupController:

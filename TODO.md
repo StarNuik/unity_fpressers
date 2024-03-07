@@ -11,7 +11,7 @@
 [x] Interactions hint
 	[] Hint disappears after interaction
 	[] Text (internal monologue)
-[x] Neutral ending
+[wip] Neutral ending
 
 approx timeline
 5:25 (mb 5:00, so that theres stuff to fade out to)

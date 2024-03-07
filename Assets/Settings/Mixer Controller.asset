@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a3c2b265f984e6a418bb2471489246ee, type: 3}
-  m_Name: Bgm Fx Controller
+  m_Name: Mixer Controller
   m_EditorClassIdentifier: 
   mixer: {fileID: 24100000, guid: 66e160ab8bdf75bb3aac4e51ac687d90, type: 2}
   decayTimeMax: 10
@@ -20,12 +20,12 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 0
-      inSlope: 3.2146237
-      outSlope: 3.2146237
+      inSlope: 2
+      outSlope: 2
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0.034482747
+      outWeight: 0
     - serializedVersion: 3
       time: 1
       value: 1
