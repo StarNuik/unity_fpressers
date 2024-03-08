@@ -10,8 +10,6 @@ public class ImageAlphaTrack : EmptyPlayableTrack<Image>
 {
 	protected override void ApplyWeight(Image target, float weight)
 	{
-		var color = target.color;
-		color.a = weight;
-		target.color = color;
+		target.SetAlpha(weight);
 	}
 }
