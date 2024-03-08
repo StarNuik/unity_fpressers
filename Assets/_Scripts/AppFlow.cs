@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Editor = UnityEngine.SerializeField;
 
 public class AppFlow : CoroutineFsm
@@ -15,7 +16,8 @@ public class AppFlow : CoroutineFsm
 
 	private IEnumerator LoadGame()
 	{
-		yield return TransitionTo(IntroCutscene);
+		SetTransition(IntroCutscene);
+		yield break;
 	}
 
 	private IEnumerator IntroCutscene()
@@ -23,18 +25,20 @@ public class AppFlow : CoroutineFsm
 		#if UNITY_EDITOR
 		if (skipIntro)
 		{
-			yield return TransitionTo(FreeRoam);
+			SetTransition(FreeRoam);
 			yield break;
 		}
 		#endif
 
 		yield return PlayAndWaitCutscene(Locator.Cutscenes.Intro);
 
-		yield return TransitionTo(FreeRoam);
+		SetTransition(FreeRoam);
 	}
 
 	private IEnumerator FreeRoam()
 	{
+		Locator.ShaderSauce.Enable(interactionsLeft);
+
 		while (interactionsLeft > 0)
 		{
 			yield return null;
@@ -42,12 +46,11 @@ public class AppFlow : CoroutineFsm
 			// technically, this is a sub-fsm
 			if (Locator.State.PendingInteraction != null)
 			{
-				yield return TransitionTo(InteractionCutscene);
-				yield break;
+				yield return InteractionCutscene();
 			}
 		}
 
-		yield return TransitionTo(MainEnding);
+		SetTransition(MainEnding);
 	}
 
 	private IEnumerator InteractionCutscene()
@@ -55,15 +58,20 @@ public class AppFlow : CoroutineFsm
 		yield return PlayAndWaitCutscene(state.PendingInteraction);
 
 		state.PendingInteraction = null;
-
-		yield return TransitionTo(FreeRoam);
 	}
 
 	private IEnumerator MainEnding()
 	{
-		Debug.Log("HEllo edning");
 		// the lack of player suppression is on purpose
 		yield return Locator.Cutscenes.MainEnding.PlayAndWait();
+
+		SetTransition(Reload);
+	}
+
+	private IEnumerator Reload()
+	{
+		SceneManager.LoadScene(0);
+		yield break;
 	}
 
 	// helpers

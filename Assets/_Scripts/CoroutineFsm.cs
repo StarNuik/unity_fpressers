@@ -10,10 +10,9 @@ public abstract class CoroutineFsm : MonoBehaviour
 
 	protected abstract State Entry { get; }
 
-	protected IEnumerator TransitionTo(State next)
+	protected void SetTransition(State next)
 	{
 		pendingTransition = next;
-		yield break;
 	}
 
 	private void Start()
