@@ -4,14 +4,16 @@
 	[x] fixes (floor, walls, lamp, cigs, books?, the door)
 [x] Interactions
 	[x] Bed
-	[] Window
-	[] Poster
-	[] Cigarettes
+	[x] Window
+	[x] Poster
+	[x] Cigarettes
 	[x] PC
+		[] screen bugfix
 [x] Interactions hint
 	[] Hint disappears after interaction
 	[] Text (internal monologue)
 [wip] Neutral ending
+[] outlines bugfix
 
 approx timeline
 5:25 (mb 5:00, so that theres stuff to fade out to)
