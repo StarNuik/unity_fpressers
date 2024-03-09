@@ -5,37 +5,15 @@ using Editor = UnityEngine.SerializeField;
 
 public class InteractionHandle : MonoBehaviour
 {
-	// refs
-	[Editor] Outline outline;
+	[Editor] List<Outline> outlines = new();
 	[Editor] Cutscene cutscene;
 
-	// props
-	[Min(0.01f)]
-	[Editor] float visibilityNearRadius;
-	[Min(0.01f)]
-	[Editor] float visibilityFarRadius;
+	[field: Editor, Min(0.01f)]
+	public float InnerRadius { get; private set; } = 1f;
+	[field: Editor, Min(0.01f)]
+	public float OuterRadius { get; private set; } = 2f;
 
-	private float distToPlayer = float.MaxValue;
-	private float startWidth;
-	
 	private Collider collider => GetComponent<Collider>();
-
-	private bool isEnabled
-	{
-		set
-		{
-			collider.enabled = value;
-			outline.enabled = value;
-		}
-	}
-
-	public void RegisterPlayerPosition(Vector3 world)
-	{
-		var pos = transform.position;
-		pos.y = 0f;
-		world.y = 0f;
-		distToPlayer = Vector3.Distance(world, pos);
-	}
 
 	public void Activate()
 	{
@@ -43,16 +21,29 @@ public class InteractionHandle : MonoBehaviour
 		if (state.PendingInteraction != null)
 			return;
 		
+		foreach (var outline in outlines)
+		{
+			outline.enabled = false;
+			Destroy(outline);
+		}
 		state.PendingInteraction = cutscene;
-		outline.enabled = false;
-		Destroy(outline);
+		Destroy(collider);
 		Destroy(this);
+	}
+
+	public float PlayerF()
+	{
+		var playerPos = Locator.State.PlayerPosition.ToX0Z();
+		var thisPos = transform.position.ToX0Z();
+		var distToPlayer = Vector3.Distance(thisPos, playerPos);
+		var dist = Mathf.Clamp(distToPlayer, InnerRadius, OuterRadius);
+		var f = Mathf.InverseLerp(OuterRadius, InnerRadius, dist);
+		return f;
 	}
 
 	private void Awake()
 	{
 		Locator.InteractionHandles.Add(this);
-		startWidth = outline.OutlineWidth;
 	}
 
 	private void OnDestroy()
@@ -62,21 +53,17 @@ public class InteractionHandle : MonoBehaviour
 
 	private void Update()
 	{
-		var dist = Mathf.Clamp(distToPlayer, visibilityNearRadius, visibilityFarRadius);
-		var f = Mathf.InverseLerp(visibilityFarRadius, visibilityNearRadius, dist);
-
-		outline.OutlineWidth = Mathf.Lerp(0f, startWidth, f);
-		isEnabled = f > 0.0001f;
+		var shouldEnable = PlayerF() > 0.0001f;
+		outlines.ForEach(o => o.enabled = shouldEnable);
 	}
 
 	private void OnDrawGizmosSelected()
 	{
-		var pos = transform.position;
-		pos.y = 0f;
+		var pos = transform.position.ToX0Z();
 
 		Gizmos.color = Color.green;
-		Gizmos.DrawWireSphere(pos, visibilityNearRadius);
+		Gizmos.DrawWireSphere(pos, InnerRadius);
 		Gizmos.color = Color.yellow;
-		Gizmos.DrawWireSphere(pos, visibilityFarRadius);
+		Gizmos.DrawWireSphere(pos, OuterRadius);
 	}
 }

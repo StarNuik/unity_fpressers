@@ -37,9 +37,6 @@ public class PlayerInteraction : MonoBehaviour
 
 	private void UpdateHandles()
 	{
-		foreach (var handle in Locator.InteractionHandles)
-		{
-			handle.RegisterPlayerPosition(player.position);
-		}
+		Locator.State.PlayerPosition = player.position;
 	}
 }
