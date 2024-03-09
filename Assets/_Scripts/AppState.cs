@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class AppState
 {
-	public bool SuppressPlayer { get; set; } = false;
-	public Cutscene PendingInteraction { get; set; }
+	public bool SuppressPlayer = false;
+	public bool IsPlayingCutscene = false;
+	public Cutscene PendingInteraction = null;
 
-	public float ScreenEmission { get; set; } = 0f;
-	public bool ShaderSauceIsTimelined = false;
+	public float ScreenEmission = 0f;
 	public Vector3 PlayerPosition;
 }

@@ -12,7 +12,5 @@ public class FogMilkRatioTrack : EmptyPlayableTrack<SauceController>
 	{
 		sauce.FogMilkRatio = weight;
 		sauce.Apply();
-		
-		Locator.State.ShaderSauceIsTimelined = weight > 0f;
 	}
 }

@@ -8,6 +8,7 @@ using Editor = UnityEngine.SerializeField;
 public class AppFlow : CoroutineFsm
 {
 	[Editor] bool skipIntro;
+	[Editor] bool skipInteractions;
 
 	protected override Func<IEnumerator> Entry => LoadGame;
 
@@ -55,9 +56,18 @@ public class AppFlow : CoroutineFsm
 
 	private IEnumerator InteractionCutscene()
 	{
-		yield return PlayAndWaitCutscene(state.PendingInteraction);
+		var cutscene = state.PendingInteraction;
+
+		#if UNITY_EDITOR
+		if (!skipInteractions)
+		#endif
+		{
+			yield return PlayAndWaitCutscene(cutscene);
+		}
 
 		state.PendingInteraction = null;
+
+		Locator.ShaderSauce.UpdateTarget(interactionsLeft);
 	}
 
 	private IEnumerator MainEnding()
@@ -74,13 +84,10 @@ public class AppFlow : CoroutineFsm
 		yield break;
 	}
 
-	// helpers
 	private IEnumerator PlayAndWaitCutscene(Cutscene cutscene)
 	{
 		state.SuppressPlayer = true;
-
 		yield return cutscene.PlayAndWait();
-
 		state.SuppressPlayer = false;
 	}
 }

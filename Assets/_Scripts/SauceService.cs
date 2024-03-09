@@ -7,18 +7,25 @@ public class SauceService : MonoBehaviour
 {
 	[Editor] SauceController shaderSauce;
 	[Editor] AnimationCurve sauceCurve;
+	[Min(0.01f)]
+	[Editor] float fSpeed;
 
-	private bool isEnabled;
-	private int totalInteractions;
-	
-	private AppState state => Locator.State;
-	private bool isSuppressed => !isEnabled || state.ShaderSauceIsTimelined;
-	private int interactionsLeft => Locator.InteractionHandles.Count;
+	private int total;
+	private float targetF;
+	private float currentF;
 
-	public void Enable(int totalInteractions)
+	private bool isBlocked => Locator.State.IsPlayingCutscene;
+
+	public void Enable(int total)
 	{
-		this.totalInteractions = totalInteractions;
-		isEnabled = true;
+		this.total = total;
+		currentF = 0f;
+		targetF = 0f;
+	}
+
+	public void UpdateTarget(int left)
+	{
+		targetF = 1f - (float)left / (float)total;
 	}
 
 	private void Awake()
@@ -28,13 +35,12 @@ public class SauceService : MonoBehaviour
 
 	private void Update()
 	{
-		if (isSuppressed)
+		if (isBlocked)
 			return;
-		
-		float max = totalInteractions;
-		float current = interactionsLeft;
-		var f = 1f - current / max;
-		shaderSauce.Strength = sauceCurve.Evaluate(f);
+	
+		currentF = Mathf.MoveTowards(currentF, targetF, fSpeed * Time.deltaTime);
+
+		shaderSauce.Strength = sauceCurve.Evaluate(currentF);
 		shaderSauce.FogMilkRatio = 0f;
 		shaderSauce.Apply();
 	}

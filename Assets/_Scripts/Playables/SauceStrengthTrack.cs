@@ -12,7 +12,5 @@ public class SauceStrengthTrack : EmptyPlayableTrack<SauceController>
 	{
 		sauce.Strength = weight;
 		sauce.Apply();
-		
-		Locator.State.ShaderSauceIsTimelined = weight > 0f;
 	}
 }

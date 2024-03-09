@@ -757,6 +757,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skipIntro: 1
+  skipInteractions: 1
 --- !u!114 &78230227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6180,24 +6181,25 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 0
-      inSlope: 1
-      outSlope: 1
-      tangentMode: 34
+      inSlope: 0.7576198
+      outSlope: 0.7576198
+      tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0
+      outWeight: 0.08405172
     - serializedVersion: 3
       time: 1
       value: 1
-      inSlope: 1
-      outSlope: 1
-      tangentMode: 34
+      inSlope: 1.2819403
+      outSlope: 1.2819403
+      tangentMode: 0
       weightedMode: 0
-      inWeight: 0
+      inWeight: 0.07543105
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  fSpeed: 0.04
 --- !u!1 &839513836
 GameObject:
   m_ObjectHideFlags: 0
@@ -9154,6 +9156,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ashtray
       objectReference: {fileID: 0}
+    - target: {fileID: -6689036041284674117, guid: 86cd96c3806a4b9468f04cadc893f4d9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -5567954287746965332, guid: 86cd96c3806a4b9468f04cadc893f4d9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: -5567954287746965332, guid: 86cd96c3806a4b9468f04cadc893f4d9,
         type: 3}
       propertyPath: m_IsActive
@@ -9164,6 +9176,16 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: ada18cd45a382124e9f6e506d0fc5f7e, type: 2}
+    - target: {fileID: 1011104007152040888, guid: 86cd96c3806a4b9468f04cadc893f4d9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2484665033948473043, guid: 86cd96c3806a4b9468f04cadc893f4d9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 2774220344278030320, guid: 86cd96c3806a4b9468f04cadc893f4d9,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -9228,6 +9250,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8772241994067259418, guid: 86cd96c3806a4b9468f04cadc893f4d9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8978103523514716507, guid: 86cd96c3806a4b9468f04cadc893f4d9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
