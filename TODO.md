@@ -8,12 +8,7 @@
 	[x] Poster
 	[x] Cigarettes
 	[x] PC
-		[] screen bugfix
-[x] Interactions hint
-	[] Hint disappears after interaction
-	[] Text (internal monologue)
-[wip] Neutral ending
-[] outlines bugfix
+[x] Neutral ending
 
 approx timeline
 5:25 (mb 5:00, so that theres stuff to fade out to)
@@ -25,8 +20,15 @@ approx timeline
 	4:30 total
 
 
-## v2
+## backlog
+[] "press any key to start / restart"
+[] outlines bugfix
+[] Interaction hints
+	[] Hint disappears after interaction
+[] Interaction monologue / text
+[] PC screen bugfix
 [] show WASD - until the Player have walked around for 1 unit 
+[] show e/f/lmb - until the player used an interaction?, but after the player aimed at an interaction?
 [] sfx
 	[] footsteps
 	[] cigs
@@ -34,3 +36,4 @@ approx timeline
 	[] bed
 	[] window
 	[] poster
+

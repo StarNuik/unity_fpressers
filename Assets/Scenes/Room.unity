@@ -17985,7 +17985,7 @@ GameObject:
   - component: {fileID: 2062243804}
   - component: {fileID: 2062243803}
   m_Layer: 0
-  m_Name: Main Ending
+  m_Name: Neutral.Ending
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
