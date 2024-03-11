@@ -11,6 +11,9 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
+namespace ChrisNolet
+{
+
 [DisallowMultipleComponent]
 
 public class Outline : MonoBehaviour {
@@ -307,3 +310,5 @@ public class Outline : MonoBehaviour {
     }
   }
 }
+}
+
