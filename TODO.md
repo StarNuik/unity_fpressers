@@ -19,7 +19,7 @@
 	[] outro -> -5 sec
 	[] cigs -> bigger collider
 [] outline [1.5h]
-	[] suppress outline in cutscene
+	[] suppress outline in cutscenes
 	[] outline flicker bug fix
 [] mouse sens x0.5 [0h]
 [] sfx [3-6h] [blocked]
@@ -63,6 +63,7 @@
 ### blocked by
 [] sfx
 [] text
+	[] font
 [] clutter disappearance order
 [] intro poster
 
@@ -80,6 +81,7 @@
 [] text size
 [] joystick
 [] tap to interact
+[] rotate phone into horizontal
 
 # INFO
 

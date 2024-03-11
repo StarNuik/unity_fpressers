@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using Editor = UnityEngine.SerializeField;
 
-public class AppFlow : CoroutineFsm
+public class RoomFlow : CoroutineFsm
 {
 	[Editor] bool skipIntro;
 	[Editor] bool skipInteractions;
@@ -17,6 +17,9 @@ public class AppFlow : CoroutineFsm
 
 	private IEnumerator LoadGame()
 	{
+		// pre-intro hack
+		state.SuppressPlayer = true;
+
 		SetTransition(IntroCutscene);
 		yield break;
 	}
