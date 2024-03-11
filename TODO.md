@@ -1,9 +1,9 @@
 # ITER
 ## v2
-[] test light bake [3h]
-[] webgl loader mechanism [1.5h]
-	[] посмотреть как работает
-	[] статья на хабре
+[] splash screen [1.5h]
+	[] white fade in
+	[] "press f to (re)start"
+	[] poster
 [] new room clutter [3h]
 	[] skateboard
 	[] fpressers stuff
@@ -11,6 +11,17 @@
 	[] ceiling plinthuses
 	[] pen & notebook
 	[] pillows
+[] interactions [3-6h]
+	[] pc fix
+	[] bed interaction improvement
+		[] the bed is boring
+		[] shorter?
+	[] outro -> -5 sec
+	[] cigs -> bigger collider
+[] outline [1.5h]
+	[] suppress outline in cutscene
+	[] outline flicker bug fix
+[] mouse sens x0.5 [0h]
 [] sfx [3-6h] [blocked]
 	[] footsteps
 	[] room ambient
@@ -30,13 +41,6 @@
 		[] раскрутка пк / диска
 		[] монитор
 		[] глюки
-[] interactions [3-6h]
-	[] pc fix
-	[] bed interaction improvement
-		[] shorter?
-	[] the bed is boring
-	[] outro -> -5 sec
-	[] cigs -> bigger collider
 [] fog / milk [3h] [blocked]
 	[] turn off free roam fog
 	[] clutter disappearance
@@ -48,14 +52,13 @@
 	[] inner monologue
 		[] (cutscene sends an event to TURN ON the text for x secs)
 		[] good / bad outcome text
-[] splash screen [1.5h]
-	[] white fade in
-	[] "press f to (re)start"
-	[] poster
-[] outline [1.5h]
-	[] suppress outline in cutscene
-	[] outline flicker bug fix
-[] mouse sens x0.5 [0h]
+[] performance ideas
+	[x] test light bake [3h]
+		* it works, but doesn't improve the performance that much
+	[] replace URP/Lit w/ URP/Simple Lit
+[x] webgl loader mechanism [1.5h]
+	[x] посмотреть как работает
+	[x] статья на хабре
 
 ### blocked by
 [] sfx
