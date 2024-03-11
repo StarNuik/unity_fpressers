@@ -11886,8 +11886,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
-  - {fileID: 902374083}
   - {fileID: 208889884}
+  - {fileID: 902374083}
   m_Father: {fileID: 782345276}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -11916,6 +11916,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   white: {fileID: 902374084}
+  text: {fileID: 208889884}
+  vcam: {fileID: 1013091681}
 --- !u!1 &1824374042
 GameObject:
   m_ObjectHideFlags: 3

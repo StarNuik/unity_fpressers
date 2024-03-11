@@ -4,37 +4,67 @@ using UnityEngine;
 using UnityEngine.UI;
 using Editor = UnityEngine.SerializeField;
 using DG.Tweening;
+using Cinemachine;
 public class SplashSequence : MonoBehaviour
 {
 	[Editor] Image white;
 	[Editor] RectTransform text;
+	[Editor] CinemachineVirtualCamera vcam;
 
-	public void Prepare()
+	private int lastPriority;
+	private Vector2? textShown;
+
+	public void Enable()
 	{
 		white.SetAlpha(1f);
-		var pos = text.anchoredPosition;
+		
+		if (!textShown.HasValue)
+		{
+			textShown = text.anchoredPosition;
+		}
+		var pos = textShown.Value;
 		pos.y = -pos.y;
 		text.anchoredPosition = pos;
+
+		// sort of a hack
+		if (vcam.Priority != int.MaxValue)
+		{
+			lastPriority = vcam.Priority;
+		}
+
+		vcam.Priority = int.MaxValue;
 	}
 
-	public IEnumerator FadeIn()
+	public void Disable()
 	{
-		Prepare();
+		vcam.Priority = lastPriority;
+	}
 
-		var t1 = white.DOFade(0f, 1f).SetEase(Ease.OutQuad);
+	public IEnumerator ClearSplash()
+	{
+		// jic
+		Enable();
+
+		var t1 = white.DOFade(0f, 1.75f).SetEase(Ease.OutQuad);
 		yield return t1.WaitForCompletion();
 
-		var pos = text.anchoredPosition;
-		pos.y = -pos.y;
-		var t2 = text.DOAnchorPos(pos, 1f).SetEase(Ease.InOutQuad);
+		var t2 = text.DOAnchorPos(textShown.Value, 1f).SetEase(Ease.InOutQuad);
 		yield return t2.WaitForCompletion();
 	}
 
-	public IEnumerator Clear()
+	public IEnumerator ClearText()
 	{
-		var pos = text.anchoredPosition;
+		var pos = textShown.Value;
 		pos.y = -pos.y;
 		var t = text.DOAnchorPos(pos, 1f).SetEase(Ease.InOutQuad);
 		yield return t.WaitForCompletion();
+	}
+
+	private void Awake()
+	{
+		Locator.Splash = this;
+		
+		// turn this on, if you see a lame frame after the game loads
+		// Enable();
 	}
 }

@@ -10,22 +10,40 @@ public class RoomFlow : CoroutineFsm
 	[Editor] bool skipIntro;
 	[Editor] bool skipInteractions;
 
-	protected override Func<IEnumerator> Entry => LoadGame;
+	protected override Func<IEnumerator> Entry => LoadApp;
 
 	private AppState state => Locator.State;
 	private int interactionsLeft => Locator.InteractionHandles.Count;
 
-	private IEnumerator LoadGame()
+	private IEnumerator LoadApp()
 	{
 		// pre-intro hack
 		state.SuppressPlayer = true;
 
-		SetTransition(IntroCutscene);
+		SetTransition(Splash);
 		yield break;
+	}
+
+	private IEnumerator Splash()
+	{
+		var splash = Locator.Splash;
+
+		splash.Enable();
+		yield return splash.ClearSplash();
+
+		// not a hack \s
+		yield return new WaitUntil(() => Input.GetKeyUp(KeyCode.F));
+
+		yield return splash.ClearText();
+		splash.Disable();
+
+		SetTransition(IntroCutscene);
 	}
 
 	private IEnumerator IntroCutscene()
 	{
+		yield return Locator.Bgm.WaitForStart();
+
 		#if UNITY_EDITOR
 		if (skipIntro)
 		{
