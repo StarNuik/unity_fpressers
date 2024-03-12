@@ -1,16 +1,18 @@
 # ITER
 ## v2
-[] splash screen [1.5h]
-	[] white fade in
-	[] "press f to (re)start"
-	[] poster
-[] new room clutter [3h]
-	[] skateboard
-	[] fpressers stuff
-	[] ukulele
+[x] splash screen [1.5h>>3h]
+	[x] white fade in
+	[x] "press f to start"
+	[?] poster
+[] new room clutter [3h>>3h+]
+	[x] skateboard
+	[x] fpressers stuff
+	[x] ukulele
 	[] ceiling plinthuses
-	[] pen & notebook
-	[] pillows
+	[x] pen & notebook
+	[x] pillows
+	[x] vinyl records
+		[x] di record
 [] interactions [3-6h]
 	[] pc fix
 	[] bed interaction improvement
@@ -22,6 +24,8 @@
 	[] suppress outline in cutscenes
 	[] outline flicker bug fix
 [] mouse sens x0.5 [0h]
+[] game restart
+	[] "press f to restart"
 [] sfx [3-6h] [blocked]
 	[] footsteps
 	[] room ambient
@@ -53,10 +57,10 @@
 		[] (cutscene sends an event to TURN ON the text for x secs)
 		[] good / bad outcome text
 [] performance ideas
-	[x] test light bake [3h]
+	[x] test light bake [>>1.5h]
 		* it works, but doesn't improve the performance that much
 	[] replace URP/Lit w/ URP/Simple Lit
-[x] webgl loader mechanism [1.5h]
+[x] webgl loader mechanism [1.5h>>1.5h]
 	[x] посмотреть как работает
 	[x] статья на хабре
 
@@ -71,6 +75,10 @@
 
 ## polish iter
 [] build size
+	[] remove all ao, height (?!) maps
+	[] remove most metallic maps, try to remove normal maps
+	[] downres, crunch and cringe all textures as much as possible
+	[] do smth about meshes, if willing
 [] performance
 [] graphics cringe
 	[] shadows leak
