@@ -6,19 +6,15 @@ using Editor = UnityEngine.SerializeField;
 public class BgmService : MonoBehaviour
 {
 	[Editor] AudioSource audio;
-	[Editor] float delay;
 
 	private void Awake()
 	{
 		Locator.Bgm = this;
 	}
 
-	public IEnumerator WaitForStart()
+	public void Run()
 	{
 		audio.Stop();
-
-		yield return new WaitForSeconds(delay);
-		
 		audio.Play();
 	}
 }

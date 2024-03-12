@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using Editor = UnityEngine.SerializeField;
 
-public class RoomFlow : CoroutineFsm
+public class AppFlow : CoroutineFsm
 {
 	[Editor] bool skipIntro;
 	[Editor] bool skipInteractions;
@@ -42,25 +42,20 @@ public class RoomFlow : CoroutineFsm
 
 	private IEnumerator IntroCutscene()
 	{
-		yield return Locator.Bgm.WaitForStart();
+		Locator.Bgm.Run();
 
 		#if UNITY_EDITOR
-		if (skipIntro)
-		{
-			SetTransition(FreeRoam);
-			yield break;
-		}
+		if (!skipIntro)
 		#endif
-
-		yield return PlayAndWaitCutscene(Locator.Cutscenes.Intro);
+		{
+			yield return PlayAndWaitCutscene(Locator.Cutscenes.Intro);
+		}
 
 		SetTransition(FreeRoam);
 	}
 
 	private IEnumerator FreeRoam()
 	{
-		Locator.ShaderSauce.Enable(interactionsLeft);
-
 		while (interactionsLeft > 0)
 		{
 			yield return null;
@@ -87,8 +82,6 @@ public class RoomFlow : CoroutineFsm
 		}
 
 		state.PendingInteraction = null;
-
-		Locator.ShaderSauce.UpdateTarget(interactionsLeft);
 	}
 
 	private IEnumerator MainEnding()

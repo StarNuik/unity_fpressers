@@ -6,5 +6,5 @@ using UnityEngine.Timeline;
 using Editor = UnityEngine.SerializeField;
 
 [System.Serializable]
-public class FogMilkRatioAsset : EmptyPlayableAsset<FogMilkRatioAsset>
+public class ShaderSauceRatioAsset : EmptyPlayableAsset<ShaderSauceRatioAsset>
 {}

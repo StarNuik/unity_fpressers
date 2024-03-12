@@ -11,6 +11,7 @@ public class SplashSequence : MonoBehaviour
 	[Editor] RectTransform text;
 	[Editor] CinemachineVirtualCamera vcam;
 
+	private bool isEnabled;
 	private int lastPriority;
 	private Vector2? textShown;
 
@@ -33,16 +34,18 @@ public class SplashSequence : MonoBehaviour
 		}
 
 		vcam.Priority = int.MaxValue;
+		isEnabled = true;
 	}
 
 	public void Disable()
 	{
 		vcam.Priority = lastPriority;
+		isEnabled = false;
 	}
 
 	public IEnumerator ClearSplash()
 	{
-		// jic
+		// just in case
 		Enable();
 
 		var t1 = white.DOFade(0f, 1.75f).SetEase(Ease.OutQuad);
@@ -64,7 +67,15 @@ public class SplashSequence : MonoBehaviour
 	{
 		Locator.Splash = this;
 		
-		// turn this on, if you see a lame frame after the game loads
+		// uncomment this if you see a lame frame after the game loads
 		// Enable();
+	}
+
+	private void Update()
+	{
+		if (isEnabled)
+		{
+			Locator.ShaderSauce.PushSplash(1f, 1f);
+		}
 	}
 }

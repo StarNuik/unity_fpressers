@@ -48,5 +48,15 @@ public class EmptyMixerPlayable : PlayableBehaviour
 
 	public override void ProcessFrame(Playable playable, FrameData info, object playerData)
 		=> ProcessFunc(playable, info, playerData);
+
+	// public override void OnGraphStart(Playable playable)
+	// {
+	// 	Debug.Log("[ EmptyMixerPlayable.OnGraphStart() ]");
+	// }
+
+	// public override void OnGraphStop(Playable playable)
+	// {
+	// 	Debug.Log("[ EmptyMixerPlayable.OnGraphStop() ]");
+	// }
 }
 

@@ -4,5 +4,5 @@ using UnityEngine;
 using UnityEngine.Playables;
 
 [System.Serializable]
-public class SauceStrengthAsset : EmptyPlayableAsset<SauceStrengthAsset>
+public class ShaderSauceStrengthAsset : EmptyPlayableAsset<ShaderSauceStrengthAsset>
 {}

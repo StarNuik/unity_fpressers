@@ -9,7 +9,6 @@ using Editor = UnityEngine.SerializeField;
 public class ResetProject : MonoBehaviour
 {
 	[Editor] MixerController mixer;
-	[Editor] SauceController sauce;
 	[Editor] Image white;
 	[Editor] Image black;
 	[Editor] Material screen;
@@ -20,10 +19,6 @@ public class ResetProject : MonoBehaviour
 		mixer.BgmSauceStrength = 0f;
 		mixer.MasterDuckStrength = 0f;
 		mixer.Apply();
-
-		sauce.Strength = 0f;
-		sauce.FogMilkRatio = 0f;
-		sauce.Apply();
 
 		white.SetAlpha(0f);
 		black.SetAlpha(0f);
