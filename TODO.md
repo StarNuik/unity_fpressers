@@ -14,7 +14,7 @@
 	[x] vinyl records
 		[x] di record
 [] sfx [3-6h] [blocked]
-	[] footsteps
+	[x] footsteps [1h]
 	[] room ambient
 	[] cigs
 		[] пачка сигарет
