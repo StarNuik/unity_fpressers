@@ -8,7 +8,6 @@ using Editor = UnityEngine.SerializeField;
 // this is a REALLY UGLY hack
 public class ResetProject : MonoBehaviour
 {
-	[Editor] MixerController mixer;
 	[Editor] Image white;
 	[Editor] Image black;
 	[Editor] Material screen;
@@ -16,10 +15,6 @@ public class ResetProject : MonoBehaviour
 	[Button]
 	private void Reset()
 	{
-		mixer.BgmSauceStrength = 0f;
-		mixer.MasterDuckStrength = 0f;
-		mixer.Apply();
-
 		white.SetAlpha(0f);
 		black.SetAlpha(0f);
 

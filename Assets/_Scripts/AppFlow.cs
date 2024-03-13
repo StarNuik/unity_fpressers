@@ -7,6 +7,7 @@ using Editor = UnityEngine.SerializeField;
 
 public class AppFlow : CoroutineFsm
 {
+	[Editor] bool skipSplash;
 	[Editor] bool skipIntro;
 	[Editor] bool skipInteractions;
 
@@ -26,16 +27,20 @@ public class AppFlow : CoroutineFsm
 
 	private IEnumerator Splash()
 	{
-		var splash = Locator.Splash;
+		#if UNITY_EDITOR
+		if (!skipSplash)
+		#endif
+		{
+			var splash = Locator.Splash;
+			splash.Enable();
+			yield return splash.ClearSplash();
 
-		splash.Enable();
-		yield return splash.ClearSplash();
+			// not a hack \s
+			yield return new WaitUntil(() => Input.GetKeyUp(KeyCode.F));
 
-		// not a hack \s
-		yield return new WaitUntil(() => Input.GetKeyUp(KeyCode.F));
-
-		yield return splash.ClearText();
-		splash.Disable();
+			yield return splash.ClearText();
+			splash.Disable();
+		}
 
 		SetTransition(IntroCutscene);
 	}
@@ -51,6 +56,7 @@ public class AppFlow : CoroutineFsm
 			yield return PlayAndWaitCutscene(Locator.Cutscenes.Intro);
 		}
 
+		state.SuppressPlayer = false; // an unnecessary, editor mode related action
 		SetTransition(FreeRoam);
 	}
 

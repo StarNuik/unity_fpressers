@@ -13,19 +13,6 @@
 	[x] pillows
 	[x] vinyl records
 		[x] di record
-[] interactions [3-6h]
-	[] pc fix
-	[] bed interaction improvement
-		[] the bed is boring
-		[] shorter?
-	[] outro -> -5 sec
-	[] cigs -> bigger collider
-[] outline [1.5h]
-	[] suppress outline in cutscenes
-	[] outline flicker bug fix
-[] mouse sens x0.5 [0h]
-[] game restart
-	[] "press f to restart"
 [] sfx [3-6h] [blocked]
 	[] footsteps
 	[] room ambient
@@ -45,6 +32,20 @@
 		[] раскрутка пк / диска
 		[] монитор
 		[] глюки
+[] interactions [3-6h]
+	[] pc fix
+	[] bed interaction improvement
+		[] the bed is boring
+		[] shorter?
+	[] outro -> -5 sec
+	[] cigs -> bigger collider
+[] outline [1.5h]
+	[] suppress outline in cutscenes
+	[] outline flicker bug fix
+[] mouse sens x0.5 [0h]
+[] game restart
+	[] "press f to restart"
+
 [] fog / milk [3h] [blocked]
 	[] turn off free roam fog
 	[] clutter disappearance
@@ -60,7 +61,7 @@
 	[x] test light bake [>>1.5h]
 		* it works, but doesn't improve the performance that much
 	[] replace URP/Lit w/ URP/Simple Lit
-[x] webgl loader mechanism [1.5h>>1.5h]
+[x] webgl loader mechanism [1.5h>>0.5h]
 	[x] посмотреть как работает
 	[x] статья на хабре
 

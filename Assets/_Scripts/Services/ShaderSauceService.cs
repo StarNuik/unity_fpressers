@@ -24,22 +24,14 @@ public class ShaderSauceService : MonoBehaviour
 	// this is starting to become hacky
 	public void PushTimelineStrength(float strength)
 	{
-		if (!timelineReq.HasValue)
-		{
-			timelineReq = new();
-		}
-		var req = timelineReq.Value;
+		var req = timelineReq.GetValueOrDefault();
 		req.Strength = strength;
 		timelineReq = req;
 	}
 
 	public void PushTimelineRatio(float fogMilkRatio)
 	{
-		if (!timelineReq.HasValue)
-		{
-			timelineReq = new();
-		}
-		var req = timelineReq.Value;
+		var req = timelineReq.GetValueOrDefault();
 		req.FogMilkRatio = fogMilkRatio;
 		timelineReq = req;
 	}

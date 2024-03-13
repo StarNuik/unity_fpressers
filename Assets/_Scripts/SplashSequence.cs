@@ -13,27 +13,21 @@ public class SplashSequence : MonoBehaviour
 
 	private bool isEnabled;
 	private int lastPriority;
-	private Vector2? textShown;
+	private Vector2 textStart;
 
 	public void Enable()
 	{
+		if (isEnabled)
+			return;
+
 		white.SetAlpha(1f);
 		
-		if (!textShown.HasValue)
-		{
-			textShown = text.anchoredPosition;
-		}
-		var pos = textShown.Value;
-		pos.y = -pos.y;
-		text.anchoredPosition = pos;
+		textStart = text.anchoredPosition;
 
 		// sort of a hack
-		if (vcam.Priority != int.MaxValue)
-		{
-			lastPriority = vcam.Priority;
-		}
-
+		lastPriority = vcam.Priority;
 		vcam.Priority = int.MaxValue;
+
 		isEnabled = true;
 	}
 
@@ -51,15 +45,16 @@ public class SplashSequence : MonoBehaviour
 		var t1 = white.DOFade(0f, 1.75f).SetEase(Ease.OutQuad);
 		yield return t1.WaitForCompletion();
 
-		var t2 = text.DOAnchorPos(textShown.Value, 1f).SetEase(Ease.InOutQuad);
+		var pos = textStart;
+		pos.y = -pos.y;
+
+		var t2 = text.DOAnchorPos(pos, 1f).SetEase(Ease.InOutQuad);
 		yield return t2.WaitForCompletion();
 	}
 
 	public IEnumerator ClearText()
 	{
-		var pos = textShown.Value;
-		pos.y = -pos.y;
-		var t = text.DOAnchorPos(pos, 1f).SetEase(Ease.InOutQuad);
+		var t = text.DOAnchorPos(textStart, 1f).SetEase(Ease.InOutQuad);
 		yield return t.WaitForCompletion();
 	}
 
