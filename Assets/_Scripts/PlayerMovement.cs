@@ -10,21 +10,26 @@ public class PlayerMovement : MonoBehaviour
 	[Editor] NavMeshAgent navAgent;
 	[Editor] float moveSpeed = 1f;
 
-	private bool isSuppressed => Locator.State.SuppressPlayer;
+	private AppState state => Locator.State;
+	private bool isActive => !state.SuppressPlayer;
 
 	private void Update()
 	{
-		if (isSuppressed)
-			return;
+		if (isActive)
+		{
+			var move = Vector3.zero;
+			move.z += Input.GetKey(KeyCode.W) ? 1f : 0f;
+			move.z += Input.GetKey(KeyCode.S) ? -1f : 0f;
+			move.x += Input.GetKey(KeyCode.D) ? 1f : 0f;
+			move.x += Input.GetKey(KeyCode.A) ? -1f : 0f;
 			
-		var move = Vector3.zero;
-		move.z += Input.GetKey(KeyCode.W) ? 1f : 0f;
-		move.z += Input.GetKey(KeyCode.S) ? -1f : 0f;
-		move.x += Input.GetKey(KeyCode.D) ? 1f : 0f;
-		move.x += Input.GetKey(KeyCode.A) ? -1f : 0f;
-		
-		var worldMove = player.TransformDirection(move);
-		var delta = worldMove * moveSpeed * Time.deltaTime;
-		navAgent.Move(delta);
+			var worldMove = player.TransformDirection(move);
+			var delta = worldMove * moveSpeed * Time.deltaTime;
+			navAgent.Move(delta);
+		}
+
+		var now = player.position;
+		state.DistanceTraveled += Vector3.Distance(now, state.PlayerPosition);
+		state.PlayerPosition = now;
 	}
 }

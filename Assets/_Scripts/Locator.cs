@@ -13,7 +13,7 @@ public static class Locator
 
 	// services
 	public static ShaderSauceService ShaderSauce;
-	public static BgmService Bgm;
+	public static BgmStartService Bgm;
 	
 	// sequences
 	public static SplashSequence Splash;

@@ -12,19 +12,12 @@ public class PlayerInteraction : MonoBehaviour
 
 	private InteractionHandle target;
 
+	private bool isActive => !Locator.State.SuppressPlayer;
+
 	private void Update()
 	{
-		UpdateHandles();
 		UpdateTarget();
 		UpdateInput();
-	}
-
-	private void UpdateInput()
-	{
-		if (Input.GetKeyUp(KeyCode.E))
-		{
-			target?.Activate();
-		}
 	}
 
 	private void UpdateTarget()
@@ -35,8 +28,11 @@ public class PlayerInteraction : MonoBehaviour
 		target = hit.collider?.GetComponent<InteractionHandle>();
 	}
 
-	private void UpdateHandles()
+	private void UpdateInput()
 	{
-		Locator.State.PlayerPosition = player.position;
+		if (isActive && Input.GetKeyUp(KeyCode.E))
+		{
+			target?.Activate();
+		}
 	}
 }

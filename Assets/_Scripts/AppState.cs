@@ -8,4 +8,5 @@ public class AppState
 
 	public float ScreenEmission = 0f;
 	public Vector3 PlayerPosition;
+	public float DistanceTraveled;
 }
