@@ -34,7 +34,7 @@ public class PlayerInteraction : MonoBehaviour
 	{
 		if (isActive && input.IsInteractUp)
 		{
-			target?.Activate();
+			target?.TryActivate();
 		}
 	}
 }

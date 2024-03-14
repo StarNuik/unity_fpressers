@@ -7822,8 +7822,8 @@ MonoBehaviour:
   m_text: Oh no! I won't be able to chat on the F-Pressers fan forum! I'm glad I
     have their vinyls.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dcd7018e2bf31404d8c610a0756ae342, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 382f227729b0ff340995c439a1e558e6, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7847,8 +7847,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 36
+  m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -7857,7 +7857,7 @@ MonoBehaviour:
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 1024
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -12987,7 +12987,7 @@ MonoBehaviour:
   vcam: {fileID: 1013091681}
   fadeinDuration: 1
   textDelay: 3
-  startText: Press "F" to start
+  startText: Press "<color=#F2D321>F</color>" to start
 --- !u!1 &1604829910
 GameObject:
   m_ObjectHideFlags: 3

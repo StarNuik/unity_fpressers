@@ -14,10 +14,15 @@ public class InteractionHandle : MonoBehaviour
 	[field: Editor, Min(0.01f)]
 	public float OuterRadius { get; private set; } = 2f;
 
+	const float epsilon = 0.0001f;
+
 	private Collider collider => GetComponent<Collider>();
 
-	public void Activate()
+	public void TryActivate()
 	{
+		if (PlayerF() < epsilon)
+			return;
+		
 		foreach (var outline in outlines)
 		{
 			outline.enabled = false;
@@ -42,7 +47,7 @@ public class InteractionHandle : MonoBehaviour
 
 	private void Update()
 	{
-		var shouldEnable = PlayerF() > 0.0001f;
+		var shouldEnable = PlayerF() > epsilon;
 		outlines.ForEach(o => o.enabled = shouldEnable);
 	}
 
