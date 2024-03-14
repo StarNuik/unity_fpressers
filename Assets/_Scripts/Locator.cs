@@ -14,6 +14,7 @@ public static class Locator
 	public static ShaderSauceService ShaderSauce;
 	public static BgmStartService Bgm;
 	public static EndingRouteService RouteTracker;
+	public static TextDisplayService TextDisplay;
 	
 	// sequences
 	public static SplashSequence Splash;

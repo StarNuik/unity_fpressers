@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using Monologue = MonologuesContainer.MonologueInfo;
 
 public class AppState
 {
@@ -14,13 +15,13 @@ public class AppState
 
 	// no signal bus no life
 	public Action<InteractionHandle> InteractionTriggered;
+	// public Action<Monologue> MonologueRequested;
 
 	public void InvokeInteractionTriggered(InteractionHandle message)
 		=> InteractionTriggered?.Invoke(message);
-	// {
-	// 	Debug.Log("[ AppState.InvokeInteractionTriggered() ]");
-	// 	InteractionTriggered?.Invoke(message);
-	// }
+
+	// public void RequestMonologue(Monologue message)
+	// 	=> MonologueRequested?.Invoke(message);
 
 	public IEnumerator WaitForInteraction(Action<InteractionHandle> returner)
 	{

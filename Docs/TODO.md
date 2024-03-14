@@ -50,12 +50,12 @@
 	[x] turn off free roam fog
 	[] clutter disappearance
 [] screen text [3-6h] [blocked]
-	[] ending tracker [3h]
+	[x] ending tracker [3h>>1.5h]
 	[] in game font
 	[] show "wasd to move" - until moved 1 unit
 	[] show "f to interact" - on first raycast
 	[] inner monologue
-		[] (cutscene sends an event to TURN ON the text for x secs)
+		[x] (cutscene sends an event to TURN ON the text for x secs)
 		[] good / bad outcome text
 [] performance ideas
 	[x] test light bake [>>1.5h]

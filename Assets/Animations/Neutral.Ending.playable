@@ -1,97 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-7556236517476784250
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d91c228d4587094d90f423c1d62a637, type: 3}
-  m_Name: Sauce Strength Track
-  m_EditorClassIdentifier: 
-  m_Version: 3
-  m_AnimClip: {fileID: 0}
-  m_Locked: 0
-  m_Muted: 0
-  m_CustomPlayableFullTypename: 
-  m_Curves: {fileID: 0}
-  m_Parent: {fileID: 11400000}
-  m_Children: []
-  m_Clips:
-  - m_Version: 1
-    m_Start: 0
-    m_ClipIn: 0
-    m_Asset: {fileID: 6322139123724165688}
-    m_Duration: 40
-    m_TimeScale: 1
-    m_ParentTrack: {fileID: -7556236517476784250}
-    m_EaseInDuration: 0
-    m_EaseOutDuration: 0
-    m_BlendInDuration: -1
-    m_BlendOutDuration: -1
-    m_MixInCurve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    m_MixOutCurve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    m_BlendInCurveMode: 0
-    m_BlendOutCurveMode: 0
-    m_ExposedParameterNames: []
-    m_AnimationCurves: {fileID: 0}
-    m_Recordable: 0
-    m_PostExtrapolationMode: 0
-    m_PreExtrapolationMode: 0
-    m_PostExtrapolationTime: 0
-    m_PreExtrapolationTime: 0
-    m_DisplayName: SauceStrengthAsset
-  m_Markers:
-    m_Objects: []
 --- !u!114 &-7155494766533153726
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -104,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7d4ad2897dfe684099f6b8a4dd4195c, type: 3}
   m_Name: MasterDuckAsset
   m_EditorClassIdentifier: 
+  template:
+    Intensity: 1
 --- !u!114 &-3097917250617455148
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -116,6 +26,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d7608d405bb5d248963c9d019750224, type: 3}
   m_Name: BgmFunkAsset
   m_EditorClassIdentifier: 
+  template:
+    Intensity: 1
 --- !u!114 &-2298818996786629034
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -206,6 +118,98 @@ MonoBehaviour:
     m_PostExtrapolationTime: 0
     m_PreExtrapolationTime: 0
     m_DisplayName: BgmFunkAsset
+  m_Markers:
+    m_Objects: []
+--- !u!114 &-1496672376172169411
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d91c228d4587094d90f423c1d62a637, type: 3}
+  m_Name: Shader Sauce Strength Track
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_AnimClip: {fileID: 0}
+  m_Locked: 0
+  m_Muted: 0
+  m_CustomPlayableFullTypename: 
+  m_Curves: {fileID: 0}
+  m_Parent: {fileID: 11400000}
+  m_Children: []
+  m_Clips:
+  - m_Version: 1
+    m_Start: 0
+    m_ClipIn: 0
+    m_Asset: {fileID: 1352534696368350975}
+    m_Duration: 40
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: -1496672376172169411}
+    m_EaseInDuration: 20
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: ShaderSauceStrengthAsset
   m_Markers:
     m_Objects: []
 --- !u!114 &-957915754369297172
@@ -314,7 +318,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Version: 0
   m_Tracks:
-  - {fileID: -7556236517476784250}
+  - {fileID: -1496672376172169411}
   - {fileID: -957915754369297172}
   - {fileID: -2298818996786629034}
   - {fileID: 3183886605059764163}
@@ -325,6 +329,20 @@ MonoBehaviour:
     m_ScenePreview: 1
   m_DurationMode: 0
   m_MarkerTrack: {fileID: 0}
+--- !u!114 &1352534696368350975
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1837491111a283a4aa4d1c1662a874ff, type: 3}
+  m_Name: ShaderSauceStrengthAsset
+  m_EditorClassIdentifier: 
+  template:
+    Intensity: 1
 --- !u!114 &1505559042117917102
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -509,18 +527,6 @@ MonoBehaviour:
     m_DisplayName: ImageAlphaAsset
   m_Markers:
     m_Objects: []
---- !u!114 &6322139123724165688
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1837491111a283a4aa4d1c1662a874ff, type: 3}
-  m_Name: SauceStrengthAsset
-  m_EditorClassIdentifier: 
 --- !u!114 &7154994087066634012
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -533,6 +539,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b17e30d5645d46d448949c9fe02243ce, type: 3}
   m_Name: FogMilkRatioAsset
   m_EditorClassIdentifier: 
+  template:
+    Intensity: 1
 --- !u!114 &8024339728672248542
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -545,3 +553,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c53b6eeb4b1ee4f43b25057e253c1951, type: 3}
   m_Name: ImageAlphaAsset
   m_EditorClassIdentifier: 
+  template:
+    Intensity: 1
