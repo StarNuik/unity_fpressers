@@ -8,54 +8,34 @@ using Cinemachine;
 public class SplashSequence : MonoBehaviour
 {
 	[Editor] Image white;
-	[Editor] RectTransform text;
 	[Editor] CinemachineVirtualCamera vcam;
+	[Min(0.1f)]
+	[Editor] float fadeinDuration = 1f;
+	[Min(0f)]
+	[Editor] float textDelay;
+	[Multiline]
+	[Editor] string startText;
 
-	private bool isEnabled;
 	private int lastPriority;
-	private Vector2 textStart;
+	private bool isEnabled;
 
-	public void Enable()
+	private TextDisplayService textDisplay => Locator.TextDisplay;
+
+	public IEnumerator FadeIn()
 	{
-		if (isEnabled)
-			return;
+		Enable();
 
-		white.SetAlpha(1f);
-		
-		textStart = text.anchoredPosition;
+		var t = white.DOFade(0f, fadeinDuration).SetEase(Ease.OutQuad);
+		yield return t.WaitForCompletion();
 
-		// sort of a hack
-		lastPriority = vcam.Priority;
-		vcam.Priority = int.MaxValue;
-
-		isEnabled = true;
+		StartCoroutine(DelayText());
 	}
 
 	public void Disable()
 	{
 		vcam.Priority = lastPriority;
+		textDisplay.SplashChannel = null;
 		isEnabled = false;
-	}
-
-	public IEnumerator ClearSplash()
-	{
-		// just in case
-		Enable();
-
-		var t1 = white.DOFade(0f, 1.75f).SetEase(Ease.OutQuad);
-		yield return t1.WaitForCompletion();
-
-		var pos = textStart;
-		pos.y = -pos.y;
-
-		var t2 = text.DOAnchorPos(pos, 1f).SetEase(Ease.InOutQuad);
-		yield return t2.WaitForCompletion();
-	}
-
-	public IEnumerator ClearText()
-	{
-		var t = text.DOAnchorPos(textStart, 1f).SetEase(Ease.InOutQuad);
-		yield return t.WaitForCompletion();
 	}
 
 	private void Awake()
@@ -72,5 +52,30 @@ public class SplashSequence : MonoBehaviour
 		{
 			Locator.ShaderSauce.PushSplash(1f, 1f);
 		}
+	}
+
+	private void Enable()
+	{
+		if (isEnabled)
+			return;
+		
+		isEnabled = true;
+
+		white.SetAlpha(1f);
+		
+		// sort of a hack
+		lastPriority = vcam.Priority;
+		vcam.Priority = int.MaxValue;
+	}
+
+	private IEnumerator DelayText()
+	{
+		yield return new WaitForSeconds(textDelay);
+
+		// player pressed "F" during the wait
+		if (!isEnabled)
+			yield break;
+
+		textDisplay.SplashChannel = startText;
 	}
 }

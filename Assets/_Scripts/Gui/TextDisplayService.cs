@@ -14,6 +14,7 @@ public class TextDisplayService : MonoBehaviour
 	public string MonologueChannel { get; set; }
 	public string SplashChannel { get; set; }
 	public string HintsChannel { get; set; }
+	const string NullChannel = "null";
 
 	private float alphaF = 0f;
 
@@ -39,8 +40,8 @@ public class TextDisplayService : MonoBehaviour
 		// a functional-like approach to an fsm
 		// i don't like it too much, but this is far simpler than my CoroutineFsm
 		// be wary: this approach can have nasty side effects
-		var isFadingIn = target == next && alphaF < 1f;
-		var isFadingOut = target != next && alphaF > 0f;
+		var isFadingIn = ReferenceEquals(target, next) && !ReferenceEquals(target, NullChannel);
+		var isFadingOut = !ReferenceEquals(target, next);
 		if (alphaF == 0f)
 		{
 			target = next;
@@ -64,6 +65,6 @@ public class TextDisplayService : MonoBehaviour
 		if (MonologueChannel != null) return MonologueChannel;
 		if (SplashChannel != null) return SplashChannel;
 		if (HintsChannel != null) return HintsChannel;
-		return null;
+		return NullChannel;
 	}
 }

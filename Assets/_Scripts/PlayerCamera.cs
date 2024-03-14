@@ -13,6 +13,8 @@ public class PlayerCamera : MonoBehaviour
 	private float targetX;
 	private float targetY;
 	
+	private InputService input => Locator.Input;
+
 	private bool isSuppressed => Locator.State.SuppressPlayer;
 
 	private void Start()
@@ -26,7 +28,7 @@ public class PlayerCamera : MonoBehaviour
 		if (isSuppressed)
 			return;
 		
-		var delta = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
+		var delta = input.Camera;
 
 		// camera Y
 		targetY = Mathf.Repeat(targetY + delta.x * mouseSensitivity, 360f);

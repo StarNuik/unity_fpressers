@@ -12,6 +12,8 @@ public class PlayerInteraction : MonoBehaviour
 
 	private InteractionHandle target;
 
+	private InputService input => Locator.Input;
+
 	private bool isActive => !Locator.State.SuppressPlayer;
 
 	private void Update()
@@ -30,7 +32,7 @@ public class PlayerInteraction : MonoBehaviour
 
 	private void UpdateInput()
 	{
-		if (isActive && Input.GetKeyUp(KeyCode.E))
+		if (isActive && input.IsInteractUp)
 		{
 			target?.Activate();
 		}

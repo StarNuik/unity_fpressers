@@ -13,7 +13,13 @@ public class AppFlow : CoroutineFsm
 
 	protected override Func<IEnumerator> Entry => LoadApp;
 
+	// a-la [Inject] fields
 	private AppState state => Locator.State;
+	private SplashSequence splash => Locator.Splash;
+	private CutscenesContainer cutscenes => Locator.Cutscenes;
+	private BgmStartService bgm => Locator.Bgm;
+	private InputService input => Locator.Input;
+	
 	private bool hasMoreInteractions => Locator.RouteTracker.HasInteractionsLeft;
 
 	private IEnumerator LoadApp()
@@ -31,14 +37,11 @@ public class AppFlow : CoroutineFsm
 		if (!skipSplash)
 		#endif
 		{
-			var splash = Locator.Splash;
-			splash.Enable();
-			yield return splash.ClearSplash();
+			yield return splash.FadeIn();
 
 			// not a hack \s
-			yield return new WaitUntil(() => Input.GetKeyUp(KeyCode.F));
+			yield return new WaitUntil(() => input.IsInteractUp);
 
-			yield return splash.ClearText();
 			splash.Disable();
 		}
 
@@ -47,13 +50,13 @@ public class AppFlow : CoroutineFsm
 
 	private IEnumerator IntroCutscene()
 	{
-		Locator.Bgm.Run();
+		bgm.Run();
 
 		#if UNITY_EDITOR
 		if (!skipIntro)
 		#endif
 		{
-			yield return PlayAndWaitCutscene(Locator.Cutscenes.Intro);
+			yield return PlayAndWaitCutscene(cutscenes.Intro);
 		}
 
 		state.SuppressPlayer = false; // an unnecessary, editor mode related action
@@ -65,7 +68,7 @@ public class AppFlow : CoroutineFsm
 		while (hasMoreInteractions)
 		{
 			InteractionHandle next = null;
-			yield return Locator.State.WaitForInteraction(
+			yield return state.WaitForInteraction(
 				ret => next = ret
 			);
 			yield return InteractionCutscene(next);
@@ -76,7 +79,7 @@ public class AppFlow : CoroutineFsm
 
 	private IEnumerator InteractionCutscene(InteractionHandle interaction)
 	{
-		var cutscene = Locator.Cutscenes.CutsceneOf(interaction);
+		var cutscene = cutscenes.CutsceneOf(interaction);
 		
 		#if UNITY_EDITOR
 		if (!skipInteractions)
@@ -89,7 +92,7 @@ public class AppFlow : CoroutineFsm
 	private IEnumerator MainEnding()
 	{
 		// the lack of player suppression is on purpose
-		yield return Locator.Cutscenes.NeutralEnding.PlayAndWait();
+		yield return cutscenes.NeutralEnding.PlayAndWait();
 
 		SetTransition(Reload);
 	}

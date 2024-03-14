@@ -15,6 +15,7 @@ public static class Locator
 	public static BgmStartService Bgm;
 	public static EndingRouteService RouteTracker;
 	public static TextDisplayService TextDisplay;
+	public static InputService Input;
 	
 	// sequences
 	public static SplashSequence Splash;

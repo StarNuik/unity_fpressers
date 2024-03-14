@@ -11,17 +11,16 @@ public class PlayerMovement : MonoBehaviour
 	[Editor] float moveSpeed = 1f;
 
 	private AppState state => Locator.State;
+	private InputService input => Locator.Input;
+
 	private bool isActive => !state.SuppressPlayer;
 
 	private void Update()
 	{
 		if (isActive)
 		{
-			var move = Vector3.zero;
-			move.z += Input.GetKey(KeyCode.W) ? 1f : 0f;
-			move.z += Input.GetKey(KeyCode.S) ? -1f : 0f;
-			move.x += Input.GetKey(KeyCode.D) ? 1f : 0f;
-			move.x += Input.GetKey(KeyCode.A) ? -1f : 0f;
+			
+			var move = input.Movement.ToX0Y();
 			
 			var worldMove = player.TransformDirection(move);
 			var delta = worldMove * moveSpeed * Time.deltaTime;
