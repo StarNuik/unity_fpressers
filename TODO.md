@@ -3,18 +3,19 @@
 [x] splash screen [1.5h>>3h]
 	[x] white fade in
 	[x] "press f to start"
-	[?] poster
+	[] poster (i forgot what is this point about)
 [] new room clutter [3h>>3h+]
+	[] ceiling plinthuses
+	[] vinyl record rotation
 	[x] skateboard
 	[x] fpressers stuff
 	[x] ukulele
-	[] ceiling plinthuses
 	[x] pen & notebook
 	[x] pillows
 	[x] vinyl records
 		[x] di record
 [] sfx [3-6h] [blocked]
-	[x] footsteps [1h]
+	[x] footsteps [>>1h]
 	[] room ambient
 	[] cigs
 		[] пачка сигарет
@@ -45,9 +46,8 @@
 [] mouse sens x0.5 [0h]
 [] game restart
 	[] "press f to restart"
-
 [] fog / milk [3h] [blocked]
-	[] turn off free roam fog
+	[x] turn off free roam fog
 	[] clutter disappearance
 [] screen text [3-6h] [blocked]
 	[] ending tracker [3h]

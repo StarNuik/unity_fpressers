@@ -9,11 +9,11 @@ public static class Locator
 	
 	// containers
 	public static CutscenesContainer Cutscenes;
-	public static List<InteractionHandle> InteractionHandles { get; private set; } = new();
 
 	// services
 	public static ShaderSauceService ShaderSauce;
 	public static BgmStartService Bgm;
+	public static EndingRouteService RouteTracker;
 	
 	// sequences
 	public static SplashSequence Splash;

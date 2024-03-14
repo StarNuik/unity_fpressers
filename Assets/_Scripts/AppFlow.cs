@@ -14,7 +14,7 @@ public class AppFlow : CoroutineFsm
 	protected override Func<IEnumerator> Entry => LoadApp;
 
 	private AppState state => Locator.State;
-	private int interactionsLeft => Locator.InteractionHandles.Count;
+	private bool hasMoreInteractions => Locator.RouteTracker.HasInteractionsLeft;
 
 	private IEnumerator LoadApp()
 	{
@@ -62,38 +62,34 @@ public class AppFlow : CoroutineFsm
 
 	private IEnumerator FreeRoam()
 	{
-		while (interactionsLeft > 0)
+		while (hasMoreInteractions)
 		{
-			yield return null;
-
-			// technically, this is a sub-fsm
-			if (Locator.State.PendingInteraction != null)
-			{
-				yield return InteractionCutscene();
-			}
+			InteractionHandle next = null;
+			yield return Locator.State.WaitForInteraction(
+				ret => next = ret
+			);
+			yield return InteractionCutscene(next);
 		}
 
 		SetTransition(MainEnding);
 	}
 
-	private IEnumerator InteractionCutscene()
+	private IEnumerator InteractionCutscene(InteractionHandle interaction)
 	{
-		var cutscene = state.PendingInteraction;
-
+		var cutscene = Locator.Cutscenes.CutsceneOf(interaction);
+		
 		#if UNITY_EDITOR
 		if (!skipInteractions)
 		#endif
 		{
 			yield return PlayAndWaitCutscene(cutscene);
 		}
-
-		state.PendingInteraction = null;
 	}
 
 	private IEnumerator MainEnding()
 	{
 		// the lack of player suppression is on purpose
-		yield return Locator.Cutscenes.MainEnding.PlayAndWait();
+		yield return Locator.Cutscenes.NeutralEnding.PlayAndWait();
 
 		SetTransition(Reload);
 	}

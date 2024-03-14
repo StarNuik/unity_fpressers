@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using ChrisNolet;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Editor = UnityEngine.SerializeField;
 
 public class InteractionHandle : MonoBehaviour
 {
 	[Editor] List<Outline> outlines = new();
-	[Editor] Cutscene cutscene;
 
 	[field: Editor, Min(0.01f)]
 	public float InnerRadius { get; private set; } = 1f;
@@ -18,18 +18,16 @@ public class InteractionHandle : MonoBehaviour
 
 	public void Activate()
 	{
-		var state = Locator.State;
-		if (state.PendingInteraction != null)
-			return;
-		
 		foreach (var outline in outlines)
 		{
 			outline.enabled = false;
 			Destroy(outline);
 		}
-		state.PendingInteraction = cutscene;
+		
 		Destroy(collider);
 		Destroy(this);
+		
+		Locator.State.InvokeInteractionTriggered(this);
 	}
 
 	public float PlayerF()
@@ -40,16 +38,6 @@ public class InteractionHandle : MonoBehaviour
 		var dist = Mathf.Clamp(distToPlayer, InnerRadius, OuterRadius);
 		var f = Mathf.InverseLerp(OuterRadius, InnerRadius, dist);
 		return f;
-	}
-
-	private void Awake()
-	{
-		Locator.InteractionHandles.Add(this);
-	}
-
-	private void OnDestroy()
-	{
-		Locator.InteractionHandles.Remove(this);
 	}
 
 	private void Update()
