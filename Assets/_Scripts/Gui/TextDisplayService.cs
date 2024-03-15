@@ -13,7 +13,7 @@ public class TextDisplayService : MonoBehaviour
 
 	public string MonologueChannel { get; set; }
 	public string SplashChannel { get; set; }
-	public string HintsChannel { get; set; }
+	public string MovementHintChannel { get; set; }
 	const string NullChannel = "null";
 
 	private float alphaF = 0f;
@@ -64,7 +64,7 @@ public class TextDisplayService : MonoBehaviour
 	{
 		if (MonologueChannel != null) return MonologueChannel;
 		if (SplashChannel != null) return SplashChannel;
-		if (HintsChannel != null) return HintsChannel;
+		if (MovementHintChannel != null) return MovementHintChannel;
 		return NullChannel;
 	}
 }

@@ -17,6 +17,7 @@
 	NEU: Жизнь проходит мимо, с тех пор, как она ушла.
 
 Press "F" to start
+Use "WASD" to move
 Press "F" to interact
 * После сна на кровати
 	COR: Can't believe I slept this well! Strange, the poster is still hanging...

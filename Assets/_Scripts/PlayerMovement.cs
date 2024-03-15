@@ -15,6 +15,11 @@ public class PlayerMovement : MonoBehaviour
 
 	private bool isActive => !state.SuppressPlayer;
 
+	private void Awake()
+	{
+		state.PlayerPosition = player.position;
+	}
+
 	private void Update()
 	{
 		if (isActive)
