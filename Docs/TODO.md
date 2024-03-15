@@ -3,7 +3,7 @@
 [x] splash screen [1.5h>>3h]
 	[x] white fade in
 	[x] "press f to start"
-	[] poster (i forgot what this point is about)
+	[] poster (i forgot what this point was about)
 
 [] sfx [3-6h] [blocked]
 	[x] footsteps [>>1h]
@@ -32,18 +32,15 @@
 	[] outro -> -5 sec
 	[] cigs -> bigger collider
 [] outline [1.5h]
-	[] suppress outline in cutscenes
+	[x] suppress outline in cutscenes
 	[] outline flicker bug fix
-[] mouse sens x0.5 [0h]
 [] game restart
 	[] "press f to restart"
 [] fog / milk [3h] [blocked]
 	[x] turn off free roam fog
 	[] clutter disappearance
-[] performance ideas
-	[x] test light bake [>>1.5h]
-		* it works, but doesn't improve the performance that much
-	[] replace URP/Lit w/ URP/Simple Lit
+
+[x] mouse sens x0.5 [0h]
 [x] screen text [3-6h>>4h] [blocked]
 	[x] ending tracker [3h>>1.5h]
 	[x] in game font
@@ -68,10 +65,10 @@
 
 ### blocked by
 [] sfx
-[] text
-	[] font
-[] clutter disappearance order
-[] intro poster
+[x] text
+	[x] font
+[x] clutter disappearance order
+[x] intro poster
 
 # TBD
 
@@ -103,6 +100,10 @@
 	2. твик vfx
 	3. исчезновение цели взаимодействия
 * на постер приближение сделать подпев
+[] performance ideas
+	[x] test light bake [>>1.5h]
+		* it works, but doesn't improve the performance that much
+	[] replace URP/Lit w/ URP/Simple Lit
 
 ## approx timeline
 5:25 (mb 5:00, so that theres stuff to fade out to)
