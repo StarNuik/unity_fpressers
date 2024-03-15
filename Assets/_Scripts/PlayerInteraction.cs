@@ -11,14 +11,20 @@ public class PlayerInteraction : MonoBehaviour
 	[Editor] LayerMask interactionLayer;
 
 	private InteractionHandle target;
+	private InteractionHandle lastTarget;
 
 	private InputService input => Locator.Input;
+	private AppState state => Locator.State;
 
 	private bool isActive => !Locator.State.SuppressPlayer;
 
 	private void Update()
 	{
+		if (!isActive)
+			return;
+		
 		UpdateTarget();
+		UpdateHover();
 		UpdateInput();
 	}
 
@@ -30,9 +36,19 @@ public class PlayerInteraction : MonoBehaviour
 		target = hit.collider?.GetComponent<InteractionHandle>();
 	}
 
+	private void UpdateHover()
+	{
+		if (target != null && target != lastTarget)
+		{
+			state.InvokeInteractionHovered(target);
+		}
+
+		lastTarget = target;
+	}
+
 	private void UpdateInput()
 	{
-		if (isActive && input.IsInteractUp)
+		if (input.IsInteractUp)
 		{
 			target?.TryActivate();
 		}

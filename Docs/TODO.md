@@ -3,17 +3,8 @@
 [x] splash screen [1.5h>>3h]
 	[x] white fade in
 	[x] "press f to start"
-	[] poster (i forgot what is this point about)
-[] new room clutter [3h>>3h+]
-	[] ceiling plinthuses
-	[] vinyl record rotation
-	[x] skateboard
-	[x] fpressers stuff
-	[x] ukulele
-	[x] pen & notebook
-	[x] pillows
-	[x] vinyl records
-		[x] di record
+	[] poster (i forgot what this point is about)
+
 [] sfx [3-6h] [blocked]
 	[x] footsteps [>>1h]
 	[] room ambient
@@ -49,18 +40,28 @@
 [] fog / milk [3h] [blocked]
 	[x] turn off free roam fog
 	[] clutter disappearance
-[] screen text [3-6h] [blocked]
+[] screen text [3-6h>>4h] [blocked]
 	[x] ending tracker [3h>>1.5h]
-	[] in game font
+	[x] in game font
 	[] show "wasd to move" - until moved 1 unit
 	[] show "f to interact" - on first raycast
-	[] inner monologue
+	[x] inner monologue
 		[x] (cutscene sends an event to TURN ON the text for x secs)
-		[] good / bad outcome text
+		[x] good / bad outcome text
 [] performance ideas
 	[x] test light bake [>>1.5h]
 		* it works, but doesn't improve the performance that much
 	[] replace URP/Lit w/ URP/Simple Lit
+[x] new room clutter [3h>>3h+]
+	[x] ceiling plinthuses
+	[x] vinyl record rotation
+	[x] skateboard
+	[x] fpressers stuff
+	[x] ukulele
+	[x] pen & notebook
+	[x] pillows
+	[x] vinyl records
+		[x] di record
 [x] webgl loader mechanism [1.5h>>0.5h]
 	[x] посмотреть как работает
 	[x] статья на хабре

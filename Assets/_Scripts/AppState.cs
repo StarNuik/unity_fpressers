@@ -15,13 +15,13 @@ public class AppState
 
 	// no signal bus no life
 	public Action<InteractionHandle> InteractionTriggered;
-	// public Action<Monologue> MonologueRequested;
+	public Action<InteractionHandle> InteractionHovered;
 
 	public void InvokeInteractionTriggered(InteractionHandle message)
 		=> InteractionTriggered?.Invoke(message);
-
-	// public void RequestMonologue(Monologue message)
-	// 	=> MonologueRequested?.Invoke(message);
+	
+	public void InvokeInteractionHovered(InteractionHandle message)
+		=> InteractionHovered?.Invoke(message);
 
 	public IEnumerator WaitForInteraction(Action<InteractionHandle> returner)
 	{

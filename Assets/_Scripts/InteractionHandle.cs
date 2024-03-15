@@ -7,7 +7,7 @@ using Editor = UnityEngine.SerializeField;
 
 public class InteractionHandle : MonoBehaviour
 {
-	[Editor] List<Outline> outlines = new();
+	[Editor] List<InteractionOutline> outlines = new();
 
 	[field: Editor, Min(0.01f)]
 	public float InnerRadius { get; private set; } = 1f;
@@ -17,20 +17,21 @@ public class InteractionHandle : MonoBehaviour
 	const float epsilon = 0.0001f;
 
 	private Collider collider => GetComponent<Collider>();
+	private AppState state => Locator.State;
+
+	public bool IsActive
+		=> !state.IsPlayingCutscene
+		&& PlayerF() > epsilon;
 
 	public void TryActivate()
 	{
-		if (PlayerF() < epsilon)
+		if (!IsActive)
 			return;
 		
-		foreach (var outline in outlines)
-		{
-			outline.enabled = false;
-			Destroy(outline);
-		}
-		
+		outlines.ForEach(o => o.Destroy());
+
 		Destroy(collider);
-		Destroy(this);
+		// Destroy(this);
 		
 		Locator.State.InvokeInteractionTriggered(this);
 	}
@@ -43,12 +44,6 @@ public class InteractionHandle : MonoBehaviour
 		var dist = Mathf.Clamp(distToPlayer, InnerRadius, OuterRadius);
 		var f = Mathf.InverseLerp(OuterRadius, InnerRadius, dist);
 		return f;
-	}
-
-	private void Update()
-	{
-		var shouldEnable = PlayerF() > epsilon;
-		outlines.ForEach(o => o.enabled = shouldEnable);
 	}
 
 	private void OnDrawGizmosSelected()
