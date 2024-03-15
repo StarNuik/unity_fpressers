@@ -12,17 +12,14 @@ public class AppState
 	public float ScreenEmission = 0f;
 	public Vector3 PlayerPosition;
 	public float DistanceTraveled;
+	public bool IsInteractionHovered;
 
 	// no signal bus no life
 	public Action<InteractionHandle> InteractionTriggered;
-	public Action<InteractionHandle> InteractionHovered;
 
 	public void InvokeInteractionTriggered(InteractionHandle message)
 		=> InteractionTriggered?.Invoke(message);
 	
-	public void InvokeInteractionHovered(InteractionHandle message)
-		=> InteractionHovered?.Invoke(message);
-
 	public IEnumerator WaitForInteraction(Action<InteractionHandle> returner)
 	{
 		var wait = true;

@@ -11,7 +11,6 @@ public class PlayerInteraction : MonoBehaviour
 	[Editor] LayerMask interactionLayer;
 
 	private InteractionHandle target;
-	private InteractionHandle lastTarget;
 
 	private InputService input => Locator.Input;
 	private AppState state => Locator.State;
@@ -38,12 +37,7 @@ public class PlayerInteraction : MonoBehaviour
 
 	private void UpdateHover()
 	{
-		if (target != null && target != lastTarget)
-		{
-			state.InvokeInteractionHovered(target);
-		}
-
-		lastTarget = target;
+		state.IsInteractionHovered = target != null;
 	}
 
 	private void UpdateInput()

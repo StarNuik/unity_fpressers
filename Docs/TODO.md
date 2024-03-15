@@ -40,18 +40,18 @@
 [] fog / milk [3h] [blocked]
 	[x] turn off free roam fog
 	[] clutter disappearance
-[] screen text [3-6h>>4h] [blocked]
-	[x] ending tracker [3h>>1.5h]
-	[x] in game font
-	[] show "wasd to move" - until moved 1 unit
-	[] show "f to interact" - on first raycast
-	[x] inner monologue
-		[x] (cutscene sends an event to TURN ON the text for x secs)
-		[x] good / bad outcome text
 [] performance ideas
 	[x] test light bake [>>1.5h]
 		* it works, but doesn't improve the performance that much
 	[] replace URP/Lit w/ URP/Simple Lit
+[x] screen text [3-6h>>4h] [blocked]
+	[x] ending tracker [3h>>1.5h]
+	[x] in game font
+	[x] show "wasd to move" - until moved 1 unit
+	[x] show "f to interact" - on first raycast
+	[x] inner monologue
+		[x] (cutscene sends an event to TURN ON the text for x secs)
+		[x] good / bad outcome text
 [x] new room clutter [3h>>3h+]
 	[x] ceiling plinthuses
 	[x] vinyl record rotation
