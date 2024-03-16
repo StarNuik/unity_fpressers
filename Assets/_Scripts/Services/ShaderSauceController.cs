@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.Experimental.Rendering.Universal;
 using Editor = UnityEngine.SerializeField;
 
+// very similar to `PcScreenMaterialController.cs`
 [ExecuteInEditMode]
 public class ShaderSauceController : MonoBehaviour
 {
@@ -34,8 +35,9 @@ public class ShaderSauceController : MonoBehaviour
 		if (mat == null)
 			return;
 
-		Action<UnityEngine.Object> destroy = Application.isPlaying ? Destroy : DestroyImmediate;		
+		Action<UnityEngine.Object> destroy = Application.isPlaying ? Destroy : DestroyImmediate;
 		destroy(mat);
+		mat = null;
 		target.settings.overrideMaterial = matOriginal;
 	}
 }
