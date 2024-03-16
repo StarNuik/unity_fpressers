@@ -714,12 +714,21 @@ PlayableDirector:
     value: {fileID: 1023407109}
   - key: {fileID: 5148489411097334685, guid: de7aeac58f2dc3145afcc0d2125e58d8, type: 2}
     value: {fileID: 619505788}
+  - key: {fileID: -8283900235893111455, guid: de7aeac58f2dc3145afcc0d2125e58d8, type: 2}
+    value: {fileID: 217345546}
+  - key: {fileID: 8307253937741867532, guid: de7aeac58f2dc3145afcc0d2125e58d8, type: 2}
+    value: {fileID: 217345546}
+  - key: {fileID: -4794494099399433204, guid: de7aeac58f2dc3145afcc0d2125e58d8, type: 2}
+    value: {fileID: 217345546}
+  - key: {fileID: -6176671539718147188, guid: de7aeac58f2dc3145afcc0d2125e58d8, type: 2}
+    value: {fileID: 1542584022}
   m_ExposedReferences:
     m_References:
     - 6f4125d1bd49fa144824e2e9193aca13: {fileID: 216544659}
     - aa89dad2044108949bd314587d68e7dc: {fileID: 1885639980}
     - 7483b5dad89d45a47a6412d822fe35dd: {fileID: 1023407107}
     - 7da0fa3559cb2774ab9d49839f20c7bf: {fileID: 20419006}
+    - f0118db5b7cd14f418b5caafcfb71ebe: {fileID: 0}
     - f2b312dbba1a9fd428f91b7802337183: {fileID: 216544659}
     - d624163581682684e8843f70c44f0b08: {fileID: 20419006}
     - c09deee2c8e31df418ff0c11a7503d11: {fileID: 353891240}
@@ -2116,7 +2125,7 @@ GameObject:
   - component: {fileID: 216544658}
   - component: {fileID: 216544659}
   m_Layer: 0
-  m_Name: Bed 1
+  m_Name: Bed 1.Vcam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2188,7 +2197,7 @@ GameObject:
   - component: {fileID: 217345545}
   - component: {fileID: 217345546}
   m_Layer: 0
-  m_Name: AudioSource
+  m_Name: Interactions.AudioSource
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2202,12 +2211,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 217345544}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 402650527}
+  m_Father: {fileID: 410089062}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &217345546
 AudioSource:
@@ -3812,7 +3821,7 @@ GameObject:
   - component: {fileID: 353891239}
   - component: {fileID: 353891240}
   m_Layer: 0
-  m_Name: Bed 3
+  m_Name: Bed Laying On Side.Vcam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3826,14 +3835,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 353891238}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.22430505, y: -0.0067291856, z: -0.0015586083, w: -0.9744946}
-  m_LocalPosition: {x: 0.023, y: 0.505, z: -0.778}
+  m_LocalRotation: {x: 0.000005139529, y: -0.57904166, z: 0.0000070286646, w: 0.815298}
+  m_LocalPosition: {x: 0.286, y: 0.629, z: -0.523}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1647741315}
   m_Father: {fileID: 31284822}
-  m_LocalEulerAnglesHint: {x: -25.925, y: 0.791, z: 0.001}
+  m_LocalEulerAnglesHint: {x: 0.001, y: -70.766, z: 0}
 --- !u!114 &353891240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4146,7 +4155,6 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 595002672}
-  - {fileID: 217345545}
   m_Father: {fileID: 410089062}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!320 &402650528
@@ -5078,6 +5086,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 754645775}
+  - {fileID: 217345545}
   - {fileID: 504551728}
   - {fileID: 2062243802}
   - {fileID: 31284822}
@@ -7026,7 +7035,7 @@ Transform:
   m_GameObject: {fileID: 649577513}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.014, y: 0.067, z: -0.433}
+  m_LocalPosition: {x: 0.014, y: 0.038, z: -0.577}
   m_LocalScale: {x: 1.2818182, y: 0.90909094, z: 1.2818182}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -7646,7 +7655,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -7918132999491640904, guid: 66e160ab8bdf75bb3aac4e51ac687d90,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: 381a6db4399b7604f9355465433ed492, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 5115fbbdffaa5044a92e895df1238631, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.5
   m_Pitch: 1
@@ -9244,16 +9253,19 @@ PlayableDirector:
   m_SceneBindings:
   - key: {fileID: 4004014996454083069, guid: 9a1d5d054af96c541987779c64511016, type: 2}
     value: {fileID: 330585548}
-  - key: {fileID: 4750021845561698480, guid: 9a1d5d054af96c541987779c64511016, type: 2}
-    value: {fileID: 1613846126}
   - key: {fileID: -1322479418663981986, guid: 9a1d5d054af96c541987779c64511016, type: 2}
     value: {fileID: 1114893950}
   - key: {fileID: -4433009845818365166, guid: 9a1d5d054af96c541987779c64511016, type: 2}
     value: {fileID: 619505788}
+  - key: {fileID: -2538408773838886455, guid: 9a1d5d054af96c541987779c64511016, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 2019698735206112915, guid: 9a1d5d054af96c541987779c64511016, type: 2}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References:
     - 233a743a242546542a188e324dd0ae2d: {fileID: 1973272213}
     - 8f593fae3710ef44db206276f4a6f54e: {fileID: 1484831118}
+    - f18b2f6e012295f4a838d187a4aa7c66: {fileID: 1973272213}
     - 8699bc83053f9a04890aa176c2fbb264: {fileID: 20419006}
     - e504e85afbff9904e8f74b9521b07ab9: {fileID: 20419006}
     - a18dcfc1cac8ec548bd0242102558c76: {fileID: 265160509}
@@ -9763,7 +9775,7 @@ Transform:
   m_GameObject: {fileID: 1013091679}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.02948182, y: 0, z: -1.2137535}
+  m_LocalPosition: {x: -0.004, y: 0, z: -1.2137535}
   m_LocalScale: {x: 1.2818182, y: 0.90909094, z: 1.2818182}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -10963,12 +10975,15 @@ PlayableDirector:
     value: {fileID: 2011133470}
   - key: {fileID: -6718289168596946213, guid: 8f4b97b825dadd04f8ad936fc3e3e9a8, type: 2}
     value: {fileID: 619505788}
+  - key: {fileID: -3090409378853080742, guid: 8f4b97b825dadd04f8ad936fc3e3e9a8, type: 2}
+    value: {fileID: 217345546}
   m_ExposedReferences:
     m_References:
     - e32f41700b8d5bb4999d23ab1d9b0e06: {fileID: 20419006}
     - ebdb7f34bd4d9394997f9758e4589ed7: {fileID: 20419006}
     - 5dd0a8260ff4ef641a35f997546ed2dd: {fileID: 1013091681}
     - d8a9f797994ccf44d8337e76afb19ca6: {fileID: 1013091681}
+    - efe7ea3d0fc854d44ac2a25922c3899e: {fileID: 1013091681}
     - f0f1cb9d76da22d4ebb0270bcb76dfac: {fileID: 649577514}
     - 015ddc28d9771a0469da09855a9bedd3: {fileID: 20419006}
 --- !u!1 &1301127182
@@ -11881,12 +11896,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   handle: {fileID: 1509164323}
---- !u!1 &1382198203 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 824c52e0a95f6634c9d03545409f844f,
-    type: 3}
-  m_PrefabInstance: {fileID: 1665509469}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1397516043
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12289,7 +12298,7 @@ PrefabInstance:
     - target: {fileID: -5567954287746965332, guid: 86cd96c3806a4b9468f04cadc893f4d9,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -5119120925735471609, guid: 86cd96c3806a4b9468f04cadc893f4d9,
         type: 3}
@@ -12398,12 +12407,6 @@ PrefabInstance:
 --- !u!4 &1480088089 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2774220344278030320, guid: 86cd96c3806a4b9468f04cadc893f4d9,
-    type: 3}
-  m_PrefabInstance: {fileID: 1480088088}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1480088090 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -5567954287746965332, guid: 86cd96c3806a4b9468f04cadc893f4d9,
     type: 3}
   m_PrefabInstance: {fileID: 1480088088}
   m_PrefabAsset: {fileID: 0}
@@ -13472,7 +13475,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1613846125}
-  - component: {fileID: 1613846126}
   m_Layer: 0
   m_Name: Cigs
   m_TagString: Untagged
@@ -13501,51 +13503,6 @@ Transform:
   - {fileID: 891420533}
   m_Father: {fileID: 477225685}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1613846126
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1613846124}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Events:
-    m_Signals:
-    - {fileID: 11400000, guid: a420752dcae4c1944be15d42f5169d43, type: 2}
-    - {fileID: 11400000, guid: 394a4b4776ddd6448adf526b803b5240, type: 2}
-    m_Events:
-    - m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1382198203}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    - m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1480088090}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 1
-          m_CallState: 2
 --- !u!1 &1631162376
 GameObject:
   m_ObjectHideFlags: 0
@@ -14473,7 +14430,7 @@ GameObject:
   - component: {fileID: 1690911331}
   - component: {fileID: 1690911332}
   m_Layer: 0
-  m_Name: AudioSource
+  m_Name: Footsteps.AudioSource
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15962,7 +15919,7 @@ GameObject:
   - component: {fileID: 1885639979}
   - component: {fileID: 1885639980}
   m_Layer: 0
-  m_Name: Bed 2
+  m_Name: Bed Laying On Back.Vcam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15976,14 +15933,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1885639978}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.019495998, y: 0.015588049, z: 0.00031671848, w: -0.9996884}
-  m_LocalPosition: {x: 0.041, y: 0.641, z: -0.599}
+  m_LocalRotation: {x: 0.23254155, y: 0.015160786, z: 0.003638425, w: -0.97246146}
+  m_LocalPosition: {x: 0.208, y: 0.627, z: -0.521}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1128162470}
   m_Father: {fileID: 31284822}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -26.897, y: -1.786, z: -0.002}
 --- !u!114 &1885639980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17076,7 +17033,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1973272213}
   serializedVersion: 8
-  lengthInSec: 1.5
+  lengthInSec: 3
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -17904,7 +17861,7 @@ ParticleSystem:
     serializedVersion: 4
     rateOverTime:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 1
       scalar: 17.5
       minScalar: 10
       maxCurve:
@@ -17912,6 +17869,15 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 3
           time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.33333334
+        - serializedVersion: 3
+          time: 0.17867434
           value: 1
           inSlope: 0
           outSlope: 0
@@ -17921,7 +17887,7 @@ ParticleSystem:
           outWeight: 0.33333334
         - serializedVersion: 3
           time: 1
-          value: 1
+          value: 0.27488518
           inSlope: 0
           outSlope: 0
           tangentMode: 0
