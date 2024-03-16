@@ -7,33 +7,33 @@
 
 [] sfx [3-6h] [blocked]
 	[x] footsteps [>>1h]
-	[] room ambient
-	[] cigs
-		[] пачка сигарет
-		[] зажигалка
-		[] вдох / выдох, длинный (2s)
-	[] кровать
-		[] лечь на кровать
-		[] встать с кровати
-	[] poster
-		[] бумага
-	[] window
-		[] outside sfx
-	[] pc
-		[] кнопка
-		[] раскрутка пк / диска
-		[] монитор
-		[] глюки
-[] interactions [3-6h]
-	[] pc fix
-	[] bed interaction improvement
+	[x] room ambient
+	[x] cigs
+		[x] пачка сигарет
+		[x] зажигалка
+		[x] вдох / выдох, длинный (2s)
+	[x] кровать
+		[x] лечь на кровать
+		[x] встать с кровати
+	[x] poster
+		[x] бумага
+	[x] window
+		[x] outside sfx
+	[x] pc
+		[x] кнопка
+		[x] раскрутка пк / диска
+		[deny] монитор
+		[x] глюки
+[x] interactions [3-6h]
+	[x] pc fix
+	[x] bed interaction improvement
 		[] the bed is boring
 		[] shorter?
-	[] outro -> -5 sec
-	[] cigs -> bigger collider
-[] outline [1.5h]
+	[?] outro -> -5 sec
+	[x] cigs -> bigger collider
+[x] outline [1.5h]
 	[x] suppress outline in cutscenes
-	[] outline flicker bug fix
+	[ignore] outline flicker bug fix
 [] game restart
 	[] "press f to restart"
 [] fog / milk [3h] [blocked]
@@ -64,7 +64,7 @@
 	[x] статья на хабре
 
 ### blocked by
-[] sfx
+[x] sfx
 [x] text
 	[x] font
 [x] clutter disappearance order
