@@ -1,11 +1,42 @@
 # ITER
-
-# TBD
-
-## v3 iter
+[] performance
 [] game restart
 	[] "press f to restart"
-[] clutter disappearance
+[] correct / reverse endings
+	[] club stage
+		[] cutscene: включается после порога
+			камерой влетает к сцене
+	[] phone call
+
+### assets
+* концовка
+	* сцена
+	* набросок плана помещения (необяз, но поможет / можно пару рефов)
+	* аудио
+* реверс концовка
+	* аудио
+* лого для сплеша
+* семпл для воспоминаний на кровати (я обмазывал reverb-ом, чтоб получилось какбе вдалеке / нереально)
+* 1 плейтест
+
+# TWEAKS BACKLOG
+[] splash
+	[] remove logo from 3d poster -> move to splash ui
+	[] start hint -> 0.5 sec delay
+[] language selection (splash)
+[] remove all height maps
+[] light leaks (shadow maps)
+[] pc cutscene
+	[] pc di logo - +1-2 secs
+	[] overall add a +1 sec to every pc screen?
+[] bed cutscene
+	[] longer female sample
+[] intro cutscene
+	[] убрать hold в начале
+[] playtest
+	[] "press f to interact" every time?
+
+# TBD
 
 ## polish iter
 [] build size
@@ -35,19 +66,11 @@
 	2. твик vfx
 	3. исчезновение цели взаимодействия
 * на постер приближение сделать подпев
+[] clutter disappearance
 [] performance ideas
 	[x] test light bake [>>1.5h]
 		* it works, but doesn't improve the performance that much
 	[] replace URP/Lit w/ URP/Simple Lit
-
-## approx timeline
-5:25 (mb 5:00, so that theres stuff to fade out to)
-	0:30 intro
-	1:00 walking around, looking for stuff
-	0:30 x5 interactions
-	0:30 outro
-	__________
-	4:30 total
 
 # COMPLETE
 ## v1
