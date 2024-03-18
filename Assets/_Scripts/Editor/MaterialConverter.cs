@@ -5,50 +5,78 @@ using UnityEditor;
 using System.IO;
 using System.Linq;
 using System;
+using MatProps = MaterialConversion.MaterialProperties;
 
 public static class MaterialConverter
 {
 	private static Shader gltfShader => Shader.Find("Shader Graphs/glTF-pbrMetallicRoughness");
 	private static Shader urpShader => Shader.Find("Universal Render Pipeline/Lit");
 	private static Shader urpSimpleShader => Shader.Find("Universal Render Pipeline/Simple Lit");
+	private static Shader builtinShader => Shader.Find("Standard");
 
 	[MenuItem("Assets/Convert Material/gltf Pbr -> Urp Lit")]
 	public static void GltfToUrp()
-	{
-		ForEachMat(gltfShader, fromMat => {
-			var props = MaterialConversion.FromGltf(fromMat);
-			var toMat = new Material(urpShader);
-			MaterialConversion.ApplyToUrp(toMat, props);
-			return toMat;
-		}, "GltfToUrp");
-	}
-
+		=> TransformSelectedMaterials(
+			withShader: gltfShader,
+			targetShader: urpSimpleShader,
+			reducer: MaterialConversion.FromGltf,
+			builder: MaterialConversion.ApplyToUrp,
+			debugTag: "GltfToUrp"
+		);
+	
 	[MenuItem("Assets/Convert Material/Urp Lit -> Urp Simple Lit")]
-	public static void UrpToSimple()
-	{
-		ForEachMat(urpShader, fromMat => {
-			var props = MaterialConversion.FromUrp(fromMat);
-			var toMat = new Material(urpSimpleShader);
-			MaterialConversion.ApplyToUrpSimple(toMat, props);
-			return toMat;
-		}, "UrpToSimple");
-	}
+	public static void UrpToUrpSimple()
+		=> TransformSelectedMaterials(
+			withShader: urpShader,
+			targetShader: urpSimpleShader,
+			reducer: MaterialConversion.FromUrp,
+			builder: MaterialConversion.ApplyToUrpSimple,
+			debugTag: "UrpToUrpSimple"
+		);
 
-	private static void ForEachMat(Shader withShader, Func<Material, Material> transform, string debugTag = "ForEachMat")
+	[MenuItem("Assets/Convert Material/Urp Lit -> Standard")]
+	public static void UrpToStandard()
+		=> TransformSelectedMaterials(
+			withShader: urpShader,
+			targetShader: builtinShader,
+			reducer: MaterialConversion.FromUrp,
+			builder: MaterialConversion.ApplyToBuiltin,
+			debugTag: "UrpToStandard"
+		);
+	
+	
+
+	private static void TransformSelectedMaterials(
+		Shader withShader,
+		Shader targetShader,
+		Func<Material, MatProps> reducer,
+		Action<Material, MatProps> builder,
+		string debugTag = "ForEachMat")
 	{
 		var filtered = Selection.GetFiltered<Material>(SelectionMode.Editable);
 		var mats = filtered.Where(m => m.shader == withShader).ToArray();
 
 		foreach (var original in mats)
 		{
-			var destPath = GetSimilarPath(original);
-
-			var target = transform(original);
-
-			AssetDatabase.CreateAsset(target, destPath);
+			TransformMat(original, targetShader, reducer, builder);
 		}
 
 		Debug.Log($"[ MaterialConverter.{debugTag}() ] successful transformations: {mats.Length}");
+	}
+
+	private static void TransformMat(
+		Material original,
+		Shader targetShader,
+		Func<Material, MatProps> reducer,
+		Action<Material, MatProps> builder)
+	{
+		var destPath = GetSimilarPath(original);
+		var props = reducer(original);
+
+		var target = new Material(targetShader);
+		builder(target, props);
+
+		AssetDatabase.CreateAsset(target, destPath);
 	}
 
 	private static string GetSimilarPath(UnityEngine.Object @object)

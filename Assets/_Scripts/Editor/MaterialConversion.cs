@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -62,5 +63,16 @@ public static class MaterialConversion
 
 		target.SetFloat("_Smoothness", props.Smoothness);
 		// target.SetFloat("_Metallic", props.Metallic);
+	}
+
+	public static void ApplyToBuiltin(Material target, MaterialProperties props)
+	{
+		MaterialHelper.SetTransparent(target, props.SurfaceType);
+
+		target.SetColor("_Color", props.AlbedoColor);
+		target.SetColor("_EmissionColor", props.EmissionColor);
+
+		target.SetFloat("_Glossiness", props.Smoothness);
+		target.SetFloat("_Metallic", props.Metallic);
 	}
 }
