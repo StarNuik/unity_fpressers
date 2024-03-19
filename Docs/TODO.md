@@ -1,13 +1,14 @@
 # ITER
-[x] performance
-	[x] win laptop: windows -> graphics perforamnce -> firefox -> high performance
-[x] game restart
-	[] "press f to restart"
 [] correct / reverse endings
 	[] club stage
 		[] cutscene: включается после порога
 			камерой влетает к сцене
 	[] phone call
+[] game restart
+	[] "press f to restart"
+	[x] restart bug fix
+[x] performance
+	[x] win laptop: windows -> graphics perforamnce -> firefox -> high performance
 
 ### assets
 * концовка
@@ -21,26 +22,26 @@
 * 1 плейтест
 
 # TWEAKS BACKLOG
-[] remove all height maps
 [] light leaks (shadow maps)
 [] bed cutscene
 	[] longer female sample
-[] language selection (splash)
-[x] splash
+[] playtest
+	[] "press f to interact" every time?
+[] splash
+	[] language selection (splash)
 	[] remove logo from 3d poster -> move to splash ui
 	[x] start hint -> 0.5 sec delay
 [x] pc cutscene
 	[x] pc di logo - +1-2 secs
 	[x] overall add a +1 sec to every pc screen?
+[x] remove all height maps
 [x] intro cutscene
 	[x] убрать hold в начале
-[] playtest
-	[] "press f to interact" every time?
 
 # TBD
 
 ## polish iter
-[] build size
+[x] build size
 	[] remove all ao, height (?!) maps
 	[] remove most metallic maps, try to remove normal maps
 	[] downres, crunch and cringe all textures as much as possible
@@ -48,8 +49,8 @@
 [] performance
 [] graphics cringe
 	[] shadows leak
-	[] bed / plinthus fog interaction
 	[] door wall scale
+	[x] bed / plinthus fog interaction
 
 ## mobile iter
 [] text size
