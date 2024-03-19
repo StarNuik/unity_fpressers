@@ -1,7 +1,7 @@
 # ITER
 [x] performance
 	[x] win laptop: windows -> graphics perforamnce -> firefox -> high performance
-[] game restart
+[x] game restart
 	[] "press f to restart"
 [] correct / reverse endings
 	[] club stage
@@ -21,19 +21,19 @@
 * 1 плейтест
 
 # TWEAKS BACKLOG
-[] splash
-	[] remove logo from 3d poster -> move to splash ui
-	[] start hint -> 0.5 sec delay
-[] language selection (splash)
 [] remove all height maps
 [] light leaks (shadow maps)
-[] pc cutscene
-	[] pc di logo - +1-2 secs
-	[] overall add a +1 sec to every pc screen?
 [] bed cutscene
 	[] longer female sample
-[] intro cutscene
-	[] убрать hold в начале
+[] language selection (splash)
+[x] splash
+	[] remove logo from 3d poster -> move to splash ui
+	[x] start hint -> 0.5 sec delay
+[x] pc cutscene
+	[x] pc di logo - +1-2 secs
+	[x] overall add a +1 sec to every pc screen?
+[x] intro cutscene
+	[x] убрать hold в начале
 [] playtest
 	[] "press f to interact" every time?
 
