@@ -5,12 +5,12 @@ using Editor = UnityEngine.SerializeField;
 
 public class InteractionHintService : MonoBehaviour
 {
-	[Multiline]
-	[Editor] string text;
+	[Editor] TextAsset text;
 
 	private AppState state => Locator.State;
 	private EndingRouteService route => Locator.RouteTracker;
 	private TextDisplayService textDisplay => Locator.TextDisplay;
+	private TranslationService translation => Locator.Translation;
 
 	private bool isActive
 		=> state.IsInteractionHovered
@@ -22,7 +22,8 @@ public class InteractionHintService : MonoBehaviour
 
 	private void Update()
 	{
-		var payload = isActive ? text : null;
+		var translated = translation.ToString(text);
+		var payload = isActive ? translated : null;
 		textDisplay.InteractionHintChannel = payload;
 	}
 }

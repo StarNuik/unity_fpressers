@@ -15,9 +15,13 @@ public class AppState
 
 	// no signal bus no life
 	public Action<InteractionHandle> InteractionTriggered;
+	public Action LanguageChanged;
 
 	public void InvokeInteractionTriggered(InteractionHandle message)
 		=> InteractionTriggered?.Invoke(message);
+
+	public void InvokeLanguageChanged()
+		=> LanguageChanged?.Invoke();
 	
 	public IEnumerator WaitForInteraction(Action<InteractionHandle> returner)
 	{

@@ -45,8 +45,7 @@ public class MonologuesContainer : MonoBehaviour
 	[System.Serializable]
 	public struct MonologueInfo
 	{
-		[Multiline]
-		public string Text;
+		public TextAsset Text;
 		[Min(1f)]
 		public float Duration;
 	}

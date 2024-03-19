@@ -11,6 +11,7 @@ public class MonologuesService : MonoBehaviour
 	private Coroutine currentRoutine;
 	
 	private TextDisplayService textDisplay => Locator.TextDisplay;
+	private TranslationService translation => Locator.Translation;
 
 	public void ShowMonologueFor(Cutscene cutscene)
 	{
@@ -26,7 +27,7 @@ public class MonologuesService : MonoBehaviour
 
 	private IEnumerator Show(Monologue info)
 	{
-		textDisplay.MonologueChannel = info.Text;
+		textDisplay.MonologueChannel = translation.ToString(info.Text);
 		yield return new WaitForSeconds(info.Duration);
 		textDisplay.MonologueChannel = null;
 		

@@ -49,7 +49,7 @@ public class AppFlow : CoroutineFsm
 			// not a hack \s
 			yield return new WaitUntil(() => input.IsInteractUp);
 
-			splash.Disable();
+			yield return splash.Disable();
 		}
 
 		SetTransition(IntroCutscene);

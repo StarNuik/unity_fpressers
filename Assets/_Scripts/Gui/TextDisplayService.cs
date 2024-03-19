@@ -27,6 +27,9 @@ public class TextDisplayService : MonoBehaviour
 		set => text.text = value;
 	}
 
+	// not great, but I'll survive if this is a once in a lifetime sin
+	public float FadeDuration => fadeDuration;
+
 	private void Awake()
 	{
 		alphaF = 0f;
