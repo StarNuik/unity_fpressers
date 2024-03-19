@@ -8,7 +8,7 @@ public class EndingRouteService : MonoBehaviour
 {
 	[Editor] List<InteractionHandle> RouteOrder = new();
 	
-	// this prop is an orphan (it actually belongs to a non-existent EndingService)
+	// these 2 props is an orphan (it actually belongs to a non-existent EndingService)
 	public bool HasInteractedOnce => currentRoute.Count > 0;
 	public bool HasInteractionsLeft => currentRoute.Count < RouteOrder.Count;
 	public RouteType CurrentRoute { get; private set; }

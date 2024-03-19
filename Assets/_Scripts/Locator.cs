@@ -19,5 +19,19 @@ public static class Locator
 	
 	// sequences
 	public static SplashSequence Splash;
+
+	// i wish locator was an instanced class xd
+	public static void Clear()
+	{
+		State = new();
+
+		Cutscenes = null;
+		ShaderSauce = null;
+		Bgm = null;
+		RouteTracker = null;
+		TextDisplay = null;
+		Input = null;
+		Splash = null;
+	}
 	
 }

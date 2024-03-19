@@ -3,12 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Experimental.Rendering.Universal;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 using Editor = UnityEngine.SerializeField;
 
 // very similar to `PcScreenMaterialController.cs`
 [ExecuteInEditMode]
 public class ShaderSauceController : MonoBehaviour
 {
+	[Editor] ScriptableRendererData targetParent;
 	[Editor] RenderObjects target;
 	[Editor] Material matOriginal;
 
@@ -23,7 +26,7 @@ public class ShaderSauceController : MonoBehaviour
 		if (mat == null)
 		{
 			mat = new(matOriginal);
-			target.settings.overrideMaterial = mat;
+			SetFeatureMaterial(mat);
 		}
 
 		mat.SetFloat("_Strength", Strength);
@@ -38,6 +41,13 @@ public class ShaderSauceController : MonoBehaviour
 		Action<UnityEngine.Object> destroy = Application.isPlaying ? Destroy : DestroyImmediate;
 		destroy(mat);
 		mat = null;
-		target.settings.overrideMaterial = matOriginal;
+
+		SetFeatureMaterial(matOriginal);
+	}
+
+	private void SetFeatureMaterial(Material material)
+	{
+		target.settings.overrideMaterial = material;
+		targetParent.SetDirty();
 	}
 }

@@ -106,6 +106,7 @@ public class AppFlow : CoroutineFsm
 
 	private IEnumerator Reload()
 	{
+		Locator.Clear();
 		SceneManager.LoadScene(0);
 		yield break;
 	}
