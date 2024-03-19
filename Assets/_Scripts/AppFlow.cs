@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Editor = UnityEngine.SerializeField;
@@ -10,6 +11,8 @@ public class AppFlow : CoroutineFsm
 	[Editor] bool skipSplash;
 	[Editor] bool skipIntro;
 	[Editor] bool skipInteractions;
+	[Range(1, 10)]
+	[Editor] int gameSpeed = 1;
 
 	protected override Func<IEnumerator> Entry => LoadApp;
 
@@ -24,6 +27,10 @@ public class AppFlow : CoroutineFsm
 
 	private IEnumerator LoadApp()
 	{
+		#if UNITY_EDITOR
+		Time.timeScale = gameSpeed;
+		#endif
+
 		// pre-intro hack
 		state.SuppressPlayer = true;
 

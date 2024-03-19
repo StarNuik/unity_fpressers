@@ -1,5 +1,6 @@
 # ITER
-[] performance
+[x] performance
+	[x] win laptop: windows -> graphics perforamnce -> firefox -> high performance
 [] game restart
 	[] "press f to restart"
 [] correct / reverse endings
