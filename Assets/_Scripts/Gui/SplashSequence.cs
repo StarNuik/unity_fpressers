@@ -28,7 +28,9 @@ public class SplashSequence : MonoBehaviour
 		var t = white.DOFade(0f, fadeinDuration).SetEase(Ease.OutQuad);
 		yield return t.WaitForCompletion();
 
-		StartCoroutine(DelayText());
+		yield return new WaitForSeconds(textDelay);
+
+		textDisplay.SplashChannel = startText;
 	}
 
 	public void Disable()
@@ -66,16 +68,5 @@ public class SplashSequence : MonoBehaviour
 		// sort of a hack
 		lastPriority = vcam.Priority;
 		vcam.Priority = int.MaxValue;
-	}
-
-	private IEnumerator DelayText()
-	{
-		yield return new WaitForSeconds(textDelay);
-
-		// player pressed "F" during the wait
-		if (!isEnabled)
-			yield break;
-
-		textDisplay.SplashChannel = startText;
 	}
 }
