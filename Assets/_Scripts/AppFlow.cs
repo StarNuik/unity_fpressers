@@ -40,6 +40,8 @@ public class AppFlow : CoroutineFsm
 
 	private IEnumerator Splash()
 	{
+		SetCursor(isLocked: false);
+
 		#if UNITY_EDITOR
 		if (!skipSplash)
 		#endif
@@ -57,6 +59,7 @@ public class AppFlow : CoroutineFsm
 
 	private IEnumerator IntroCutscene()
 	{
+		SetCursor(isLocked: true);
 		bgm.Run();
 
 		#if UNITY_EDITOR
@@ -116,5 +119,11 @@ public class AppFlow : CoroutineFsm
 		state.SuppressPlayer = true;
 		yield return cutscene.PlayAndWait();
 		state.SuppressPlayer = false;
+	}
+
+	private void SetCursor(bool isLocked)
+	{
+		Cursor.visible = !isLocked;
+		Cursor.lockState = isLocked ? CursorLockMode.Locked : CursorLockMode.None;
 	}
 }

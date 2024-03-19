@@ -27,9 +27,9 @@
 	[] longer female sample
 [] playtest
 	[] "press f to interact" every time?
-[] splash
-	[] language selection (splash)
-	[] remove logo from 3d poster -> move to splash ui
+[x] splash
+	[x] language selection (splash)
+	[x] remove logo from 3d poster -> move to splash ui
 	[x] start hint -> 0.5 sec delay
 [x] pc cutscene
 	[x] pc di logo - +1-2 secs
@@ -42,10 +42,10 @@
 
 ## polish iter
 [x] build size
-	[] remove all ao, height (?!) maps
-	[] remove most metallic maps, try to remove normal maps
-	[] downres, crunch and cringe all textures as much as possible
 	[] do smth about meshes, if willing
+	[x] remove all ao, height (?!) maps
+	[x] remove most metallic maps, try to remove normal maps
+	[x] downres, crunch and cringe all textures as much as possible
 [] performance
 [] graphics cringe
 	[] shadows leak

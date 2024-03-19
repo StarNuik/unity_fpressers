@@ -17,12 +17,6 @@ public class PlayerCamera : MonoBehaviour
 
 	private bool isSuppressed => Locator.State.SuppressPlayer;
 
-	private void Start()
-	{
-		// Cursor.lockState = CursorLockMode.Locked;
-		// Cursor.visible = false;
-	}
-
 	private void Update()
 	{
 		if (isSuppressed)
