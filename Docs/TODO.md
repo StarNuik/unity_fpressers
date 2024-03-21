@@ -7,6 +7,9 @@
 [] game restart
 	[] "press f to restart"
 	[x] restart bug fix
+[] clutter disappearance
+	[] make a movie w/ an empty-ish room
+		[] mb add disappearance in the timeline
 [x] performance
 	[x] win laptop: windows -> graphics perforamnce -> firefox -> high performance
 
@@ -68,7 +71,7 @@
 	2. твик vfx
 	3. исчезновение цели взаимодействия
 * на постер приближение сделать подпев
-[] clutter disappearance
+
 [] performance ideas
 	[x] test light bake [>>1.5h]
 		* it works, but doesn't improve the performance that much

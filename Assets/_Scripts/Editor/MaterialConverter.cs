@@ -18,7 +18,7 @@ public static class MaterialConverter
 	public static void GltfToUrp()
 		=> TransformSelectedMaterials(
 			withShader: gltfShader,
-			targetShader: urpSimpleShader,
+			targetShader: urpShader,
 			reducer: MaterialConversion.FromGltf,
 			builder: MaterialConversion.ApplyToUrp,
 			debugTag: "GltfToUrp"
