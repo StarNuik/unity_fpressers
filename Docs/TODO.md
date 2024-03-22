@@ -1,35 +1,24 @@
 # ITER
-[] correct / reverse endings
-	[] club stage
-		[] cutscene: включается после порога
-			камерой влетает к сцене
-	[] phone call
-[] game restart
-	[] "press f to restart"
-	[x] restart bug fix
-[] clutter disappearance
-	[] make a movie w/ an empty-ish room
-		[] mb add disappearance in the timeline
-[x] performance
-	[x] win laptop: windows -> graphics perforamnce -> firefox -> high performance
-
-### assets
-* концовка
-	* сцена
-	* набросок плана помещения (необяз, но поможет / можно пару рефов)
-	* аудио
-* реверс концовка
-	* аудио
-* лого для сплеша
-* семпл для воспоминаний на кровати (я обмазывал reverb-ом, чтоб получилось какбе вдалеке / нереально)
-* 1 плейтест
-
-# TWEAKS BACKLOG
-[] light leaks (shadow maps)
+[] room gltf import
+[] club / correct ending
+	[] level design
+		[] instruments
+		[] confetti / trash on the floor
+		[x] room layout
+	[] move assets to the Art/3d folder
+	[] crunch textures
+	[] cutscene: включается после порога
+		камерой влетает к сцене
+[] phone / reverse ending
+	[] cutscene / separate scene w/ the sfx?
 [] bed cutscene
 	[] longer female sample
 [] playtest
-	[] "press f to interact" every time?
+	[] "press f to interact"
+	[] "WASD" -> "WASD keys"
+	[] "mouse to look around"
+
+# TWEAKS BACKLOG
 [x] splash
 	[x] language selection (splash)
 	[x] remove logo from 3d poster -> move to splash ui
@@ -44,16 +33,9 @@
 # TBD
 
 ## polish iter
-[x] build size
-	[] do smth about meshes, if willing
-	[x] remove all ao, height (?!) maps
-	[x] remove most metallic maps, try to remove normal maps
-	[x] downres, crunch and cringe all textures as much as possible
 [] performance
 [] graphics cringe
-	[] shadows leak
-	[x] door wall scale
-	[x] bed / plinthus fog interaction
+	[] light / shadow leaks (shadow maps)
 
 ## mobile iter
 [] text size
@@ -64,18 +46,18 @@
 # INFO
 
 ## ideas
-* после последнего взаимодействия включить песню на месте с временем ровно до концовки
-	* на последнем действии музыка затихает
-* молоко
-	1. исчезновение предметов не важных
-	2. твик vfx
-	3. исчезновение цели взаимодействия
-* на постер приближение сделать подпев
-
+[] "press f to restart"
+[] clutter disappearance
+		[] make a movie w/ an empty-ish room
+			[] mb add disappearance in the timeline
+[] после последнего взаимодействия включить песню на месте с временем ровно до концовки
+	[] на последнем действии музыка затихает
+[] на постер приближение сделать подпев
 [] performance ideas
-	[x] test light bake [>>1.5h]
-		* it works, but doesn't improve the performance that much
-	[] replace URP/Lit w/ URP/Simple Lit
+[DENY] молоко
+	[] твик vfx
+	[] исчезновение цели взаимодействия
+	
 
 # COMPLETE
 ## v1
@@ -146,3 +128,21 @@
 [x] webgl loader mechanism [1.5h>>0.5h]
 	[x] посмотреть как работает
 	[x] статья на хабре
+
+## v3
+[x] build size
+	[] do smth about meshes, if willing
+	[x] remove all ao, height (?!) maps
+	[x] remove most metallic maps, try to remove normal maps
+	[x] downres, crunch and cringe all textures as much as possible
+[x] performance
+	[x] test light bake [>>1.5h]
+		* it works, but doesn't improve the performance that much
+	[x] replace URP/Lit w/ URP/Simple Lit
+		* tested on a test scene, didn't seem to improve performance that much
+	[x] win laptop: windows -> graphics perforamnce -> firefox -> high performance
+[x] game restart
+	[x] restart state fix
+[PART] graphics cringe
+	[x] door wall scale
+	[x] bed / plinthus fog interaction

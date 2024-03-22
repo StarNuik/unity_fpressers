@@ -1,0 +1,448 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 14,
+      "max": [
+        0.3101639151573181,
+        0.25174641609191895,
+        0.8065503239631653
+      ],
+      "min": [
+        0.2577996551990509,
+        -0.25174641609191895,
+        0.057470500469207764
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 168,
+      "componentType": 5126,
+      "count": 14,
+      "max": [
+        1.0,
+        0.32587486505508423,
+        8.664414075099103e-09
+      ],
+      "min": [
+        0.9454129338264465,
+        -0.32587480545043945,
+        -8.664413186920683e-09
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 14,
+      "max": [
+        0.3258748948574066,
+        -0.9454129338264465,
+        5.487741532306245e-07,
+        1.0
+      ],
+      "min": [
+        -0.32587483525276184,
+        -1.0,
+        -2.2271137822826859e-07,
+        1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 14,
+      "max": [
+        0.835320770740509,
+        0.985061764717102
+      ],
+      "min": [
+        0.16657331585884094,
+        0.014938175678253174
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 36,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 336,
+      "componentType": 5126,
+      "count": 6620,
+      "max": [
+        1.3550896644592285,
+        1.0183169841766357,
+        4.015865802764893
+      ],
+      "min": [
+        -1.0,
+        -1.043334722518921,
+        -2.384185791015625e-07
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 79776,
+      "componentType": 5126,
+      "count": 6620,
+      "max": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 224,
+      "componentType": 5126,
+      "count": 6620,
+      "max": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 112,
+      "componentType": 5126,
+      "count": 6620,
+      "max": [
+        0.981583297252655,
+        0.9683331847190857
+      ],
+      "min": [
+        0.016500204801559448,
+        0.01198888011276722
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 144,
+      "componentType": 5125,
+      "count": 19224,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "the milkwayster (https://sketchfab.com/kirarm2005)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/dusty-passive-stage-speaker-8df385f4a7f149d5b6fa367837421560",
+      "title": "Dusty Passive Stage Speaker"
+    },
+    "generator": "Sketchfab-15.27.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 77040,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 53072,
+      "byteOffset": 77040,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 159216,
+      "byteOffset": 130112,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 106144,
+      "byteOffset": 289328,
+      "byteStride": 16,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 395472,
+      "uri": "scene.bin"
+    }
+  ],
+  "images": [
+    {
+      "uri": "textures/M_Speaker-ProtectorMesh_baseColor.png"
+    },
+    {
+      "uri": "textures/M_Speaker-ProtectorMesh_metallicRoughness.png"
+    },
+    {
+      "uri": "textures/M_Speaker-ProtectorMesh_normal.png"
+    },
+    {
+      "uri": "textures/M_Speaker-Main_baseColor.png"
+    },
+    {
+      "uri": "textures/M_Speaker-Main_metallicRoughness.png"
+    },
+    {
+      "uri": "textures/M_Speaker-Main_normal.png"
+    }
+  ],
+  "materials": [
+    {
+      "alphaMode": "BLEND",
+      "doubleSided": true,
+      "name": "M_Speaker-ProtectorMesh",
+      "normalTexture": {
+        "index": 2
+      },
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          1.0,
+          1.0,
+          1.0,
+          0.8640026331508819
+        ],
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicFactor": 0.0,
+        "metallicRoughnessTexture": {
+          "index": 1
+        }
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "M_Speaker-Main",
+      "normalTexture": {
+        "index": 5
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 3
+        },
+        "metallicRoughnessTexture": {
+          "index": 4
+        }
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "SM_Speaker-ProtectorMesh_M_Speaker-ProtectorMesh_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 4,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "SM_Speaker-MAIN_M_Speaker-Main_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 6,
+            "POSITION": 5,
+            "TANGENT": 7,
+            "TEXCOORD_0": 8
+          },
+          "indices": 9,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        2.220446049250313e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2
+      ],
+      "matrix": [
+        0.009999999776482582,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.009999999776482582,
+        0.0,
+        0.0,
+        -0.009999999776482582,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "60949e6998d4454f9a307d2140851e84.fbx"
+    },
+    {
+      "children": [
+        3,
+        5
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        4
+      ],
+      "matrix": [
+        100.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -1.629206793918314e-05,
+        -99.99999999999868,
+        0.0,
+        0.0,
+        99.99999999999868,
+        -1.629206793918314e-05,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "SM_Speaker-ProtectorMesh"
+    },
+    {
+      "mesh": 0,
+      "name": "SM_Speaker-ProtectorMesh_M_Speaker-ProtectorMesh_0"
+    },
+    {
+      "children": [
+        6
+      ],
+      "matrix": [
+        27.58740234375,
+        0.0,
+        0.0,
+        0.0,
+        -0.0,
+        -4.494558332499552e-06,
+        -27.587402343749634,
+        0.0,
+        0.0,
+        27.587402343749634,
+        -4.494558332499552e-06,
+        0.0,
+        -0.9865123629570007,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "SM_Speaker-MAIN"
+    },
+    {
+      "mesh": 1,
+      "name": "SM_Speaker-MAIN_M_Speaker-Main_0"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    },
+    {
+      "sampler": 0,
+      "source": 2
+    },
+    {
+      "sampler": 0,
+      "source": 3
+    },
+    {
+      "sampler": 0,
+      "source": 4
+    },
+    {
+      "sampler": 0,
+      "source": 5
+    }
+  ]
+}

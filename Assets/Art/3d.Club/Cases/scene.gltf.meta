@@ -1,0 +1,99 @@
+fileFormatVersion: 2
+guid: 75d140457e040b14cb4175c749ee8d5a
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FlightCase
+    second: {fileID: 2100000, guid: 1a6e5bfce1989b646b4ffd67f17d6449, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal.Brushed
+    second: {fileID: 2100000, guid: 0ca00b9f2eec8e64fb898c5b1aee3ad5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal.Chrome
+    second: {fileID: 2100000, guid: 7076601310594a341972ae3b738a48c7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plastic.Black
+    second: {fileID: 2100000, guid: 3b07e1b491988cc458d7591618849cdd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plastic.Black.Smooth
+    second: {fileID: 2100000, guid: aa6e35d105c760544b52cf37b342899c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rack
+    second: {fileID: 2100000, guid: 85f0c3ed3416d1345b1c7640ad44c58d, type: 2}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 804e1ce4c496647cfa3f1a1134187c71, type: 3}
+  _removeEmptyRootObjects: 1
+  _scaleFactor: 1
+  _maximumLod: 300
+  _readWriteEnabled: 1
+  _generateColliders: 0
+  _swapUvs: 0
+  _generateLightmapUVs: 0
+  _importBlendShapeNames: 1
+  _blendShapeFrameWeight:
+    _option: 0
+    _multiplier: 1
+  _importNormals: 0
+  _importTangents: 0
+  _importAnimations: 2
+  _addAnimatorComponent: 0
+  _animationLoopTime: 1
+  _animationLoopPose: 0
+  _importMaterials: 1
+  _enableGpuInstancing: 0
+  _useSceneNameIdentifier: 1
+  _textureCompression: -50
+  optimizeGameObjects: 0
+  materials:
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  textures:
+  - {fileID: 2800000, guid: 64b0107689156b44c857c5bf171e32a8, type: 3}
+  - {fileID: 2800000, guid: 0c50647b61eed30479565a1f719a0bb5, type: 3}
+  - {fileID: 2800000, guid: 0c5eaf38335468047ac776eb190f23d2, type: 3}
+  - {fileID: 2800000, guid: 33bcdecefffab7e44b2ff9bd8693f85d, type: 3}
+  - {fileID: 2800000, guid: ae94d86d30c39b0418f1fc8e3509a263, type: 3}
+  hasSceneData: 1
+  hasAnimationData: 0
+  hasMaterialData: 1
+  hasTextureData: 1
+  animations: []
+  _extensions: []
+  _textures:
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  _mainAssetIdentifier: scenes/Sketchfab_Scene
+  _importPlugins: []

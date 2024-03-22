@@ -1,0 +1,65 @@
+fileFormatVersion: 2
+guid: c0bcd957e41b2a84dbdb3cf9c049a00f
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: floor_speaker_1001
+    second: {fileID: 2100000, guid: 9b7db37d88026994397323175e2a6505, type: 2}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 804e1ce4c496647cfa3f1a1134187c71, type: 3}
+  _removeEmptyRootObjects: 1
+  _scaleFactor: 0.01
+  _maximumLod: 300
+  _readWriteEnabled: 1
+  _generateColliders: 0
+  _swapUvs: 0
+  _generateLightmapUVs: 0
+  _importBlendShapeNames: 1
+  _blendShapeFrameWeight:
+    _option: 0
+    _multiplier: 1
+  _importNormals: 0
+  _importTangents: 0
+  _importAnimations: 2
+  _addAnimatorComponent: 0
+  _animationLoopTime: 1
+  _animationLoopPose: 0
+  _importMaterials: 1
+  _enableGpuInstancing: 0
+  _useSceneNameIdentifier: 1
+  _textureCompression: -50
+  optimizeGameObjects: 0
+  materials:
+  - {fileID: -8155217827265608672, guid: c0bcd957e41b2a84dbdb3cf9c049a00f, type: 3}
+  textures:
+  - {fileID: 2800000, guid: 707edb42e21db3a448199f1ec2e67787, type: 3}
+  - {fileID: 2800000, guid: 4a602556cf6b2e74b9ad6c9ce4cacfd4, type: 3}
+  - {fileID: 2800000, guid: f2c2ad5c06b6bf64ab5bfcb68b486718, type: 3}
+  - {fileID: 2800000, guid: c5334fe61f2a48647be44c4ec75d885b, type: 3}
+  hasSceneData: 1
+  hasAnimationData: 0
+  hasMaterialData: 1
+  hasTextureData: 1
+  animations: []
+  _extensions: []
+  _textures:
+  - texture: {fileID: 2800000, guid: 707edb42e21db3a448199f1ec2e67787, type: 3}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {fileID: 2800000, guid: 4a602556cf6b2e74b9ad6c9ce4cacfd4, type: 3}
+    shouldBeLinear: 1
+    shouldBeNormalMap: 0
+  - texture: {fileID: 2800000, guid: f2c2ad5c06b6bf64ab5bfcb68b486718, type: 3}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {fileID: 2800000, guid: c5334fe61f2a48647be44c4ec75d885b, type: 3}
+    shouldBeLinear: 1
+    shouldBeNormalMap: 1
+  _mainAssetIdentifier: scenes/Sketchfab_Scene
+  _importPlugins: []
