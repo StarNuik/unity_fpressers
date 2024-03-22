@@ -52,7 +52,7 @@
 [] performance
 [] graphics cringe
 	[] shadows leak
-	[] door wall scale
+	[x] door wall scale
 	[x] bed / plinthus fog interaction
 
 ## mobile iter
