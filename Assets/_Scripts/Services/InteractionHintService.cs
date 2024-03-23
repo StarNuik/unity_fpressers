@@ -8,7 +8,7 @@ public class InteractionHintService : MonoBehaviour
 	[Editor] TextAsset text;
 
 	private AppState state => Locator.State;
-	private EndingRouteService route => Locator.RouteTracker;
+	// private EndingRouteService route => Locator.RouteTracker;
 	private TextDisplayService textDisplay => Locator.TextDisplay;
 	private TranslationService translation => Locator.Translation;
 
@@ -16,7 +16,7 @@ public class InteractionHintService : MonoBehaviour
 		=> state.IsInteractionHovered
 		&& !state.IsPlayingCutscene
 		&& !state.SuppressPlayer // just in case
-		&& !route.HasInteractedOnce;
+		/* && !route.HasInteractedOnce */;
 
 	private bool wasShown;
 

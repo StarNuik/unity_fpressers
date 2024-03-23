@@ -1,5 +1,4 @@
 # ITER
-[x] room gltf import
 [] club / correct ending
 	[] level design
 		[x] instruments
@@ -11,12 +10,13 @@
 	[x] move assets to the Art/3d folder
 [] phone / reverse ending
 	[] cutscene / separate scene w/ the sfx?
+[] playtest
+	[] "mouse to look around"
+	[x] "press f to interact" every time
+	[x] "WASD" -> "WASD keys"
 [x] bed cutscene
 	[x] longer female sample
-[] playtest
-	[] "press f to interact" every time
-	[] "WASD" -> "WASD keys"
-	[] "mouse to look around"
+[x] room gltf import
 
 # TWEAKS BACKLOG
 [x] splash
