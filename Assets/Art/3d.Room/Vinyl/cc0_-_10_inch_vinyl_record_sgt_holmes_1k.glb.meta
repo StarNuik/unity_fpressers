@@ -2,7 +2,12 @@ fileFormatVersion: 2
 guid: 3320a712b5aabd144b5e9e6ab4e011e1
 ScriptedImporter:
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: VinylRecordSgtHolmes
+    second: {fileID: 2100000, guid: d58d9250f713fe3489b7225665df33ff, type: 2}
   serializedVersion: 2
   userData: 
   assetBundleName: 
@@ -25,21 +30,21 @@ ScriptedImporter:
   _addAnimatorComponent: 0
   _animationLoopTime: 1
   _animationLoopPose: 0
-  _importMaterials: 1
+  _importMaterials: 0
   _enableGpuInstancing: 0
   _useSceneNameIdentifier: 1
   _textureCompression: -50
   optimizeGameObjects: 0
   materials:
-  - {instanceID: 0}
-  - {instanceID: 0}
+  - {fileID: 4570204790246025998, guid: 3320a712b5aabd144b5e9e6ab4e011e1, type: 3}
+  - {fileID: 5306704299997687276, guid: 3320a712b5aabd144b5e9e6ab4e011e1, type: 3}
   textures:
-  - {instanceID: 0}
-  - {instanceID: 0}
-  - {instanceID: 0}
-  - {instanceID: 0}
-  - {instanceID: 0}
-  - {instanceID: 0}
+  - {fileID: 6983701643236107813, guid: 3320a712b5aabd144b5e9e6ab4e011e1, type: 3}
+  - {fileID: 8022499087761476943, guid: 3320a712b5aabd144b5e9e6ab4e011e1, type: 3}
+  - {fileID: 5230624929818990856, guid: 3320a712b5aabd144b5e9e6ab4e011e1, type: 3}
+  - {fileID: -2834534249764746836, guid: 3320a712b5aabd144b5e9e6ab4e011e1, type: 3}
+  - {fileID: -409340629399409755, guid: 3320a712b5aabd144b5e9e6ab4e011e1, type: 3}
+  - {fileID: -6477806308458343453, guid: 3320a712b5aabd144b5e9e6ab4e011e1, type: 3}
   hasSceneData: 1
   hasAnimationData: 0
   hasMaterialData: 1
@@ -47,22 +52,28 @@ ScriptedImporter:
   animations: []
   _extensions: []
   _textures:
-  - texture: {instanceID: 0}
+  - texture: {fileID: 6983701643236107813, guid: 3320a712b5aabd144b5e9e6ab4e011e1,
+      type: 3}
     shouldBeLinear: 0
     shouldBeNormalMap: 0
-  - texture: {instanceID: 0}
+  - texture: {fileID: 8022499087761476943, guid: 3320a712b5aabd144b5e9e6ab4e011e1,
+      type: 3}
     shouldBeLinear: 1
     shouldBeNormalMap: 0
-  - texture: {instanceID: 0}
+  - texture: {fileID: 5230624929818990856, guid: 3320a712b5aabd144b5e9e6ab4e011e1,
+      type: 3}
     shouldBeLinear: 1
     shouldBeNormalMap: 1
-  - texture: {instanceID: 0}
+  - texture: {fileID: -2834534249764746836, guid: 3320a712b5aabd144b5e9e6ab4e011e1,
+      type: 3}
     shouldBeLinear: 0
     shouldBeNormalMap: 0
-  - texture: {instanceID: 0}
+  - texture: {fileID: -409340629399409755, guid: 3320a712b5aabd144b5e9e6ab4e011e1,
+      type: 3}
     shouldBeLinear: 1
     shouldBeNormalMap: 0
-  - texture: {instanceID: 0}
+  - texture: {fileID: -6477806308458343453, guid: 3320a712b5aabd144b5e9e6ab4e011e1,
+      type: 3}
     shouldBeLinear: 1
     shouldBeNormalMap: 1
   _mainAssetIdentifier: scenes/Sketchfab_Scene

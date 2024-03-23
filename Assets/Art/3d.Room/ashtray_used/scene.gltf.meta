@@ -2,7 +2,17 @@ fileFormatVersion: 2
 guid: 86cd96c3806a4b9468f04cadc893f4d9
 ScriptedImporter:
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.000
+    second: {fileID: 2100000, guid: ffede385ca52de74d8cb40719ea17489, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: ada18cd45a382124e9f6e506d0fc5f7e, type: 2}
   serializedVersion: 2
   userData: 
   assetBundleName: 

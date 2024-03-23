@@ -5,16 +5,16 @@
 		[] instruments
 		[] confetti / trash on the floor
 		[x] room layout
-	[] move assets to the Art/3d folder
 	[] crunch textures
 	[] cutscene: включается после порога
 		камерой влетает к сцене
+	[x] move assets to the Art/3d folder
 [] phone / reverse ending
 	[] cutscene / separate scene w/ the sfx?
 [] bed cutscene
 	[] longer female sample
 [] playtest
-	[] "press f to interact"
+	[] "press f to interact" every time
 	[] "WASD" -> "WASD keys"
 	[] "mouse to look around"
 
