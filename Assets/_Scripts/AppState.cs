@@ -14,12 +14,16 @@ public class AppState
 	public bool IsInteractionHovered;
 
 	// no signal bus no life
+	public Action InteractPressed;
 	public Action<InteractionHandle> InteractionTriggered;
 	public Action LanguageChanged;
 
 	public void InvokeInteractionTriggered(InteractionHandle message)
 		=> InteractionTriggered?.Invoke(message);
 
+	public void InvokeInteractPressed()
+		=> InteractPressed?.Invoke();
+		
 	public void InvokeLanguageChanged()
 		=> LanguageChanged?.Invoke();
 	

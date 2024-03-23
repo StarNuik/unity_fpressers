@@ -1,17 +1,21 @@
 # ITER
 [] club / correct ending
 	[] level design
-		[x] instruments
+		[] projected image
 		[] confetti / trash on the floor
+		[x] instruments
 		[x] room layout
 	[] crunch textures
 	[] cutscene: включается после порога
 		камерой влетает к сцене
+		[] sfx
 	[x] move assets to the Art/3d folder
 [] phone / reverse ending
 	[] cutscene / separate scene w/ the sfx?
+[] ending transitions
 [] playtest
-	[] "mouse to look around"
+	[] (1 sec) > "use mouse to look around"
+	[] "WASD" > "W,A,S,D"
 	[x] "press f to interact" every time
 	[x] "WASD" -> "WASD keys"
 [x] bed cutscene
@@ -31,6 +35,29 @@
 	[x] убрать hold в начале
 
 # TBD
+[] club ending
+	[] 3sec pause
+	[] stop bgm
+	[] turn on door interaction
+	[] player interacts w/ the door
+[] cutscene
+	[] turn around
+	[] turn off the lights
+		[] sfx
+	[] open the door
+		[] sfx
+	[] enter the nightclub
+
+	[] идти к сцене, смотря по сторонам (на коробки)
+	[] подойти к сцене
+	[] посмотреть на надпись на проекторе
+	[] развернуться и идти в выход в белый свет
+[] reverse route text
+[] phone ending
+	[] phone rings
+	[] interact w/ the phone
+	[] message plays
+	[] ideally: the door opens, the player walks out into the light
 
 ## polish iter
 [] performance
@@ -46,10 +73,9 @@
 # INFO
 
 ## ideas
-[] "press f to restart"
 [] clutter disappearance
-		[] make a movie w/ an empty-ish room
-			[] mb add disappearance in the timeline
+	[] make a movie w/ an empty-ish room
+		[] mb add disappearance in the timeline
 [] после последнего взаимодействия включить песню на месте с временем ровно до концовки
 	[] на последнем действии музыка затихает
 [] на постер приближение сделать подпев

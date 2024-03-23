@@ -17,6 +17,16 @@ public class PlayerInteraction : MonoBehaviour
 
 	private bool isActive => !Locator.State.SuppressPlayer;
 
+	private void OnEnable()
+	{
+		state.InteractPressed += TryInteraction;
+	}
+
+	private void OnDisable()
+	{
+		state.InteractPressed -= TryInteraction;
+	}
+
 	private void Update()
 	{
 		if (!isActive)
@@ -24,7 +34,6 @@ public class PlayerInteraction : MonoBehaviour
 		
 		UpdateTarget();
 		UpdateHover();
-		UpdateInput();
 	}
 
 	private void UpdateTarget()
@@ -40,11 +49,8 @@ public class PlayerInteraction : MonoBehaviour
 		state.IsInteractionHovered = target != null;
 	}
 
-	private void UpdateInput()
+	private void TryInteraction()
 	{
-		if (input.IsInteractUp)
-		{
-			target?.TryActivate();
-		}
+		target?.TryActivate();
 	}
 }

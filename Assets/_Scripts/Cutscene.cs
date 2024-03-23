@@ -20,8 +20,12 @@ public class Cutscene : MonoBehaviour
 		track.Play();
 
 		var wait = true;
-		track.stopped += _ => wait = false;
+		Action<PlayableDirector> action = _ => wait = false;
+		
+		track.stopped += action;
 		yield return new WaitWhile(() => wait);
+		track.stopped -= action;
+		
 		state.IsPlayingCutscene = false;
 	}
 }
