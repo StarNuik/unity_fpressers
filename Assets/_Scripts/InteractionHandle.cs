@@ -45,6 +45,7 @@ public class InteractionHandle : MonoBehaviour
 	{
 		if (!IsActive)
 			return;
+		isEnabled = false;
 		
 		outlines.ForEach(o => o.Destroy());
 

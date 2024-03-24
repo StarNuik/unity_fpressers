@@ -43,6 +43,11 @@ public class InputService : MonoBehaviour
 		interact.performed += SendInteract;
 	}
 
+	private void OnDestroy()
+	{
+		interact.performed -= SendInteract;
+	}
+
 	private void SendInteract(InputAction.CallbackContext _)
 	{
 		state.InvokeInteractPressed();

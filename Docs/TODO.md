@@ -11,28 +11,28 @@
 		[] club ending
 			[x] 3sec pause
 			[x] stop bgm
-			[] turn on door interaction
-			[] player interacts w/ the door
-		[] cutscene
-			[] turn around
-			[] turn off the lights
-				[] sfx
-			[] open the door
-				[] sfx
-			[] enter the nightclub
+			[x] turn on door interaction
+			[x] player interacts w/ the door
+		[x] cutscene
+			[x] turn around
+			[x] turn off the lights
+				[x] sfx
+			[x] open the door
+				[x] sfx
+			[x] enter the nightclub
 
 			[] идти к сцене, смотря по сторонам (на коробки)
-			[] подойти к сцене
-			[] посмотреть на надпись на проекторе
+			[x] подойти к сцене
+			[x] посмотреть на надпись на проекторе
 			[] развернуться и идти в выход в белый свет
-		[] sfx
+		[x] sfx
 	[x] move assets to the Art/3d folder
-[] phone / reverse ending
-	[] cutscene / separate scene w/ the sfx?
-		[] phone ending
-			[] phone rings
-			[] interact w/ the phone
-			[] message plays
+[x] phone / reverse ending
+	[x] cutscene / separate scene w/ the sfx?
+		[x] phone ending
+			[x] phone rings
+			[x] interact w/ the phone
+			[x] message plays
 			[] ideally: the door opens, the player walks out into the light
 [] отписаться от всех событий из AppState
 [] playtest
