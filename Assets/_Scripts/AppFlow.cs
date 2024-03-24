@@ -8,6 +8,7 @@ using Editor = UnityEngine.SerializeField;
 
 public class AppFlow : CoroutineFsm
 {
+	[Editor] EndingsFlow endings;
 	[Editor] bool skipSplash;
 	[Editor] bool skipIntro;
 	[Editor] bool skipInteractions;
@@ -66,7 +67,7 @@ public class AppFlow : CoroutineFsm
 		if (!skipIntro)
 		#endif
 		{
-			yield return PlayAndWaitCutscene(cutscenes.Intro);
+			yield return LockPlayerAnd(cutscenes.Intro.PlayAndWait);
 		}
 
 		state.SuppressPlayer = false; // an unnecessary, editor mode related action
@@ -84,7 +85,7 @@ public class AppFlow : CoroutineFsm
 			yield return InteractionCutscene(next);
 		}
 
-		SetTransition(MainEnding);
+		SetTransition(Ending);
 	}
 
 	private IEnumerator InteractionCutscene(InteractionHandle interaction)
@@ -95,35 +96,29 @@ public class AppFlow : CoroutineFsm
 		if (!skipInteractions)
 		#endif
 		{
-			yield return PlayAndWaitCutscene(cutscene);
+			yield return LockPlayerAnd(cutscene.PlayAndWait);
 		}
 	}
 
-	private IEnumerator MainEnding()
+	private IEnumerator Ending()
 	{
-		// the lack of player suppression is on purpose
-		yield return cutscenes.NeutralEnding.PlayAndWait();
+		yield return endings.RouteEnding();
 
-		SetTransition(Reload);
-	}
-
-	private IEnumerator Reload()
-	{
+		// Reload()
 		Locator.Clear();
 		SceneManager.LoadScene(0);
-		yield break;
-	}
-
-	private IEnumerator PlayAndWaitCutscene(Cutscene cutscene)
-	{
-		state.SuppressPlayer = true;
-		yield return cutscene.PlayAndWait();
-		state.SuppressPlayer = false;
 	}
 
 	private void SetCursor(bool isLocked)
 	{
 		Cursor.visible = !isLocked;
 		Cursor.lockState = isLocked ? CursorLockMode.Locked : CursorLockMode.None;
+	}
+
+	private IEnumerator LockPlayerAnd(Func<IEnumerator> routine)
+	{
+		state.SuppressPlayer = true;
+		yield return routine();
+		state.SuppressPlayer = false;
 	}
 }
