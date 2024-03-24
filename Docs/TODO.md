@@ -44,6 +44,7 @@
 [x] bed cutscene
 	[x] longer female sample
 [x] room gltf import
+[] some room objects are not getting milked
 
 # TWEAKS BACKLOG
 [x] splash

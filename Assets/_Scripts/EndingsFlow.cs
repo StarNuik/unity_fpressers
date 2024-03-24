@@ -51,7 +51,8 @@ public class EndingsFlow : MonoBehaviour
 			ret => Assert.IsTrue(reverseEndingInteraction == ret),
 			() => { mixer.PushBgmFx(1f); mixer.PushBgmDuck(1f); }
 		);
-
+		
+		bgm.Stop();
 		yield return cutscenes.ReverseEnding.PlayAndWait();
 	}
 }
