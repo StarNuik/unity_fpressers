@@ -10,9 +10,9 @@ public class MonologuesContainer : MonoBehaviour
 {
 	[Editor] List<RouteListPair> RouteTexts = new();
 
-	private Dictionary<Route, Dictionary<Cutscene, MonologueInfo>> store;
+	private Dictionary<Route, Dictionary<Cutscene, TextAsset>> store;
 
-	public MonologueInfo GetMonologue(Cutscene cutscene, Route route)
+	public TextAsset GetMonologue(Cutscene cutscene, Route route)
 	{
 		return store[route][cutscene];
 	}
@@ -23,7 +23,7 @@ public class MonologuesContainer : MonoBehaviour
 			p => p.Route,
 			p => p.CutsceneTexts.ToDictionary(
 				q => q.Cutscene,
-				q => q.Info
+				q => q.TextAsset
 			)
 		);
 	}
@@ -39,14 +39,6 @@ public class MonologuesContainer : MonoBehaviour
 	private struct CutsceneTextPair
 	{
 		public Cutscene Cutscene;
-		public MonologueInfo Info;
-	}
-
-	[System.Serializable]
-	public struct MonologueInfo
-	{
-		public TextAsset Text;
-		[Min(1f)]
-		public float Duration;
+		public TextAsset TextAsset;
 	}
 }

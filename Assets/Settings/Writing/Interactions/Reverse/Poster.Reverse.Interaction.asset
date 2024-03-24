@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e61713a6f47ff0343b479dcf431340d3, type: 3}
-  m_Name: Window.Neutral.Interaction
+  m_Name: Poster.Reverse.Interaction
   m_EditorClassIdentifier: 
-  english: Life's passing by now that she left...
-  russian: "\u0416\u0438\u0437\u043D\u044C \u043F\u0440\u043E\u0445\u043E\u0434\u0438\u0442
-    \u043C\u0438\u043C\u043E, \u0441 \u0442\u0435\u0445 \u043F\u043E\u0440, \u043A\u0430\u043A
-    \u043E\u043D\u0430 \u0443\u0448\u043B\u0430."
+  english: I m355ed up, th4t w45 h3r fav0urit3 post3r...
+  russian: "\u042F 8\u0441\u0451 \u0438\u0441\u043F0\u04407\u0438\u043B, 3\u04420
+    \u0431\u044B\u043B 3\u044E \u043B\u044E6\u0438\u043C\u044B\u0439 \u043F\u043E\u04417\u0435\u0440."
+  preferredDuration: 6

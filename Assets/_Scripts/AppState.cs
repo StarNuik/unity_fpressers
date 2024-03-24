@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using UnityEngine;
-using Monologue = MonologuesContainer.MonologueInfo;
 
 public class AppState
 {

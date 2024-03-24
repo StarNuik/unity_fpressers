@@ -8,7 +8,7 @@ public class EndingRouteService : MonoBehaviour
 {
 	[Editor] List<InteractionHandle> RouteOrder = new();
 	
-	// these 2 props is an orphan (it actually belongs to a non-existent EndingService)
+	// these 2 props are orphans (they kind of don't belong here)
 	public bool HasInteractedOnce => currentRoute.Count > 0;
 	public bool HasInteractionsLeft => currentRoute.Count < RouteOrder.Count;
 	public RouteType CurrentRoute { get; private set; }
@@ -23,6 +23,10 @@ public class EndingRouteService : MonoBehaviour
 
 	private void UpdateRoute(InteractionHandle handle)
 	{
+		// this allows me to have interactions outside of the Route system
+		if (!RouteOrder.Contains(handle))
+			return;
+		
 		currentRoute.Add(handle);
 
 		CurrentRoute = RouteType.Neutral;
@@ -32,20 +36,32 @@ public class EndingRouteService : MonoBehaviour
 
 	private void TestForCorrectRoute()
 	{
-		var correct = true;
+		var isRoute = true;
 		for (int i = 0; i < currentRoute.Count; i++)
 		{
-			correct &= currentRoute[i] == RouteOrder[i];
+			isRoute &= currentRoute[i] == RouteOrder[i];
 		}
 
-		if (correct)
+		if (isRoute)
 		{
 			CurrentRoute = RouteType.Correct;
 		}
 	}
 
 	private void TestForReversedRoute()
-	{}
+	{
+		var orderLast = RouteOrder.Count - 1;
+		var isRoute = true;
+		for (int i = 0; i < currentRoute.Count; i++)
+		{
+			isRoute &= currentRoute[i] == RouteOrder[orderLast - i];
+		}
+
+		if (isRoute)
+		{
+			CurrentRoute = RouteType.Reversed;
+		}
+	}
 
 	public enum RouteType
 	{

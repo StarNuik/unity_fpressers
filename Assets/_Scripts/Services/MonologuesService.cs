@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Editor = UnityEngine.SerializeField;
-using Monologue = MonologuesContainer.MonologueInfo;
 
 public class MonologuesService : MonoBehaviour
 {
@@ -16,19 +15,19 @@ public class MonologuesService : MonoBehaviour
 	public void ShowMonologueFor(Cutscene cutscene)
 	{
 		var router = Locator.RouteTracker;
-		var info = monologues.GetMonologue(cutscene, router.CurrentRoute);
+		var text = monologues.GetMonologue(cutscene, router.CurrentRoute);
 		
 		if (currentRoutine != null)
 		{
 			StopCoroutine(currentRoutine);
 		}
-		currentRoutine = StartCoroutine(Show(info));
+		currentRoutine = StartCoroutine(Show(text));
 	}
 
-	private IEnumerator Show(Monologue info)
+	private IEnumerator Show(TextAsset text)
 	{
-		textDisplay.MonologueChannel = translation.ToString(info.Text);
-		yield return new WaitForSeconds(info.Duration);
+		textDisplay.MonologueChannel = translation.ToString(text);
+		yield return new WaitForSeconds(text.PreferredDuration);
 		textDisplay.MonologueChannel = null;
 		
 		currentRoutine = null;

@@ -10,8 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e61713a6f47ff0343b479dcf431340d3, type: 3}
-  m_Name: Bed.Neutral.Interaction
+  m_Name: Pc.Reverse.Interaction
   m_EditorClassIdentifier: 
-  english: I am still so tired...
-  russian: "\u042F \u0432\u0441\u0435 \u0440\u0430\u0432\u043D\u043E \u043D\u0435
-    \u0432\u044B\u0441\u043F\u0430\u043B\u0441\u044F..."
+  english: Sti11 n0t working! Wh4t an awful d4y!
+  russian: "\u041E5 \u043D3 \u0440\u0430\u0431\u043E\u0442\u0430\u0435\u0442! \u041A4\u043A\u043E\u0439
+    \u043E\u0442\u0432\u0440\u0430\u0442\u0438\u04423\u043B\u044C\u043D\u044B\u0439
+    \u0434\u0435\u043D\u044C!"
+  preferredDuration: 5

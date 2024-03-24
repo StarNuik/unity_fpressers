@@ -12,8 +12,13 @@ public class TextAsset : ScriptableObject
 	[Editor] string english;
 	[Multiline]
 	[Editor] string russian;
+	[Min(1f)]
+	[Editor] float preferredDuration = 1f;
 
-	// this is easier to manage in the Editor
+	public float PreferredDuration => preferredDuration;
+
+	// the code is hacky
+	// but this way it is easier to manage texts in the Editor
 	public string ToString(Lang lang)
 		=> lang switch {
 			Lang.English => english,
