@@ -19,6 +19,7 @@ public class EndingsFlow : MonoBehaviour
 	private AudioMixerService mixer => Locator.AudioMixer;
 	private BgmStartService bgm => Locator.Bgm;
 	private AppState state => Locator.State;
+	private RecordSpin record => Locator.RecordSpin;
 
 	public IEnumerator RouteEnding()
 	{
@@ -39,20 +40,27 @@ public class EndingsFlow : MonoBehaviour
 
 	public IEnumerator CorrectEnding()
 	{
-		yield break;
+		yield return BeforeEnding(correctEndingInteraction);
+		yield return cutscenes.CorrectEnding.PlayAndWait();
 	}
 
 	public IEnumerator ReverseEnding()
 	{
-		yield return cutscenes.BeforeEnding.PlayAndWait();
+		yield return BeforeEnding(reverseEndingInteraction);
+		yield return cutscenes.ReverseEnding.PlayAndWait();
+	}
 
-		reverseEndingInteraction.Enable();
+	private IEnumerator BeforeEnding(InteractionHandle finalInteraction)
+	{
+		yield return cutscenes.BeforeEnding.PlayAndWait();
+		bgm.Stop();
+		record.Destroy();
+
+		finalInteraction.Enable();
 		yield return state.WaitForInteractionAndUpdate(
-			ret => Assert.IsTrue(reverseEndingInteraction == ret),
+			ret => Assert.IsTrue(ret == finalInteraction),
 			() => { mixer.PushBgmFx(1f); mixer.PushBgmDuck(1f); }
 		);
 		
-		bgm.Stop();
-		yield return cutscenes.ReverseEnding.PlayAndWait();
 	}
 }

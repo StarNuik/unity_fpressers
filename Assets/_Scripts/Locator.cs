@@ -19,6 +19,7 @@ public static class Locator
 	public static TextDisplayService TextDisplay;
 	public static InputService Input;
 	public static TranslationService Translation;
+	public static RecordSpin RecordSpin;
 	
 	// sequences
 	public static SplashSequence Splash;
@@ -38,6 +39,7 @@ public static class Locator
 		Input = null;
 		Splash = null;
 		Translation = null;
+		RecordSpin = null; // i wish this was an instanced class
 	}
 	
 }
