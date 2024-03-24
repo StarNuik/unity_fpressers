@@ -1029,9 +1029,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   endings: {fileID: 1994847253}
-  skipSplash: 1
-  skipIntro: 1
-  skipInteractions: 1
+  skipSplash: 0
+  skipIntro: 0
+  skipInteractions: 0
   gameSpeed: 1
 --- !u!1 &82762450
 GameObject:

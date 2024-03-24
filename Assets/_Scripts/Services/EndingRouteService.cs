@@ -27,7 +27,6 @@ public class EndingRouteService : MonoBehaviour
 		if (!RouteOrder.Contains(handle))
 			return;
 		
-		Debug.Log($"[ EndingRouteService.UpdateRoute ] unityId: {this.GetInstanceID()}, currentRoute.Count: {currentRoute.Count}");
 		currentRoute.Add(handle);
 
 		CurrentRoute = RouteType.Neutral;

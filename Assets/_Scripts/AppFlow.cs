@@ -121,9 +121,4 @@ public class AppFlow : CoroutineFsm
 		yield return routine();
 		state.SuppressPlayer = false;
 	}
-
-	private void Update()
-	{
-		Debug.Log($"[ AppFlow ] hasMoreInteractions: {hasMoreInteractions}");
-	}
 }
