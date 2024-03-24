@@ -17,4 +17,9 @@ public class BgmStartService : MonoBehaviour
 		audio.Stop();
 		audio.Play();
 	}
+
+	public void Stop()
+	{
+		audio.Stop();
+	}
 }

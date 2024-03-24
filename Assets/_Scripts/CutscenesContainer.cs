@@ -8,6 +8,7 @@ public class CutscenesContainer : MonoBehaviour
 {
 	public Cutscene Intro;
 	public Cutscene NeutralEnding;
+	public Cutscene BeforeEnding;
 	[Editor] List<InteractionCutscenePair> interactionCutscenesList = new();
 
 	private Dictionary<InteractionHandle, Cutscene> interactionCutscenes;

@@ -3,11 +3,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Route = EndingRouteService.RouteType;
+using Editor = UnityEngine.SerializeField;
+using DG.Tweening;
 
 public class EndingsFlow : MonoBehaviour
 {
+	// a nasty hack
+	[Editor] TextAsset finalInteractionText;
+
 	private EndingRouteService routes => Locator.RouteTracker;
 	private CutscenesContainer cutscenes => Locator.Cutscenes;
+	private AudioMixerService mixer => Locator.AudioMixer;
+	private BgmStartService bgm => Locator.Bgm;
+	private AppState state => Locator.State;
 
 	public IEnumerator RouteEnding()
 	{
@@ -33,6 +41,12 @@ public class EndingsFlow : MonoBehaviour
 
 	public IEnumerator ReverseEnding()
 	{
-		yield break;
+		yield return cutscenes.BeforeEnding.PlayAndWait();
+
+		InteractionHandle next;
+		yield return state.WaitForInteractionAndUpdate(
+			ret => next = ret,
+			() => { mixer.PushBgmFx(1f); mixer.PushBgmDuck(1f); }
+		);
 	}
 }

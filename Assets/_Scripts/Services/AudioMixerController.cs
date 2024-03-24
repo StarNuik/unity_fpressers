@@ -18,16 +18,7 @@ public class AudioMixerController : MonoBehaviour
 	{
 		SetVolume("Volume.Master", 1f - Properties.MasterDuck);
 		SetVolume("Volume.Bgm", 1f - Properties.BgmDuck);
-		ApplyBgmSauce();
-	}
-
-	private void ApplyBgmSauce()
-	{
-		var f = Properties.BgmFx;
-		var decay = Mathf.Lerp(0f, decayTimeMax, f);
-		mixer.SetFloat("DecayTime.BGM", decay);
-
-		SetVolume("Wet.BGM", f);
+		SetVolume("Send.Bgm2Reverb", Properties.BgmFx);
 	}
 
 	private void SetVolume(string name, float f)

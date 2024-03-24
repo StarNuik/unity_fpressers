@@ -10,6 +10,11 @@ public class AudioMixerService : MonoBehaviour
 
 	private AudioMixerController.Props? current;
 
+	private void Awake()
+	{
+		Locator.AudioMixer = this;
+	}
+
 	public void PushBgmDuck(float strength)
 	{
 		var p = current.GetValueOrDefault();

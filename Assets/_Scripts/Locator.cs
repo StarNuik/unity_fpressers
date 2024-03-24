@@ -13,6 +13,7 @@ public static class Locator
 
 	// services
 	public static ShaderSauceService ShaderSauce;
+	public static AudioMixerService AudioMixer;
 	public static BgmStartService Bgm;
 	public static EndingRouteService RouteTracker;
 	public static TextDisplayService TextDisplay;
@@ -30,6 +31,7 @@ public static class Locator
 
 		Cutscenes = null;
 		ShaderSauce = null;
+		AudioMixer = null; // i wish this was an instanced class
 		Bgm = null;
 		RouteTracker = null;
 		TextDisplay = null;

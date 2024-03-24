@@ -46,7 +46,7 @@ public class PlayerInteraction : MonoBehaviour
 
 	private void UpdateHover()
 	{
-		state.IsInteractionHovered = target != null;
+		state.IsInteractionHovered = target != null && target.IsCloseEnough();
 	}
 
 	private void TryInteraction()

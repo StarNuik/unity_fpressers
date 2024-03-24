@@ -21,7 +21,7 @@ public class InteractionHandle : MonoBehaviour
 
 	public bool IsActive
 		=> !state.IsPlayingCutscene
-		&& PlayerF() > epsilon;
+		&& IsCloseEnough();
 
 	public void TryActivate()
 	{
@@ -35,6 +35,9 @@ public class InteractionHandle : MonoBehaviour
 		
 		Locator.State.InvokeInteractionTriggered(this);
 	}
+
+	public bool IsCloseEnough()
+		=> PlayerF() > epsilon;
 
 	public float PlayerF()
 	{
