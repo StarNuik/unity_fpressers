@@ -2,12 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using ChrisNolet;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Serialization;
 using Editor = UnityEngine.SerializeField;
 
 public class InteractionHandle : MonoBehaviour
 {
 	[Editor] List<InteractionOutline> outlines = new();
+	[Editor] bool isEnabledOnStart = true;
+	// not a nasty hack at all \s
+	[Editor] UnityEvent onEnable = new();
 
 	[field: Editor, Min(0.01f)]
 	public float InnerRadius { get; private set; } = 1f;
@@ -16,12 +20,26 @@ public class InteractionHandle : MonoBehaviour
 
 	const float epsilon = 0.0001f;
 
+	private bool isEnabled;
+
 	private Collider collider => GetComponent<Collider>();
 	private AppState state => Locator.State;
 
 	public bool IsActive
-		=> !state.IsPlayingCutscene
+		=> isEnabled
+		&& !state.IsPlayingCutscene
 		&& IsCloseEnough();
+	
+	private void Awake()
+	{
+		isEnabled = isEnabledOnStart;
+	}
+
+	public void Enable()
+	{
+		isEnabled = true;
+		onEnable.Invoke();
+	}
 
 	public void TryActivate()
 	{

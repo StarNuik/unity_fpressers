@@ -5,11 +5,14 @@ using UnityEngine;
 using Route = EndingRouteService.RouteType;
 using Editor = UnityEngine.SerializeField;
 using DG.Tweening;
+using UnityEngine.Assertions;
 
 public class EndingsFlow : MonoBehaviour
 {
 	// a nasty hack
 	[Editor] TextAsset finalInteractionText;
+	[Editor] InteractionHandle reverseEndingInteraction;
+	[Editor] InteractionHandle correctEndingInteraction;
 
 	private EndingRouteService routes => Locator.RouteTracker;
 	private CutscenesContainer cutscenes => Locator.Cutscenes;
@@ -43,10 +46,12 @@ public class EndingsFlow : MonoBehaviour
 	{
 		yield return cutscenes.BeforeEnding.PlayAndWait();
 
-		InteractionHandle next;
+		reverseEndingInteraction.Enable();
 		yield return state.WaitForInteractionAndUpdate(
-			ret => next = ret,
+			ret => Assert.IsTrue(reverseEndingInteraction == ret),
 			() => { mixer.PushBgmFx(1f); mixer.PushBgmDuck(1f); }
 		);
+
+		yield return cutscenes.ReverseEnding.PlayAndWait();
 	}
 }

@@ -9,8 +9,8 @@
 	[] cutscene: включается после порога
 		камерой влетает к сцене
 		[] club ending
-			[] 3sec pause
-			[] stop bgm
+			[x] 3sec pause
+			[x] stop bgm
 			[] turn on door interaction
 			[] player interacts w/ the door
 		[] cutscene

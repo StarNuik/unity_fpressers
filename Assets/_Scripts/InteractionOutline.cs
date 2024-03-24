@@ -26,7 +26,7 @@ public class InteractionOutline : MonoBehaviour
 
 	private void Update()
 	{
-		driver.enabled = handle.IsActive;
 		driver.OutlineWidth = Mathf.Lerp(0f, startWidth, handle.PlayerF());
+		driver.enabled = handle.IsActive;
 	}
 }
