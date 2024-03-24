@@ -1,14 +1,36 @@
 # ITER
 [] club / correct ending
-	[] level design
-		[] projected image
-		[] confetti / trash on the floor
+	[] развернуться и идти в выход в белый свет
+	[] идти к сцене, смотря по сторонам (на коробки)
+	[] projected image
+	[] crunch textures
+[] phone / reverse ending
+	[] ideally: the door opens, the player walks out into the light
+[] playtest
+	[] (1 sec) > "use mouse to look around"
+	[x] "WASD" > "W,A,S,D"
+	[x] "press f to interact" every time
+	[x] "WASD" -> "WASD keys"
+[] отписаться от всех событий из AppState
+[x] phone / reverse ending
+	[x] cutscene / separate scene w/ the sfx?
+		[x] phone ending
+			[x] phone rings
+			[x] interact w/ the phone
+			[x] message plays
+[x] reverse route text
+[x] bed cutscene
+	[x] longer female sample
+[x] room gltf import
+[x] some room objects are not getting milked
+[ч] club / correct ending
+	[x] level design
+		[x] confetti / trash on the floor
 		[x] instruments
 		[x] room layout
-	[] crunch textures
-	[] cutscene: включается после порога
+	[x] cutscene: включается после порога
 		камерой влетает к сцене
-		[] club ending
+		[x] club ending
 			[x] 3sec pause
 			[x] stop bgm
 			[x] turn on door interaction
@@ -21,32 +43,10 @@
 				[x] sfx
 			[x] enter the nightclub
 
-			[] идти к сцене, смотря по сторонам (на коробки)
 			[x] подойти к сцене
 			[x] посмотреть на надпись на проекторе
-			[] развернуться и идти в выход в белый свет
 		[x] sfx
 	[x] move assets to the Art/3d folder
-[x] phone / reverse ending
-	[x] cutscene / separate scene w/ the sfx?
-		[x] phone ending
-			[x] phone rings
-			[x] interact w/ the phone
-			[x] message plays
-			[] ideally: the door opens, the player walks out into the light
-[] отписаться от всех событий из AppState
-[] playtest
-	[] (1 sec) > "use mouse to look around"
-	[x] "WASD" > "W,A,S,D"
-	[x] "press f to interact" every time
-	[x] "WASD" -> "WASD keys"
-[x] reverse route text
-[x] bed cutscene
-	[x] longer female sample
-[x] room gltf import
-[] some room objects are not getting milked
-
-# TWEAKS BACKLOG
 [x] splash
 	[x] language selection (splash)
 	[x] remove logo from 3d poster -> move to splash ui
