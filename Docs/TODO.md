@@ -1,4 +1,26 @@
 # ITER
+[] "bgm interrupted" sfx (vinyl scratch)
+[] return the ashtray filling
+[] club
+	[] preload club
+	[x] ceiling white -> black (mb dark)
+	[] stage cables
+	[] bass guitar scene
+	[] paint stage back lights mesh
+	[DENY] try a cheap (additive) fog
+	[POSSIBLE] laser machines?
+		[] make a passable draft to showcase
+	[] more boxes (closer to the entrance)
+	[x] try to add more of a lightshow
+	[x] add 2 more lights w/ a different color to the lightshow
+[IMPOSSIBLE] rescue reverb
+	[] remove reverb and fix cutscenes that rely on it
+		[] Before.Ending
+		[] Neutral.Ending
+		[] Reverse.Ending
+[x] "change language" color white -> yellow
+[x] door club ambience -> rise
+
 [] club / correct ending
 	[] развернуться и идти в выход в белый свет
 	[] идти к сцене, смотря по сторонам (на коробки)

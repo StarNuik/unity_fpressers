@@ -12,5 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e61713a6f47ff0343b479dcf431340d3, type: 3}
   m_Name: Select Language.Splash
   m_EditorClassIdentifier: 
-  english: "\u0432\u043A\u043B\u044E\u0447\u0438\u0442\u044C \u0440\u0443\u0441\u0441\u043A\u0438\u0439"
-  russian: switch to english
+  english: "\u0432\u043A\u043B\u044E\u0447\u0438\u0442\u044C <color=#F2D321>\u0440\u0443\u0441\u0441\u043A\u0438\u0439</color>\n"
+  russian: 'switch to <color=#F2D321>english</color>
+
+'
+  preferredDuration: 1
