@@ -92,7 +92,7 @@ MonoBehaviour:
     m_Start: 0
     m_ClipIn: 0
     m_Asset: {fileID: -1115788531531547101}
-    m_Duration: 9.5
+    m_Duration: 14.85
     m_TimeScale: 1
     m_ParentTrack: {fileID: 7138665686341894296}
     m_EaseInDuration: 0
@@ -158,7 +158,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: Intro.Subtrack
   - m_Version: 1
-    m_Start: 9.5
+    m_Start: 14.85
     m_ClipIn: 0
     m_Asset: {fileID: -3485454587888038304}
     m_Duration: 45
