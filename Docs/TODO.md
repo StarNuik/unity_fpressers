@@ -1,18 +1,33 @@
 # ITER
+[] (1 sec) > "use mouse to look around"
 [] return the ashtray filling
-[] playtest
-	[] (1 sec) > "use mouse to look around"
+[] add a light switch mesh to the room
 [] отписаться от всех событий из AppState
 [] move all club assets to the Art/3d.Club folder
 [] crunch all club textures (check the 2d folder as well)
+[] club geometry loading
+[] make the before.ending shorter
+[] door outline (is behind the door)
+[] promo quads' transparent parts are shown by the Secret Sauce shader
+[] raise the +3db ambient door club music
+[] end of correct.ending - add a black to white fade (0.5sec)
+[] reverse.ending: add a cut phone ring to the start 
+[] use headphones for the best experience
+[] show game title in every ending
+	[] a sub title for every ending other than neutral
+[] splash'es "DisIn" title is shared between the splash and the ending, and is placed ABOVE the fade
+[] graphics cringe
+	[] light / shadow leaks (shadow maps)
+[] poster 0.01 alpha lag spike
+[] bgm didn't start (hard to track down)
 
 # TBD
 
 ## polish iter
-[] use headphones for the best experience
 [] performance
-[] graphics cringe
-	[] light / shadow leaks (shadow maps)
+[] memory consumption
+[] build size
+[] move gitignore -> art/3d
 
 ## mobile iter
 [] text size
