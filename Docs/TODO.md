@@ -79,6 +79,8 @@
 [x] remove all height maps
 [x] intro cutscene
 	[x] убрать hold в начале
+[x] the poster is too slimy (skyrim-y)
+[x] gay lame unknown bug, that lowers some white balance until the first interaction
 
 # TBD
 
@@ -98,6 +100,10 @@
 # INFO
 
 ## ideas
+[] have the logo pop up during the endings
+	[] neutral ending - disappearing in
+	[] correct ending - disappearing in (track name)
+	[] reverse ending - disappearing in (broken telephone)
 [] clutter disappearance
 	[] make a movie w/ an empty-ish room
 		[] mb add disappearance in the timeline
