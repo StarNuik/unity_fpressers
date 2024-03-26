@@ -671,6 +671,11 @@ PrefabInstance:
       propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[3].tangentMode
       value: 34
       objectReference: {fileID: 0}
+    - target: {fileID: 2341997095294014195, guid: 534250765bdefad4fa130fa0ad774167,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2472120640232856969, guid: 534250765bdefad4fa130fa0ad774167,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -761,11 +766,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3049267742459694929, guid: 534250765bdefad4fa130fa0ad774167,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3979933156401496741, guid: 534250765bdefad4fa130fa0ad774167,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 9fbdedbc04b662e4287e20c066f5a2fc, type: 2}
+    - target: {fileID: 4758899575191414074, guid: 534250765bdefad4fa130fa0ad774167,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5380236689091844271, guid: 534250765bdefad4fa130fa0ad774167,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6507386834064019358, guid: 534250765bdefad4fa130fa0ad774167,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7684401994537041652, guid: 534250765bdefad4fa130fa0ad774167,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -785,6 +810,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Club
+      objectReference: {fileID: 0}
+    - target: {fileID: 8313935888549083145, guid: 534250765bdefad4fa130fa0ad774167,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

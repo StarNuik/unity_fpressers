@@ -6,11 +6,11 @@
 	[x] ceiling white -> black (mb dark)
 	[] stage cables
 	[] bass guitar scene
-	[] paint stage back lights mesh
 	[DENY] try a cheap (additive) fog
 	[POSSIBLE] laser machines?
 		[] make a passable draft to showcase
 	[] more boxes (closer to the entrance)
+	[x] paint stage back lights mesh
 	[x] try to add more of a lightshow
 	[x] add 2 more lights w/ a different color to the lightshow
 [IMPOSSIBLE] rescue reverb
