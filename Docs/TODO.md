@@ -1,8 +1,8 @@
 # ITER
-[] "bgm interrupted" sfx (vinyl scratch)
+[x] "bgm interrupted" sfx (vinyl scratch)
 [] return the ashtray filling
 [] club
-	[] preload club
+	[RND] preload club
 	[x] ceiling white -> black (mb dark)
 	[x] stage cables
 	[x] bass guitar scene
@@ -15,8 +15,8 @@
 	[x] add 2 more lights w/ a different color to the lightshow
 [IMPOSSIBLE] rescue reverb
 	[] remove reverb and fix cutscenes that rely on it
-		[] Before.Ending
-		[] Neutral.Ending
+		[x] Before.Ending
+		[x] Neutral.Ending
 		[] Reverse.Ending
 [x] "change language" color white -> yellow
 [x] door club ambience -> rise
