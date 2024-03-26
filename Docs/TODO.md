@@ -1,92 +1,15 @@
 # ITER
-[x] "bgm interrupted" sfx (vinyl scratch)
 [] return the ashtray filling
-[] club
-	[RND] preload club
-	[x] ceiling white -> black (mb dark)
-	[x] stage cables
-	[x] bass guitar scene
-	[DENY] try a cheap (additive) fog
-	[POSSIBLE] laser machines?
-		[] make a passable draft to showcase
-	[x] more boxes (closer to the entrance)
-	[x] paint stage back lights mesh
-	[x] try to add more of a lightshow
-	[x] add 2 more lights w/ a different color to the lightshow
-[IMPOSSIBLE] rescue reverb
-	[] remove reverb and fix cutscenes that rely on it
-		[x] Before.Ending
-		[x] Neutral.Ending
-		[] Reverse.Ending
-[x] "change language" color white -> yellow
-[x] door club ambience -> rise
-
-[] club / correct ending
-	[] развернуться и идти в выход в белый свет
-	[] идти к сцене, смотря по сторонам (на коробки)
-	[] projected image
-	[] crunch textures
-[] phone / reverse ending
-	[] ideally: the door opens, the player walks out into the light
 [] playtest
 	[] (1 sec) > "use mouse to look around"
-	[x] "WASD" > "W,A,S,D"
-	[x] "press f to interact" every time
-	[x] "WASD" -> "WASD keys"
 [] отписаться от всех событий из AppState
-[x] phone / reverse ending
-	[x] cutscene / separate scene w/ the sfx?
-		[x] phone ending
-			[x] phone rings
-			[x] interact w/ the phone
-			[x] message plays
-[x] reverse route text
-[x] bed cutscene
-	[x] longer female sample
-[x] room gltf import
-[x] some room objects are not getting milked
-[ч] club / correct ending
-	[x] level design
-		[x] confetti / trash on the floor
-		[x] instruments
-		[x] room layout
-	[x] cutscene: включается после порога
-		камерой влетает к сцене
-		[x] club ending
-			[x] 3sec pause
-			[x] stop bgm
-			[x] turn on door interaction
-			[x] player interacts w/ the door
-		[x] cutscene
-			[x] turn around
-			[x] turn off the lights
-				[x] sfx
-			[x] open the door
-				[x] sfx
-			[x] enter the nightclub
-
-			[x] подойти к сцене
-			[x] посмотреть на надпись на проекторе
-		[x] sfx
-	[x] move assets to the Art/3d folder
-[x] splash
-	[x] language selection (splash)
-	[x] remove logo from 3d poster -> move to splash ui
-	[x] start hint -> 0.5 sec delay
-[x] pc cutscene
-	[x] pc di logo - +1-2 secs
-	[x] overall add a +1 sec to every pc screen?
-[x] remove all height maps
-[x] intro cutscene
-	[x] убрать hold в начале
-[x] the poster is too slimy (skyrim-y)
-[x] gay lame unknown bug, that lowers some white balance until the first interaction
+[] move all club assets to the Art/3d.Club folder
+[] crunch all club textures (check the 2d folder as well)
 
 # TBD
 
 ## polish iter
-[] move all club assets to the Art/3d.Club folder
-[] crunch all club textures (check the 2d folder as well)
+[] use headphones for the best experience
 [] performance
 [] graphics cringe
 	[] light / shadow leaks (shadow maps)
@@ -100,10 +23,18 @@
 # INFO
 
 ## ideas
+[] club ending - music playing from the phone
 [] have the logo pop up during the endings
 	[] neutral ending - disappearing in
 	[] correct ending - disappearing in (track name)
 	[] reverse ending - disappearing in (broken telephone)
+[] club / correct ending
+	[] развернуться и идти в выход в белый свет
+	[] идти к сцене, смотря по сторонам (на коробки)
+	[] projected image
+	[] crunch textures
+[] phone / reverse ending
+	[] ideally: the door opens, the player walks out into the light
 [] clutter disappearance
 	[] make a movie w/ an empty-ish room
 		[] mb add disappearance in the timeline
@@ -203,3 +134,75 @@
 [PART] graphics cringe
 	[x] door wall scale
 	[x] bed / plinthus fog interaction
+
+## v4
+[x] playtest
+	[x] "WASD" > "W,A,S,D"
+	[x] "press f to interact" every time
+	[x] "WASD" -> "WASD keys"
+[TMP] "bgm interrupted" sfx (vinyl scratch)
+[x] club
+	[x] preload club
+	[x] ceiling white -> black (mb dark)
+	[x] stage cables
+	[x] bass guitar scene
+	[DENY] try a cheap (additive) fog
+	[POSSIBLE] laser machines?
+		[] make a passable draft to showcase
+	[x] more boxes (closer to the entrance)
+	[x] paint stage back lights mesh
+	[x] try to add more of a lightshow
+	[x] add 2 more lights w/ a different color to the lightshow
+[IMPOSSIBLE] rescue reverb
+	[x] remove reverb and fix cutscenes that rely on it
+		[x] Before.Ending
+		[x] Neutral.Ending
+[x] "change language" color white -> yellow
+[x] door club ambience -> rise
+[x] phone / reverse ending
+	[x] cutscene / separate scene w/ the sfx?
+		[x] phone ending
+			[x] phone rings
+			[x] interact w/ the phone
+			[x] message plays
+[x] reverse route text
+[x] bed cutscene
+	[x] longer female sample
+[x] room gltf import
+[x] some room objects are not getting milked
+[ч] club / correct ending
+	[x] level design
+		[x] confetti / trash on the floor
+		[x] instruments
+		[x] room layout
+	[x] cutscene: включается после порога
+		камерой влетает к сцене
+		[x] club ending
+			[x] 3sec pause
+			[x] stop bgm
+			[x] turn on door interaction
+			[x] player interacts w/ the door
+		[x] cutscene
+			[x] turn around
+			[x] turn off the lights
+				[x] sfx
+			[x] open the door
+				[x] sfx
+			[x] enter the nightclub
+
+			[x] подойти к сцене
+			[x] посмотреть на надпись на проекторе
+		[x] sfx
+	[x] move assets to the Art/3d folder
+[x] splash
+	[x] language selection (splash)
+	[x] remove logo from 3d poster -> move to splash ui
+	[x] start hint -> 0.5 sec delay
+[x] pc cutscene
+	[x] pc di logo - +1-2 secs
+	[x] overall add a +1 sec to every pc screen?
+[x] remove all height maps
+[x] intro cutscene
+	[x] убрать hold в начале
+[x] the poster is too slimy (skyrim-y)
+[x] gay lame unknown bug, that lowers some white balance until the first interaction
