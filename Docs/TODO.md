@@ -4,12 +4,12 @@
 [] club
 	[] preload club
 	[x] ceiling white -> black (mb dark)
-	[] stage cables
-	[] bass guitar scene
+	[x] stage cables
+	[x] bass guitar scene
 	[DENY] try a cheap (additive) fog
 	[POSSIBLE] laser machines?
 		[] make a passable draft to showcase
-	[] more boxes (closer to the entrance)
+	[x] more boxes (closer to the entrance)
 	[x] paint stage back lights mesh
 	[x] try to add more of a lightshow
 	[x] add 2 more lights w/ a different color to the lightshow
@@ -83,6 +83,8 @@
 # TBD
 
 ## polish iter
+[] move all club assets to the Art/3d.Club folder
+[] crunch all club textures (check the 2d folder as well)
 [] performance
 [] graphics cringe
 	[] light / shadow leaks (shadow maps)
