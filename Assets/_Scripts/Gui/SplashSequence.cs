@@ -5,6 +5,10 @@ using UnityEngine.UI;
 using Editor = UnityEngine.SerializeField;
 using DG.Tweening;
 using Cinemachine;
+
+// this file is getting more and more hacky
+// pull the `.WaitForInteraction` over here
+// to squash 2 routines into 1 ?
 public class SplashSequence : MonoBehaviour
 {
 	[Editor] Image white;
@@ -13,7 +17,7 @@ public class SplashSequence : MonoBehaviour
 	[Min(0.1f)]
 	[Editor] float fadeinDuration = 1f;
 	[Min(0f)]
-	[Editor] float textDelay;
+	[Editor] float textDelay = 1f;
 	[Editor] TextAsset startText;
 
 	private int lastPriority;
@@ -22,6 +26,8 @@ public class SplashSequence : MonoBehaviour
 
 	private TextDisplayService textDisplay => Locator.TextDisplay;
 	private TranslationService translation => Locator.Translation;
+	private TitleAlphaService titleAlpha => Locator.TitleAlpha;
+	private ShaderSauceService shader => Locator.ShaderSauce;
 
 	public IEnumerator FadeIn()
 	{
@@ -29,10 +35,16 @@ public class SplashSequence : MonoBehaviour
 
 		var t = white
 			.DOFade(0f, fadeinDuration)
-			.SetEase(Ease.OutQuad);
+			.SetEase(Consts.B2WTweenEase)
+			.OnUpdate(() => titleAlpha.PushFromTimeline(1f));
 		yield return t.WaitForCompletion();
 
-		yield return new WaitForSeconds(textDelay);
+		var until = Time.time + textDelay;
+		while (Time.time <= until)
+		{
+			yield return null;
+			titleAlpha.PushFromTimeline(1f);
+		}
 
 		showText = true;
 	}
@@ -42,10 +54,19 @@ public class SplashSequence : MonoBehaviour
 		showText = false;
 		textDisplay.SplashChannel = null;
 
-		var t = guiGroup
-			.DOFade(0f, textDisplay.FadeDuration)
-			.SetEase(Ease.OutQuad);
-		yield return t.WaitForCompletion();
+		// a hack
+		var duration = textDisplay.FadeDuration;
+
+		var seq = DOTween.Sequence();
+		seq.Join(guiGroup
+			.DOFade(0f, duration)
+			.SetEase(Consts.W2BTweenEase)
+		);
+		seq.Join(DOVirtual
+			.Float(1f, 0f, duration, f => titleAlpha.PushFromTimeline(f))
+		);
+
+		yield return seq.WaitForCompletion();
 
 		vcam.Priority = lastPriority;
 		isEnabled = false;
@@ -55,7 +76,7 @@ public class SplashSequence : MonoBehaviour
 	{
 		Locator.Splash = this;
 		
-		// uncomment this if you see a lame frame after the game loads
+		// uncomment this if you see a lame frame when the game loads
 		// Enable();
 	}
 
@@ -63,14 +84,16 @@ public class SplashSequence : MonoBehaviour
 	{
 		if (isEnabled)
 		{
-			Locator.ShaderSauce.PushSplash(1f, 1f);
+			shader.PushSplash(1f, 1f);
 		}
 
 		// this code is like junk food:
 		// cheap and unhealthy
 		// in the long run
+		// reason: translations
 		if (showText)
 		{
+			titleAlpha.PushFromTimeline(1f);
 			textDisplay.SplashChannel = translation.ToString(startText);
 		}
 	}
@@ -84,6 +107,7 @@ public class SplashSequence : MonoBehaviour
 
 		white.SetAlpha(1f);
 		guiGroup.alpha = 1f;
+		titleAlpha.PushFromTimeline(1f);
 		
 		// sort of a hack
 		lastPriority = vcam.Priority;

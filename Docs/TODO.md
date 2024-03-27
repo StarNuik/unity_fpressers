@@ -5,20 +5,19 @@
 [] make the before.ending shorter
 [x] door outline (is behind the door)
 [x] promo quads' transparent parts are shown by the Secret Sauce shader
-	[] fix poster and vinyl record not being milked
-	[] fix all cutscenes involving the shader sauce
+	[x] fix poster and vinyl record not being milked
+	[x] fix all cutscenes involving the shader sauce
 [x] raise the +3db ambient door club music
 [x] end of correct.ending - add a black to white fade (0.5sec)
 [x] reverse.ending
 	[x] loop the phone ring
 		[x] turn it off when the cutscene starts
 	[x] add a cut phone ring to the start 
-[] use headphones for the best experience
-[] show game title in every ending
-	[] a sub title for every ending other than neutral
-[] splash'es "DisIn" title is shared between the splash and the ending, and is placed ABOVE the fade
+[x] show game title in every ending
+[x] splash'es "DisIn" title is shared between the splash and the ending, and is placed ABOVE the fade
 [] graphics cringe
 	[] light / shadow leaks (shadow maps)
+[] use headphones for the best experience
 [] poster 0.01 alpha lag spike
 [] bgm didn't start (hard to track down)
 [] club geometry loading (profiling required)
