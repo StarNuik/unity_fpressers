@@ -14,6 +14,7 @@ public class TextDisplayService : MonoBehaviour
 	public string MonologueChannel { get; set; }
 	public string SplashChannel { get; set; }
 	public string InteractionHintChannel { get; set; }
+	public string PointerHintChannel { get; set; }
 	public string MovementHintChannel { get; set; }
 	const string NullChannel = "null";
 
@@ -69,6 +70,7 @@ public class TextDisplayService : MonoBehaviour
 		if (MonologueChannel != null) return MonologueChannel;
 		if (SplashChannel != null) return SplashChannel;
 		if (InteractionHintChannel != null) return InteractionHintChannel;
+		if (PointerHintChannel != null) return PointerHintChannel;
 		if (MovementHintChannel != null) return MovementHintChannel;
 		return NullChannel;
 	}

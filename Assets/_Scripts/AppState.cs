@@ -9,8 +9,11 @@ public class AppState
 	public Cutscene PendingInteraction = null;
 
 	public Vector3 PlayerPosition;
-	public float DistanceTraveled;
 	public bool IsInteractionHovered;
+
+	// hints
+	public float CameraPixelsTraveled;
+	public float DistanceTraveled;
 
 	// no signal bus no life
 	public Action InteractPressed;

@@ -1,11 +1,16 @@
 Press "F" to start
 Нажми "F" чтобы начать
 
+Move the mouse to look around
+Двигай мышкe чтобы осмотреться
+
 Use "WASD" to move
 Используй "WASD" чтобы ходить
 
 Press "F" to interact
 Нажми "F" чтобы взаимодействовать
+
+
 * После сна на кровати
 	COR: Can't believe I slept this well! Strange, the poster is still hanging...
 	COR: Не верю, что я выспался! Этот постер до сих пор висит...

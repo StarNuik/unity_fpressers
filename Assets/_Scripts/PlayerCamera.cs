@@ -13,6 +13,7 @@ public class PlayerCamera : MonoBehaviour
 	private float targetX;
 	private float targetY;
 	
+	private AppState state => Locator.State;
 	private InputService input => Locator.Input;
 
 	private bool isSuppressed => Locator.State.SuppressPlayer;
@@ -23,6 +24,7 @@ public class PlayerCamera : MonoBehaviour
 			return;
 		
 		var delta = input.Camera;
+		state.CameraPixelsTraveled += delta.magnitude;
 
 		// camera Y
 		targetY = Mathf.Repeat(targetY + delta.x * mouseSensitivity, 360f);

@@ -1,5 +1,5 @@
 # ITER
-[] (1 sec) > "use mouse to look around"
+[x] (1 sec) > "use mouse to look around"
 [] return the ashtray filling
 [] add a light switch mesh to the room
 [] отписаться от всех событий из AppState
