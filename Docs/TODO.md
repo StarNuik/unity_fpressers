@@ -1,13 +1,9 @@
 # ITER
 [x] (1 sec) > "use mouse to look around"
-[] return the ashtray filling
-[] add a light switch mesh to the room
-[] отписаться от всех событий из AppState
-[] move all club assets to the Art/3d.Club folder
-[] crunch all club textures (check the 2d folder as well)
-[] club geometry loading
+[x] return the ashtray filling
+[x] add a light switch mesh to the room
 [] make the before.ending shorter
-[] door outline (is behind the door)
+[x] door outline (is behind the door)
 [] promo quads' transparent parts are shown by the Secret Sauce shader
 [] raise the +3db ambient door club music
 [] end of correct.ending - add a black to white fade (0.5sec)
@@ -20,6 +16,10 @@
 	[] light / shadow leaks (shadow maps)
 [] poster 0.01 alpha lag spike
 [] bgm didn't start (hard to track down)
+[] club geometry loading (profiling required)
+[] crunch all club textures (check the 2d folder as well)
+[] move all club assets to the Art/3d.Club folder
+[] отписаться от всех событий из AppState
 
 # TBD
 
