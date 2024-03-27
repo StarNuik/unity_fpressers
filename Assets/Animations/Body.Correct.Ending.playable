@@ -270,6 +270,98 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fde0d25a170598d46a0b9dc16b4527a5, type: 3}
   m_Name: ActivationPlayableAsset(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   m_EditorClassIdentifier: 
+--- !u!114 &-7305188071670290521
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b182c5acf01f91242ad48c8cfb30d821, type: 3}
+  m_Name: Image Alpha Track (1)
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_AnimClip: {fileID: 0}
+  m_Locked: 0
+  m_Muted: 0
+  m_CustomPlayableFullTypename: 
+  m_Curves: {fileID: 0}
+  m_Parent: {fileID: 11400000}
+  m_Children: []
+  m_Clips:
+  - m_Version: 1
+    m_Start: 45
+    m_ClipIn: 0
+    m_Asset: {fileID: -1391760248292820336}
+    m_Duration: 1
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: -7305188071670290521}
+    m_EaseInDuration: 1
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 2
+        outSlope: 2
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 1
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: ImageAlphaAsset
+  m_Markers:
+    m_Objects: []
 --- !u!114 &-7287603422692735638
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1528,7 +1620,25 @@ MonoBehaviour:
       m_RotationOrder: 4
     m_MixOutCurve:
       serializedVersion: 2
-      m_Curve: []
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -1684,7 +1794,7 @@ MonoBehaviour:
     m_Start: 30
     m_ClipIn: 0
     m_Asset: {fileID: 8957360649319537883}
-    m_Duration: 15
+    m_Duration: 16
     m_TimeScale: 1
     m_ParentTrack: {fileID: -4519263852079974529}
     m_EaseInDuration: 0
@@ -4129,7 +4239,7 @@ MonoBehaviour:
     m_Start: 0
     m_ClipIn: 0
     m_Asset: {fileID: -500833102456842550}
-    m_Duration: 45
+    m_Duration: 46
     m_TimeScale: 1
     m_ParentTrack: {fileID: -1559363429416633806}
     m_EaseInDuration: 0
@@ -5280,6 +5390,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fde0d25a170598d46a0b9dc16b4527a5, type: 3}
   m_Name: ActivationPlayableAsset(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   m_EditorClassIdentifier: 
+--- !u!114 &-1391760248292820336
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c53b6eeb4b1ee4f43b25057e253c1951, type: 3}
+  m_Name: ImageAlphaAsset
+  m_EditorClassIdentifier: 
+  template:
+    Intensity: 1
 --- !u!114 &-1041036585577560999
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5667,6 +5791,7 @@ MonoBehaviour:
   - {fileID: -6643757156268531178}
   - {fileID: 8935489539617677210}
   - {fileID: 2468512495124592307}
+  - {fileID: -7305188071670290521}
   m_FixedDuration: 0
   m_EditorSettings:
     m_Framerate: 60
@@ -8212,7 +8337,7 @@ MonoBehaviour:
     m_Start: 38
     m_ClipIn: 0
     m_Asset: {fileID: -5917504009982166596}
-    m_Duration: 7
+    m_Duration: 8
     m_TimeScale: 1
     m_ParentTrack: {fileID: 2468512495124592307}
     m_EaseInDuration: 7

@@ -4,10 +4,15 @@
 [x] add a light switch mesh to the room
 [] make the before.ending shorter
 [x] door outline (is behind the door)
-[] promo quads' transparent parts are shown by the Secret Sauce shader
-[] raise the +3db ambient door club music
-[] end of correct.ending - add a black to white fade (0.5sec)
-[] reverse.ending: add a cut phone ring to the start 
+[x] promo quads' transparent parts are shown by the Secret Sauce shader
+	[] fix poster and vinyl record not being milked
+	[] fix all cutscenes involving the shader sauce
+[x] raise the +3db ambient door club music
+[x] end of correct.ending - add a black to white fade (0.5sec)
+[x] reverse.ending
+	[x] loop the phone ring
+		[x] turn it off when the cutscene starts
+	[x] add a cut phone ring to the start 
 [] use headphones for the best experience
 [] show game title in every ending
 	[] a sub title for every ending other than neutral
