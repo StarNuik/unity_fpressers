@@ -27,7 +27,7 @@ MonoBehaviour:
   m_Name: ShaderSauceStrengthAsset
   m_EditorClassIdentifier: 
   template:
-    Intensity: 0.2
+    Intensity: 1
 --- !u!114 &-3968589164784901006
 MonoBehaviour:
   m_ObjectHideFlags: 1
