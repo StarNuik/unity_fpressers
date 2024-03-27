@@ -30,7 +30,7 @@ ScriptedImporter:
   _addAnimatorComponent: 0
   _animationLoopTime: 1
   _animationLoopPose: 0
-  _importMaterials: 1
+  _importMaterials: 0
   _enableGpuInstancing: 0
   _useSceneNameIdentifier: 1
   _textureCompression: -50
@@ -38,10 +38,10 @@ ScriptedImporter:
   materials:
   - {fileID: -8155217827265608672, guid: c0bcd957e41b2a84dbdb3cf9c049a00f, type: 3}
   textures:
-  - {fileID: 2800000, guid: 707edb42e21db3a448199f1ec2e67787, type: 3}
-  - {fileID: 2800000, guid: 4a602556cf6b2e74b9ad6c9ce4cacfd4, type: 3}
-  - {fileID: 2800000, guid: f2c2ad5c06b6bf64ab5bfcb68b486718, type: 3}
-  - {fileID: 2800000, guid: c5334fe61f2a48647be44c4ec75d885b, type: 3}
+  - {fileID: -844417810680718993, guid: c0bcd957e41b2a84dbdb3cf9c049a00f, type: 3}
+  - {fileID: 4256441929348988141, guid: c0bcd957e41b2a84dbdb3cf9c049a00f, type: 3}
+  - {fileID: 5023254252079617414, guid: c0bcd957e41b2a84dbdb3cf9c049a00f, type: 3}
+  - {fileID: -2337682251767398551, guid: c0bcd957e41b2a84dbdb3cf9c049a00f, type: 3}
   hasSceneData: 1
   hasAnimationData: 0
   hasMaterialData: 1
@@ -49,17 +49,17 @@ ScriptedImporter:
   animations: []
   _extensions: []
   _textures:
-  - texture: {fileID: 2800000, guid: 707edb42e21db3a448199f1ec2e67787, type: 3}
+  - texture: {instanceID: 0}
     shouldBeLinear: 0
     shouldBeNormalMap: 0
-  - texture: {fileID: 2800000, guid: 4a602556cf6b2e74b9ad6c9ce4cacfd4, type: 3}
-    shouldBeLinear: 1
-    shouldBeNormalMap: 0
-  - texture: {fileID: 2800000, guid: f2c2ad5c06b6bf64ab5bfcb68b486718, type: 3}
+  - texture: {instanceID: 0}
     shouldBeLinear: 0
     shouldBeNormalMap: 0
-  - texture: {fileID: 2800000, guid: c5334fe61f2a48647be44c4ec75d885b, type: 3}
-    shouldBeLinear: 1
-    shouldBeNormalMap: 1
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
   _mainAssetIdentifier: scenes/Sketchfab_Scene
   _importPlugins: []

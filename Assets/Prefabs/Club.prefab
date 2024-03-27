@@ -9255,7 +9255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 420d01ccf8bb6c140a63ec3b085cbff1, type: 2}
+  m_Material: {fileID: 2100000, guid: aeeceb19804334548b0edc35cb72187b, type: 2}
   m_DrawDistance: 50
   m_FadeScale: 0.9
   m_StartAngleFade: 180
@@ -9266,7 +9266,7 @@ MonoBehaviour:
   m_ScaleMode: 0
   m_Offset: {x: 0, y: 0, z: 2.77}
   m_Size: {x: 2.88, y: 1.62, z: 5.54}
-  m_FadeFactor: 0.72
+  m_FadeFactor: 0.824
 --- !u!1 &1650151407018849176
 GameObject:
   m_ObjectHideFlags: 0
@@ -21571,7 +21571,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1741872708679528903}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: -1.799, y: 90.01, z: 0.033}
 --- !u!108 &1830588406216617417
 Light:
   m_ObjectHideFlags: 0
@@ -54576,6 +54576,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: scene
       objectReference: {fileID: 0}
+    - target: {fileID: -3052652710979803646, guid: c0bcd957e41b2a84dbdb3cf9c049a00f,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9b7db37d88026994397323175e2a6505, type: 2}
     - target: {fileID: 2774220344278030320, guid: c0bcd957e41b2a84dbdb3cf9c049a00f,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -54715,6 +54720,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: scene (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: -2748083031698441711, guid: 913e55c28ebe229479437a9bc0902a36,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.06
+      objectReference: {fileID: 0}
+    - target: {fileID: -2748083031698441711, guid: 913e55c28ebe229479437a9bc0902a36,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.28
       objectReference: {fileID: 0}
     - target: {fileID: -710044475950496254, guid: 913e55c28ebe229479437a9bc0902a36,
         type: 3}
@@ -56447,6 +56462,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: scene
       objectReference: {fileID: 0}
+    - target: {fileID: -3052652710979803646, guid: c0bcd957e41b2a84dbdb3cf9c049a00f,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9b7db37d88026994397323175e2a6505, type: 2}
     - target: {fileID: 2774220344278030320, guid: c0bcd957e41b2a84dbdb3cf9c049a00f,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -56586,6 +56606,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: scene (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: -2748083031698441711, guid: 913e55c28ebe229479437a9bc0902a36,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: -2748083031698441711, guid: 913e55c28ebe229479437a9bc0902a36,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.28
       objectReference: {fileID: 0}
     - target: {fileID: -710044475950496254, guid: 913e55c28ebe229479437a9bc0902a36,
         type: 3}
