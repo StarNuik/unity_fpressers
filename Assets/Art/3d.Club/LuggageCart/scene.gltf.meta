@@ -1,0 +1,115 @@
+fileFormatVersion: 2
+guid: f142f6fe36076684ab0292e111619a02
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Antique_Luggage_Cart_Planks_Wood_01
+    second: {fileID: 2100000, guid: 4672d5c63a2f40f41bf561a06791118d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Antique_Luggage_Hand_Cart_Type_A_Painted_Green
+    second: {fileID: 2100000, guid: 4672d5c63a2f40f41bf561a06791118d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Antique_Luggage_Hand_Cart_Type_A_Painted_Red
+    second: {fileID: 2100000, guid: 4672d5c63a2f40f41bf561a06791118d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Antique_Luggage_Hand_Cart_Type_A_Wood_01
+    second: {fileID: 2100000, guid: 4672d5c63a2f40f41bf561a06791118d, type: 2}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 804e1ce4c496647cfa3f1a1134187c71, type: 3}
+  _removeEmptyRootObjects: 1
+  _scaleFactor: 1
+  _maximumLod: 300
+  _readWriteEnabled: 1
+  _generateColliders: 0
+  _swapUvs: 0
+  _generateLightmapUVs: 0
+  _importBlendShapeNames: 1
+  _blendShapeFrameWeight:
+    _option: 0
+    _multiplier: 1
+  _importNormals: 0
+  _importTangents: 0
+  _importAnimations: 2
+  _addAnimatorComponent: 0
+  _animationLoopTime: 1
+  _animationLoopPose: 0
+  _importMaterials: 0
+  _enableGpuInstancing: 0
+  _useSceneNameIdentifier: 1
+  _textureCompression: -50
+  optimizeGameObjects: 0
+  materials:
+  - {fileID: -3081699791332572260, guid: f142f6fe36076684ab0292e111619a02, type: 3}
+  - {fileID: 3242970177398662620, guid: f142f6fe36076684ab0292e111619a02, type: 3}
+  - {fileID: -6279550340450624594, guid: f142f6fe36076684ab0292e111619a02, type: 3}
+  - {fileID: 5172547933613340296, guid: f142f6fe36076684ab0292e111619a02, type: 3}
+  textures:
+  - {fileID: -1329234718440508323, guid: f142f6fe36076684ab0292e111619a02, type: 3}
+  - {fileID: 4464414244866978800, guid: f142f6fe36076684ab0292e111619a02, type: 3}
+  - {fileID: -5354315265011933622, guid: f142f6fe36076684ab0292e111619a02, type: 3}
+  - {fileID: -7656297781186071580, guid: f142f6fe36076684ab0292e111619a02, type: 3}
+  - {fileID: -1410605163934999283, guid: f142f6fe36076684ab0292e111619a02, type: 3}
+  - {fileID: 7358218703862587314, guid: f142f6fe36076684ab0292e111619a02, type: 3}
+  - {fileID: 8674727331897805593, guid: f142f6fe36076684ab0292e111619a02, type: 3}
+  - {fileID: -6272297039588875098, guid: f142f6fe36076684ab0292e111619a02, type: 3}
+  - {fileID: -6153331498663517093, guid: f142f6fe36076684ab0292e111619a02, type: 3}
+  - {fileID: -3878906494156485766, guid: f142f6fe36076684ab0292e111619a02, type: 3}
+  - {fileID: -7483131654442404148, guid: f142f6fe36076684ab0292e111619a02, type: 3}
+  - {fileID: -3275107085545269723, guid: f142f6fe36076684ab0292e111619a02, type: 3}
+  hasSceneData: 1
+  hasAnimationData: 0
+  hasMaterialData: 1
+  hasTextureData: 1
+  animations: []
+  _extensions: []
+  _textures:
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {instanceID: 0}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  _mainAssetIdentifier: scenes/Sketchfab_Scene
+  _importPlugins: []
