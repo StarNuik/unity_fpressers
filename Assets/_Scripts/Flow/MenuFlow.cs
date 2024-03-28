@@ -23,11 +23,9 @@ public class MenuFlow : MonoBehaviour
 
 	private bool isEnabled;
 	private bool showText;
-	private float? titleAlpha = 1f;
 
 	private TextDisplayService textDisplay => Locator.TextDisplay;
 	private TranslationService translation => Locator.Translation;
-	private TitleAlphaService titleAlphaService => Locator.TitleAlpha;
 	private ShaderSauceService shader => Locator.ShaderSauce;
 	private InputService input => Locator.Input;
 
@@ -39,7 +37,6 @@ public class MenuFlow : MonoBehaviour
 
 		guiGroup.alpha = 1f;
 		white.SetAlpha(1f);
-		titleAlpha = 1f;
 		// titleAlpha.PushFromTimeline(1f);
 		
 		// sort of a hack
@@ -49,7 +46,7 @@ public class MenuFlow : MonoBehaviour
 		// FADE IN
 		var tIn = white
 			.DOFade(0f, fadeinDuration)
-			.SetEase(Consts.B2WTweenEase);
+			.SetEase(Consts.W2BTweenEase);
 		yield return tIn.WaitForCompletion();
 
 		yield return new WaitForSeconds(textDelay);
@@ -62,20 +59,14 @@ public class MenuFlow : MonoBehaviour
 		showText = false;
 
 		var outDuration = textDisplay.FadeDuration;
-		var seqOut = DOTween.Sequence();
-		seqOut.Join(guiGroup
+		var tOut = guiGroup
 			.DOFade(0f, outDuration)
-			.SetEase(Consts.W2BTweenEase)
-		);
-		seqOut.Join(DOVirtual
-			.Float(1f, 0f, outDuration, f => titleAlpha = f)
-		);
+			.SetEase(Consts.W2BTweenEase);
 
-		yield return seqOut.WaitForCompletion();
+		yield return tOut.WaitForCompletion();
 
 		vcam.Priority = lastPriority;
 		isEnabled = false;
-		titleAlpha = null;
 	}
 
 	private void Update()
@@ -83,13 +74,6 @@ public class MenuFlow : MonoBehaviour
 		if (isEnabled)
 		{
 			shader.PushSplash(1f, 1f);
-		}
-
-		// this logic should be inside of the TitleAlphaService
-		// but I don't have THAT much time for refactoring
-		if (titleAlpha.HasValue)
-		{
-			titleAlphaService.PushFromTimeline(titleAlpha.Value);
 		}
 
 		// this code is like junk food:

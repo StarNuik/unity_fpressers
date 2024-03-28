@@ -1,6 +1,5 @@
 # ITER
 [] bgm didn't start (hard to track down)
-[] use headphones for the best experience
 [] graphics cringe
 	[] light / shadow leaks (shadow maps)
 [] profiling
@@ -8,6 +7,8 @@
 	[] ssao
 [] poster 0.01 alpha lag spike
 [] отписаться от всех событий из AppState
+[] revert the title in every ending
+[x] use headphones for the best experience
 [x] make the before.ending shorter
 [x] (1 sec) > "use mouse to look around"
 [x] return the ashtray filling

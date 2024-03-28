@@ -20,7 +20,6 @@ public static class Locator
 	public static InputService Input;
 	public static TranslationService Translation;
 	public static RecordSpin RecordSpin;
-	public static TitleAlphaService TitleAlpha;
 	
 	// i wish locator was an instanced class xd
 	public static void Clear()
@@ -37,7 +36,6 @@ public static class Locator
 		Input = null;
 		Translation = null;
 		RecordSpin = null; // i wish this was an instanced class
-		TitleAlpha = null; // i wish this was an instanced class
 	}
 	
 }
