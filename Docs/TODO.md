@@ -1,13 +1,14 @@
 # ITER
 [] bgm didn't start (hard to track down)
-[] graphics cringe
-	[] light / shadow leaks (shadow maps)
 [] profiling
 	[] club geometry loading (profiling required)
 	[] ssao
 [] poster 0.01 alpha lag spike
 [] отписаться от всех событий из AppState
-[] revert the title in every ending
+[] a better Esc/Fullscreen/"Invisible cursor" system / tracking
+	[] fullscreen button
+[x] light / shadow leaks (shadow maps)
+[x] revert the title in every ending
 [x] use headphones for the best experience
 [x] make the before.ending shorter
 [x] (1 sec) > "use mouse to look around"
@@ -30,12 +31,10 @@
 [x] new .shadervariants
 
 # TBD
-
 ## polish iter
 [] performance
 [] memory consumption
 [] build size
-[] move gitignore -> art/3d
 
 ## mobile iter
 [] text size
