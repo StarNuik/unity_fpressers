@@ -22,9 +22,6 @@ public static class Locator
 	public static RecordSpin RecordSpin;
 	public static TitleAlphaService TitleAlpha;
 	
-	// sequences
-	public static SplashSequence Splash;
-
 	// i wish locator was an instanced class xd
 	public static void Clear()
 	{
@@ -38,7 +35,6 @@ public static class Locator
 		RouteTracker = null;
 		TextDisplay = null;
 		Input = null;
-		Splash = null;
 		Translation = null;
 		RecordSpin = null; // i wish this was an instanced class
 		TitleAlpha = null; // i wish this was an instanced class

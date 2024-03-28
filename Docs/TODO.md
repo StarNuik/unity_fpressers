@@ -1,15 +1,14 @@
 # ITER
+[] bgm didn't start (hard to track down)
+[] use headphones for the best experience
 [] graphics cringe
 	[] light / shadow leaks (shadow maps)
 [] profiling
 	[] club geometry loading (profiling required)
 	[] ssao
 [] poster 0.01 alpha lag spike
-[] bgm didn't start (hard to track down)
-[] use headphones for the best experience
-[] new .shadervariants
 [] отписаться от всех событий из AppState
-[] make the before.ending shorter
+[x] make the before.ending shorter
 [x] (1 sec) > "use mouse to look around"
 [x] return the ashtray filling
 [x] add a light switch mesh to the room
@@ -24,9 +23,10 @@
 		[x] turn it off when the cutscene starts
 	[x] add a cut phone ring to the start 
 [x] show game title in every ending
-[x] splash'es "DisIn" title is shared between the splash and the ending, and is placed ABOVE the fade
+	[x] splash'es "DisIn" title is shared between the splash and the ending, and is placed ABOVE the fade
 [x] crunch all club textures (check the 2d folder as well)
 [x] move all club assets to the Art/3d.Club folder
+[x] new .shadervariants
 
 # TBD
 
