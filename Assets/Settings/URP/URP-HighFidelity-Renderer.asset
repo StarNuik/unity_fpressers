@@ -37,13 +37,13 @@ MonoBehaviour:
     AOMethod: 1
     Downsample: 0
     AfterOpaque: 0
-    Source: 1
+    Source: 0
     NormalSamples: 1
     Intensity: 0.5
     DirectLightingStrength: 0.25
     Radius: 0.25
-    Samples: 0
-    BlurQuality: 0
+    Samples: 2
+    BlurQuality: 2
     Falloff: 100
     SampleCount: -1
   m_BlueNoise256Textures:
@@ -72,10 +72,10 @@ MonoBehaviour:
       type: 3}
     hdrDebugViewPS: {fileID: 4800000, guid: 573620ae32aec764abd4d728906d2587, type: 3}
   m_RendererFeatures:
+  - {fileID: -1878332245247344467}
   - {fileID: -4408492715971634669}
   - {fileID: 6115047048569563035}
-  - {fileID: -1878332245247344467}
-  m_RendererFeatureMap: 131a9d653be3d1c29b27ca4ae402dd54adc0de57c6d2eee5
+  m_RendererFeatureMap: adc0de57c6d2eee5131a9d653be3d1c29b27ca4ae402dd54
   m_UseNativeRenderPass: 0
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
