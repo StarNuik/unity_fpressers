@@ -31,11 +31,6 @@ public class SplashFlow : MonoBehaviour
 		fadeImage.SetAlpha(0f);
 		headphonesGroup.alpha = 0f;
 
-		// BG FADE
-		var bgIn = fadeImage
-			.DOFade(1f, fadeDuration)
-			.SetEase(Consts.B2WTweenEase);
-		yield return bgIn.WaitForCompletion();
 
 		// turn this into a list, if doing more than one group
 		// MAIN "LOOP"
@@ -52,6 +47,12 @@ public class SplashFlow : MonoBehaviour
 			.SetEase(Consts.W2BTweenEase);
 		
 		yield return tOut.WaitForCompletion();
+		
+		// BG FADE
+		var bgIn = fadeImage
+			.DOFade(1f, fadeDuration)
+			.SetEase(Consts.B2WTweenEase);
+		yield return bgIn.WaitForCompletion();
 
 		// LOAD MAIN SCENE
 		SceneManager.LoadScene(roomScene.ScenePath);
