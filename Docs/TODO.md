@@ -1,12 +1,13 @@
 # ITER
-[] bgm didn't start (hard to track down)
+[] a better Esc/Fullscreen/"Invisible cursor" system / tracking
+	[] fullscreen button
 [] profiling
 	[] club geometry loading (profiling required)
 	[] ssao
-[] poster 0.01 alpha lag spike
 [] отписаться от всех событий из AppState
-[] a better Esc/Fullscreen/"Invisible cursor" system / tracking
-	[] fullscreen button
+[] bgm didn't start (hard to track down)
+[DISAPPEARED] poster 0.01 alpha lag spike
+[x] replace the Room's ceiling lamp
 [x] light / shadow leaks (shadow maps)
 [x] revert the title in every ending
 [x] use headphones for the best experience
