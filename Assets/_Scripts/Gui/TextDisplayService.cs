@@ -8,8 +8,6 @@ using Editor = UnityEngine.SerializeField;
 public class TextDisplayService : MonoBehaviour
 {
 	[Editor] TMP_Text text;
-	[Min(0.01f)]
-	[Editor] float fadeDuration = 0.5f;
 
 	public string MonologueChannel { get; set; }
 	public string SplashChannel { get; set; }
@@ -28,8 +26,7 @@ public class TextDisplayService : MonoBehaviour
 		set => text.text = value;
 	}
 
-	// not great, but I'll survive if this is a once in a lifetime sin
-	public float FadeDuration => fadeDuration;
+	private float fadeDuration => Consts.TextFadeDuration;
 
 	private void Awake()
 	{

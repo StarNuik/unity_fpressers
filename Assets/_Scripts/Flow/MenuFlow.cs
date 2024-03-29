@@ -15,8 +15,6 @@ public class MenuFlow : MonoBehaviour
 	[Editor] Image white;
 	[Editor] CanvasGroup guiGroup;
 	[Editor] CinemachineVirtualCamera vcam;
-	[Min(0.1f)]
-	[Editor] float fadeinDuration = 1f;
 	[Min(0f)]
 	[Editor] float textDelay = 1f;
 	[Editor] TextAsset startText;
@@ -28,6 +26,8 @@ public class MenuFlow : MonoBehaviour
 	private TranslationService translation => Locator.Translation;
 	private ShaderSauceService shader => Locator.ShaderSauce;
 	private InputService input => Locator.Input;
+
+	private float fadeinDuration => Consts.MenuFadeinDuration;
 
 	public IEnumerator MenuSequence()
 	{
@@ -58,7 +58,7 @@ public class MenuFlow : MonoBehaviour
 		// FADE OUT
 		showText = false;
 
-		var outDuration = textDisplay.FadeDuration;
+		var outDuration = Consts.TextFadeDuration;
 		var tOut = guiGroup
 			.DOFade(0f, outDuration)
 			.SetEase(Consts.W2BTweenEase);
