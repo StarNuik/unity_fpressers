@@ -24,8 +24,8 @@ public class AppFlow : MonoBehaviour
 	private AppState state => Locator.State;
 	private CutscenesContainer cutscenes => Locator.Cutscenes;
 	private BgmStartService bgm => Locator.Bgm;
-	private InputService input => Locator.Input;
-	private PlatformService platform => Locator.Platform;
+	private CursorService cursor => Locator.Cursor;
+	
 	
 	private bool hasMoreInteractions => Locator.RouteTracker.HasInteractionsLeft;
 
@@ -45,7 +45,7 @@ public class AppFlow : MonoBehaviour
 		state.SuppressPlayer = true;
 
 		// MAIN MENU
-		platform.PreferredCursor = CursorState.Default;
+		SetCursor(isHidden: false);
 
 		#if UNITY_EDITOR
 		if (!skipMenu)
@@ -55,7 +55,7 @@ public class AppFlow : MonoBehaviour
 		}
 
 		// INTRO CUTSCENE
-		platform.PreferredCursor = CursorState.Hidden;
+		SetCursor(isHidden: true);
 		bgm.Run();
 
 		#if UNITY_EDITOR
@@ -97,10 +97,12 @@ public class AppFlow : MonoBehaviour
 		}
 	}
 
-	private void SetCursor(bool isLocked)
+	private void SetCursor(bool isHidden)
 	{
-		Cursor.visible = !isLocked;
-		Cursor.lockState = isLocked ? CursorLockMode.Locked : CursorLockMode.None;
+		cursor.PreferHidden = isHidden;
+
+		// Cursor.visible = !isLocked;
+		// Cursor.lockState = isLocked ? CursorLockMode.Locked : CursorLockMode.None;
 	}
 
 	private IEnumerator LockPlayerAnd(Func<IEnumerator> routine)

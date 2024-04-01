@@ -1,6 +1,4 @@
 # ITER
-[] a better Esc/Fullscreen/"Invisible cursor" system / tracking
-	[] fullscreen button
 [] outside.window
 	[] change the outside quad color
 	[] change the light's color
@@ -11,17 +9,20 @@
 	[] 4px -> 5px
 	[] add a curve
 	<!-- [] larger outer / inner radius (+1u) -->
-[] profiling
-	[] club geometry loading (profiling required)
-	[] ssao
+[] web loader draft
 [] отписаться от всех событий из AppState
 [] pc.outline didn't start
 [] bgm didn't start (hard to track down)
 [LATER] projector's image
+[x] a better Esc/Fullscreen/"Invisible cursor" system / tracking
+[x] fullscreen button
 [x] send current reverse.ending texts
 
 # TBD
 ## polish iter
+[] profiling
+	[] club geometry loading (profiling required)
+	[] ssao
 [] performance
 [] memory consumption
 [] build size
@@ -224,6 +225,7 @@
 [x] replace the Room's ceiling lamp
 [x] light / shadow leaks (shadow maps)
 [x] revert the title in every ending
+
 [x] use headphones for the best experience
 [x] make the before.ending shorter
 [x] (1 sec) > "use mouse to look around"

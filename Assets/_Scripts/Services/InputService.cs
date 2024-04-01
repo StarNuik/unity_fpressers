@@ -13,6 +13,7 @@ public class InputService : MonoBehaviour
 	private InputAction move;
 	private InputAction look;
 	private InputAction interact;
+	private InputAction escape;
 
 	private AppState state => Locator.State;
 	
@@ -40,8 +41,11 @@ public class InputService : MonoBehaviour
 		move = map.FindAction("Move");
 		look = map.FindAction("Look");
 		interact = map.FindAction("Interact");
+		escape = map.FindAction("Escape");
 		interact.performed += SendInteract;
+		escape.performed += SendEscape;
 	}
+
 
 	private void OnDestroy()
 	{
@@ -51,6 +55,11 @@ public class InputService : MonoBehaviour
 	private void SendInteract(InputAction.CallbackContext _)
 	{
 		state.InvokeInteractPressed();
+	}
+
+	private void SendEscape(InputAction.CallbackContext _)
+	{
+		state.InvokeEscPressed();
 	}
 
 }

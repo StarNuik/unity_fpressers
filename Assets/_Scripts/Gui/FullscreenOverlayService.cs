@@ -13,13 +13,7 @@ public class FullscreenOverlayService : MonoBehaviour
 	[Editor] Sprite enableSrite;
 	[Editor] Sprite disableSprite;
 
-	private AppState state => Locator.State;
-	private PlatformService platform => Locator.Platform;
-
-	private void OnEnable()
-	{
-		button.onClick.AddListener(ToggleFullscreen);
-	}
+	private FullscreenService platform => Locator.Fullscreen;
 
 	private void Update()
 	{
@@ -29,8 +23,8 @@ public class FullscreenOverlayService : MonoBehaviour
 		buttonImage.sprite = sprite;
 	}
 
-	private void ToggleFullscreen()
-	{
-		Debug.Log("[ ToggleFullscreen ]");
-	}
+	// private void ToggleFullscreen()
+	// {
+	// 	platform.TryToggleFullscreen();
+	// }
 }

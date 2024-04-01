@@ -37,7 +37,7 @@ public class TranslationService : MonoBehaviour
 
 		current = next;
 
-		state.InvokeLanguageChanged();
+		// state.InvokeLanguageChanged();
 	}
 
 	private void Awake()

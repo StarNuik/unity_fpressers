@@ -18,17 +18,21 @@ public class AppState
 	// no signal bus no life
 	public Action InteractPressed;
 	public Action<InteractionHandle> InteractionTriggered;
-	public Action LanguageChanged;
+	public Action FallthroughPressed;
+	public Action EscPressed;
 
 	public void InvokeInteractionTriggered(InteractionHandle message)
 		=> InteractionTriggered?.Invoke(message);
 
 	public void InvokeInteractPressed()
 		=> InteractPressed?.Invoke();
-		
-	public void InvokeLanguageChanged()
-		=> LanguageChanged?.Invoke();
 	
+	public void InvokeFallthroughPressed()
+		=> FallthroughPressed?.Invoke();
+	
+	public void InvokeEscPressed()
+		=> EscPressed?.Invoke();
+		
 	// these should be in a separate service (WaiterService mb? I think I have some more Wait's as well)
 	public IEnumerator WaitForInteraction(Action<InteractionHandle> returner)
 	{

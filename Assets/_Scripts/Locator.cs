@@ -6,7 +6,6 @@ public static class Locator
 {
 	// non-Room stuff (a separate Locator would be nice)
 	public static PersistentState Persistent = new();
-	public static PlatformService Platform;
 
 	// state
 	public static AppState State = new();
@@ -15,6 +14,8 @@ public static class Locator
 	public static CutscenesContainer Cutscenes;
 
 	// services
+	public static FullscreenService Fullscreen;
+	public static CursorService Cursor;
 	public static ShaderSauceService ShaderSauce;
 	public static AudioMixerService AudioMixer;
 	public static BgmStartService Bgm;
