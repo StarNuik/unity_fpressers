@@ -14,6 +14,7 @@ public class FullscreenOverlayService : MonoBehaviour
 	[Editor] Sprite disableSprite;
 
 	private AppState state => Locator.State;
+	private PlatformService platform => Locator.Platform;
 
 	private void OnEnable()
 	{
@@ -22,9 +23,9 @@ public class FullscreenOverlayService : MonoBehaviour
 
 	private void Update()
 	{
-		text.enabled = !WebPlatform.IsMobile && WebPlatform.IsFullscreen;
+		text.enabled = !platform.IsMobile && platform.IsFullscreen;
 
-		var sprite = WebPlatform.IsFullscreen ? disableSprite : enableSrite;
+		var sprite = platform.IsFullscreen ? disableSprite : enableSrite;
 		buttonImage.sprite = sprite;
 	}
 

@@ -1,35 +1,24 @@
 # ITER
 [] a better Esc/Fullscreen/"Invisible cursor" system / tracking
 	[] fullscreen button
+[] outside.window
+	[] change the outside quad color
+	[] change the light's color
+	[LATER] change the light's position
+[] window -> falling leaves
+[] interaction outline?
+	[] up the alpha
+	[] 4px -> 5px
+	[] add a curve
+	<!-- [] larger outer / inner radius (+1u) -->
 [] profiling
 	[] club geometry loading (profiling required)
 	[] ssao
 [] отписаться от всех событий из AppState
+[] pc.outline didn't start
 [] bgm didn't start (hard to track down)
-[DISAPPEARED] poster 0.01 alpha lag spike
-[x] replace the Room's ceiling lamp
-[x] light / shadow leaks (shadow maps)
-[x] revert the title in every ending
-[x] use headphones for the best experience
-[x] make the before.ending shorter
-[x] (1 sec) > "use mouse to look around"
-[x] return the ashtray filling
-[x] add a light switch mesh to the room
-[x] door outline (is behind the door)
-[x] promo quads' transparent parts are shown by the Secret Sauce shader
-	[x] fix poster and vinyl record not being milked
-	[x] fix all cutscenes involving the shader sauce
-[x] raise the +3db ambient door club music
-[x] end of correct.ending - add a black to white fade (0.5sec)
-[x] reverse.ending
-	[x] loop the phone ring
-		[x] turn it off when the cutscene starts
-	[x] add a cut phone ring to the start 
-[x] show game title in every ending
-	[x] splash'es "DisIn" title is shared between the splash and the ending, and is placed ABOVE the fade
-[x] crunch all club textures (check the 2d folder as well)
-[x] move all club assets to the Art/3d.Club folder
-[x] new .shadervariants
+[LATER] projector's image
+[x] send current reverse.ending texts
 
 # TBD
 ## polish iter
@@ -229,3 +218,29 @@
 	[x] убрать hold в начале
 [x] the poster is too slimy (skyrim-y)
 [x] gay lame unknown bug, that lowers some white balance until the first interaction
+
+## v5
+[DISAPPEARED] poster 0.01 alpha lag spike
+[x] replace the Room's ceiling lamp
+[x] light / shadow leaks (shadow maps)
+[x] revert the title in every ending
+[x] use headphones for the best experience
+[x] make the before.ending shorter
+[x] (1 sec) > "use mouse to look around"
+[x] return the ashtray filling
+[x] add a light switch mesh to the room
+[x] door outline (is behind the door)
+[x] promo quads' transparent parts are shown by the Secret Sauce shader
+	[x] fix poster and vinyl record not being milked
+	[x] fix all cutscenes involving the shader sauce
+[x] raise the +3db ambient door club music
+[x] end of correct.ending - add a black to white fade (0.5sec)
+[x] reverse.ending
+	[x] loop the phone ring
+		[x] turn it off when the cutscene starts
+	[x] add a cut phone ring to the start 
+[x] show game title in every ending
+	[x] splash'es "DisIn" title is shared between the splash and the ending, and is placed ABOVE the fade
+[x] crunch all club textures (check the 2d folder as well)
+[x] move all club assets to the Art/3d.Club folder
+[x] new .shadervariants

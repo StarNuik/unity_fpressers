@@ -25,6 +25,7 @@ public class AppFlow : MonoBehaviour
 	private CutscenesContainer cutscenes => Locator.Cutscenes;
 	private BgmStartService bgm => Locator.Bgm;
 	private InputService input => Locator.Input;
+	private PlatformService platform => Locator.Platform;
 	
 	private bool hasMoreInteractions => Locator.RouteTracker.HasInteractionsLeft;
 
@@ -44,7 +45,7 @@ public class AppFlow : MonoBehaviour
 		state.SuppressPlayer = true;
 
 		// MAIN MENU
-		SetCursor(isLocked: false);
+		platform.PreferredCursor = CursorState.Default;
 
 		#if UNITY_EDITOR
 		if (!skipMenu)
@@ -54,7 +55,7 @@ public class AppFlow : MonoBehaviour
 		}
 
 		// INTRO CUTSCENE
-		SetCursor(isLocked: true);
+		platform.PreferredCursor = CursorState.Hidden;
 		bgm.Run();
 
 		#if UNITY_EDITOR

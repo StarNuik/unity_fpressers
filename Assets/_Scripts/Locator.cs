@@ -4,9 +4,12 @@ using UnityEngine;
 
 public static class Locator
 {
+	// non-Room stuff (a separate Locator would be nice)
+	public static PersistentState Persistent = new();
+	public static PlatformService Platform;
+
 	// state
 	public static AppState State = new();
-	public static PersistentState Persistent = new();
 	
 	// containers
 	public static CutscenesContainer Cutscenes;
@@ -25,7 +28,6 @@ public static class Locator
 	public static void Clear()
 	{
 		State = new();
-		Persistent = new();
 
 		Cutscenes = null;
 		ShaderSauce = null;
