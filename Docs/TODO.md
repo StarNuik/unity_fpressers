@@ -1,24 +1,27 @@
 # ITER
+[] выключать poster overlay
+	[] либо во время сигарет
+	[] либо когда ShaderSauce.Strength <= 0f
+[] pc.outline didn't start
+[] bgm didn't start (hard to track down)
+[] web loader draft
+[] отписаться от всех событий в Locator
 [] outside.window
 	[LATER] change the light's color
 	[LATER] change the light's position
 	[x] falling leaves
 	[x] change the outside quad color
-[] interaction outline?
-	[] up the alpha
-	[] 4px -> 5px
-	[] add a curve
-	<!-- [] larger outer / inner radius (+1u) -->
-[] web loader draft
-[] отписаться от всех событий из AppState
-[] pc.outline didn't start
-[] bgm didn't start (hard to track down)
-[LATER] projector's image
+[x] projector's image
+[x] interaction outline?
+	[x] up the alpha
+	[x] 4px -> 5px
+	[x] add a curve
 [x] a better Esc/Fullscreen/"Invisible cursor" system / tracking
 	[x] fullscreen service
 	[x] cursor visibility service
 [x] fullscreen button
 [x] send current reverse.ending texts
+[DENY] отписаться от всех событий из AppState
 
 # TBD
 ## polish iter
