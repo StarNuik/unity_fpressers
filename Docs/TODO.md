@@ -1,9 +1,9 @@
 # ITER
 [] outside.window
+	[] falling leaves
 	[] change the outside quad color
 	[] change the light's color
 	[LATER] change the light's position
-[] window -> falling leaves
 [] interaction outline?
 	[] up the alpha
 	[] 4px -> 5px
@@ -15,6 +15,8 @@
 [] bgm didn't start (hard to track down)
 [LATER] projector's image
 [x] a better Esc/Fullscreen/"Invisible cursor" system / tracking
+	[x] fullscreen service
+	[x] cursor visibility service
 [x] fullscreen button
 [x] send current reverse.ending texts
 
