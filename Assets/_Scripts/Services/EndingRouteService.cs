@@ -8,9 +8,11 @@ public class EndingRouteService : MonoBehaviour
 {
 	[Editor] List<InteractionHandle> RouteOrder = new();
 	
-	// these 2 props are orphans (they kind of don't belong here)
-	public bool HasInteractedOnce => currentRoute.Count > 0;
-	public bool HasInteractionsLeft => currentRoute.Count < RouteOrder.Count;
+	// these 3 props are orphans (they kind of don't belong here)
+	public int TimesInteracted => currentRoute.Count;
+	public bool HasInteractedOnce => TimesInteracted > 0;
+	public bool HasInteractionsLeft => TimesInteracted < RouteOrder.Count;
+
 	public RouteType CurrentRoute { get; private set; }
 
 	private List<InteractionHandle> currentRoute = new();

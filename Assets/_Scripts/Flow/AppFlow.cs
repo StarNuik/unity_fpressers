@@ -95,6 +95,8 @@ public class AppFlow : MonoBehaviour
 		{
 			yield return LockPlayerAnd(cutscene.PlayAndWait);
 		}
+
+		state.InvokeInteractionFinished();
 	}
 
 	private void SetCursor(bool isHidden)

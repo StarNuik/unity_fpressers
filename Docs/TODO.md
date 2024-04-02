@@ -1,9 +1,9 @@
 # ITER
 [] outside.window
-	[] falling leaves
-	[] change the outside quad color
-	[] change the light's color
+	[LATER] change the light's color
 	[LATER] change the light's position
+	[x] falling leaves
+	[x] change the outside quad color
 [] interaction outline?
 	[] up the alpha
 	[] 4px -> 5px
