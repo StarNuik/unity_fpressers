@@ -7,6 +7,7 @@ using Editor = UnityEngine.SerializeField;
 public class InteractionOutline : MonoBehaviour
 {
 	[Editor] InteractionHandle handle;
+	[Editor] AnimationCurve curve;
 
 	private Outline driver;
 	private float startWidth;
@@ -26,7 +27,7 @@ public class InteractionOutline : MonoBehaviour
 
 	private void Update()
 	{
-		driver.OutlineWidth = Mathf.Lerp(0f, startWidth, handle.PlayerF());
+		driver.OutlineWidth = Mathf.Lerp(0f, startWidth, curve.Evaluate(handle.PlayerF()));
 		driver.enabled = handle.IsActive;
 	}
 }
