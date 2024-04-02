@@ -2,7 +2,8 @@
 [] выключать poster overlay
 	[] либо во время сигарет
 	[] либо когда ShaderSauce.Strength <= 0f
-[] pc.outline didn't start
+[] outlines are being weird
+	[] pc.outline didn't start
 [] bgm didn't start (hard to track down)
 [] web loader draft
 [] отписаться от всех событий в Locator
