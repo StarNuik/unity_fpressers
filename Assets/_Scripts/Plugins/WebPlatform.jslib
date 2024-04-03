@@ -2,13 +2,15 @@
 var plugin = {
 	WebSendLoadProgress: function(progress)
 	{
-		SetProgress(progress);
-	}
+		// console.log(`[ WebSendLoadProgress ] ${progress}`);
+		SetLoadProgress(progress);
+	},
 
 	WebNotifyLoaded: function()
 	{
-		SetLoaded();
-	}
+		// console.log("[ WebNotifyLoaded ]");
+		NotifyLoaded();
+	},
 };
 
 

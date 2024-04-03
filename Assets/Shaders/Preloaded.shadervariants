@@ -146,6 +146,9 @@ ShaderVariantCollection:
           _RECEIVE_SHADOWS_OFF _SCREEN_SPACE_OCCLUSION
         passType: 13
       - keywords: _ADDITIONAL_LIGHTS _ADDITIONAL_LIGHT_SHADOWS _EMISSION _LIGHT_COOKIES
+          _RECEIVE_SHADOWS_OFF _SCREEN_SPACE_OCCLUSION _SHADOWS_SOFT
+        passType: 13
+      - keywords: _ADDITIONAL_LIGHTS _ADDITIONAL_LIGHT_SHADOWS _EMISSION _LIGHT_COOKIES
           _SCREEN_SPACE_OCCLUSION
         passType: 13
       - keywords: _ADDITIONAL_LIGHTS _ADDITIONAL_LIGHT_SHADOWS _EMISSION _METALLICSPECGLOSSMAP
@@ -210,6 +213,11 @@ ShaderVariantCollection:
         passType: 13
       - keywords: _ALPHATEST_ON
         passType: 13
+  - first: {fileID: 4800000, guid: 0406db5a14f94604a8c57ccfbc9f3b46, type: 3}
+    second:
+      variants:
+      - keywords: _SCREEN_SPACE_OCCLUSION _SURFACE_TYPE_TRANSPARENT
+        passType: 0
   - first: {fileID: 4800000, guid: 8d2bb70cbf9db8d4da26e15b26e74248, type: 3}
     second:
       variants:
@@ -218,6 +226,9 @@ ShaderVariantCollection:
       - keywords: _ALPHATEST_ON
         passType: 8
       - keywords: 
+        passType: 13
+      - keywords: _ADDITIONAL_LIGHTS _ADDITIONAL_LIGHT_SHADOWS _ALPHATEST_ON _LIGHT_COOKIES
+          _SCREEN_SPACE_OCCLUSION
         passType: 13
       - keywords: _ADDITIONAL_LIGHTS _ADDITIONAL_LIGHT_SHADOWS _ALPHATEST_ON _SCREEN_SPACE_OCCLUSION
         passType: 13
@@ -290,6 +301,12 @@ ShaderVariantCollection:
           _SHADOWS_SOFT _VERTEX_COLORS_ON
         passType: 13
       - keywords: _ADDITIONAL_LIGHTS _ADDITIONAL_LIGHT_SHADOWS _LIGHT_COOKIES _SCREEN_SPACE_OCCLUSION
+          _VERTEX_COLORS_ON
+        passType: 13
+      - keywords: _ADDITIONAL_LIGHTS _ADDITIONAL_LIGHT_SHADOWS _SCREEN_SPACE_OCCLUSION
+          _SHADOWS_SOFT _VERTEX_COLORS_ON
+        passType: 13
+      - keywords: _ADDITIONAL_LIGHTS _ADDITIONAL_LIGHT_SHADOWS _SCREEN_SPACE_OCCLUSION
           _VERTEX_COLORS_ON
         passType: 13
       - keywords: _VERTEX_COLORS_ON

@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
 using UnityEngine;
+using Debug = UnityEngine.Debug;
 
 public static class WebPlatform
 {
@@ -17,17 +18,24 @@ public static class WebPlatform
 	[DllImport("__Internal")]
 	private static extern void WebNotifyLoaded();
 
-	[Conditional("WEBGL_BUILD")]
 	public static void SendLoadProgress(float value)
 	{
 		var remapped = Mathf.Clamp01(value) + 1f;
+		
+		#if WEBGL_BUILD
 		WebSendLoadProgress(remapped);
+		#endif
+
+		// Debug.Log($"[ WebPlatform.SendLoadProgress ] {remapped}");
 	}
 
-	[Conditional("WEBGL_BUILD")]
 	public static void NotifyLoaded()
 	{
+		// Debug.Log("[ WebPlatform.NotifyLoaded ]");
+		
+		#if WEBGL_BUILD
 		WebNotifyLoaded();
+		#endif
 	}
 
 	// [DllImport("__Internal")]
