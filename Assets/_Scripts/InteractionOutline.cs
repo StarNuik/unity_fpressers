@@ -29,7 +29,5 @@ public class InteractionOutline : MonoBehaviour
 	{
 		driver.OutlineWidth = Mathf.Lerp(0f, startWidth, curve.Evaluate(handle.PlayerF()));
 		driver.enabled = handle.IsActive;
-
-		Debug.Log($"[ InteractionOutline.Update ] whoami: {this.name}, startWidth: {this.startWidth}, OutlineWidth: {driver.OutlineWidth}");
 	}
 }

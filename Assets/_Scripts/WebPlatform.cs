@@ -5,13 +5,30 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Runtime.InteropServices;
 using UnityEngine;
 
 public static class WebPlatform
 {
-	// [DllImport("__Internal")]
-	// private static extern void WebGoFullscreen();
+	[DllImport("__Internal")]
+	private static extern void WebSendLoadProgress(float progress);
+	
+	[DllImport("__Internal")]
+	private static extern void WebNotifyLoaded();
+
+	[Conditional("WEBGL_BUILD")]
+	public static void SendLoadProgress(float value)
+	{
+		var remapped = Mathf.Clamp01(value) + 1f;
+		WebSendLoadProgress(remapped);
+	}
+
+	[Conditional("WEBGL_BUILD")]
+	public static void NotifyLoaded()
+	{
+		WebNotifyLoaded();
+	}
 
 	// [DllImport("__Internal")]
 	// private static extern bool WebIsMobile();

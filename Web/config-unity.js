@@ -15,7 +15,7 @@ let elemProgressFull = document.querySelector("#unity-progress-bar-full");
 let elemCover = document.querySelector("#loading-cover");
 
 // used by Unity
-var SetProgress = function(progress)
+var SetLoadProgress = function(progress)
 {
 	let remapped = 0.0;
 	if (progress <= 1.0)
@@ -30,14 +30,15 @@ var SetProgress = function(progress)
 	elemProgressFull.style.width = `${100 * remapped}%`;
 };
 
+var SetLoaded = function()
+{
+	elemCover.style.display = "none";
+}
+
 let script = document.createElement("script");
 script.src = loaderUrl;
 script.onload = () => {
-	createUnityInstance(elemCanvas, config, SetProgress)
-	.then(unityInstance =>
-	{
-		elemCover.style.display = "none";
-	})
+	createUnityInstance(elemCanvas, config, SetLoadProgress)
 	.catch(message =>
 	{
 		alert(message);
