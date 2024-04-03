@@ -6,6 +6,7 @@
 [] outlines are being weird
 	[] pc.outline didn't start
 [] review
+	[] return the logo to the splash screen
 	[] hide outside.window when entering the club
 	[] change leaves.window sprite
 	[] change projector.club's cookie
