@@ -1,5 +1,5 @@
 # ITER
-[] web loader draft
+[] reverse.ending writing
 [] выключать poster overlay
 	[] либо во время сигарет
 	[] либо когда ShaderSauce.Strength <= 0f
@@ -7,11 +7,16 @@
 	[] pc.outline didn't start
 [] review
 	[] hide outside.window when entering the club
-	[BLOCKED] change outside.window colors
-	[BLOCKED] change leaves.window sprite
-	[BLOCKED] outside light's position + color (room light's color)
-	[BLOCKED] change projector.club's cookie
-	[BLOCKED] new fullscreen icon
+	[] change leaves.window sprite
+	[] change projector.club's cookie
+	[] new fullscreen icon
+	[] outside light's position
+		[] poster - lights up the poster
+		[] cigs - the other side of the room
+		[x] + color (room light's color)
+	[x] change outside.window colors
+[] Run in background - true
+	[] splash must wait for focus
 
 [] bgm didn't start (hard to track down)
 [] отписаться от всех событий в Locator
@@ -20,6 +25,8 @@
 	[LATER] change the light's position
 	[x] falling leaves
 	[x] change the outside quad color
+
+[x] web loader draft
 [x] projector's image
 [x] interaction outline?
 	[x] up the alpha
