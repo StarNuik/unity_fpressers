@@ -1,13 +1,13 @@
 #! /bin/bash
 
 # local
-me="[ send_build.sh ]"
-sign="unity_fpressers_"
-build_src="./Builds/fpressers/Build"
+me="[ send_web.sh ]"
+sign="frontend_fpressers_"
+build_src="./Web"
 
 # remote
 ssh_dest=`cat dest.secret | tr -d '\n'`
-remote_dest="~/personal-cloud/static@root/Unity"
+remote_dest="~/personal-cloud/static@root"
 
 hash=`tar c $build_src | md5sum | head -c 32`
 tar="$sign$hash.tar"

@@ -12,8 +12,8 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
-  productName: unity_fpressers
+  companyName: F-Pressers
+  productName: Disappearing In
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -139,8 +139,9 @@ PlayerSettings:
   loadStoreDebugModeEnabled: 0
   visionOSBundleVersion: 1.0
   tvOSBundleVersion: 1.0
-  bundleVersion: 0.1.0
-  preloadedAssets: []
+  bundleVersion: 1.0
+  preloadedAssets:
+  - {fileID: 11400000, guid: f041518a0a0e80f449b906b52ca13143, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -538,6 +539,7 @@ PlayerSettings:
   openGLRequireES31AEP: 0
   openGLRequireES32: 0
   m_TemplateCustomTags:
+    HIDE_FULL_SCREEN_BUTTON: true
     PRODUCT_DESCRIPTION: 
   mobileMTRendering:
     Android: 1
@@ -793,13 +795,13 @@ PlayerSettings:
   spritePackerPolicy: 
   webGLMemorySize: 32
   webGLExceptionSupport: 1
-  webGLNameFilesAsHashes: 1
+  webGLNameFilesAsHashes: 0
   webGLShowDiagnostics: 0
   webGLDataCaching: 1
   webGLDebugSymbols: 0
   webGLEmscriptenArgs: 
   webGLModulesDirectory: 
-  webGLTemplate: APPLICATION:Default
+  webGLTemplate: APPLICATION:Minimal
   webGLAnalyzeBuildSize: 0
   webGLUseEmbeddedResources: 0
   webGLCompressionFormat: 2

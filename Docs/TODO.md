@@ -1,11 +1,19 @@
 # ITER
+[] web loader draft
 [] выключать poster overlay
 	[] либо во время сигарет
 	[] либо когда ShaderSauce.Strength <= 0f
 [] outlines are being weird
 	[] pc.outline didn't start
+[] review
+	[] hide outside.window when entering the club
+	[BLOCKED] change outside.window colors
+	[BLOCKED] change leaves.window sprite
+	[BLOCKED] outside light's position + color (room light's color)
+	[BLOCKED] change projector.club's cookie
+	[BLOCKED] new fullscreen icon
+
 [] bgm didn't start (hard to track down)
-[] web loader draft
 [] отписаться от всех событий в Locator
 [] outside.window
 	[LATER] change the light's color
