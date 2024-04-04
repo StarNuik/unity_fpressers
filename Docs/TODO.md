@@ -1,14 +1,14 @@
 # ITER
 [] review
-	[] hide outside.window when entering the club
 	[] return the logo to the splash screen
-	[] change projector.club's cookie
-	[] new fullscreen icon
 	[] outside light's position
 		[] cleanup the script
 		[] poster - lights up the poster
 		[] cigs - the other side of the room
 		[x] + color (room light's color)
+	[x] hide outside.window when entering the club
+	[x] change projector.club's cookie
+	[x] new fullscreen icon
 	[x] change leaves.window sprite
 	[x] change outside.window colors
 	[x] change the outside quad color
