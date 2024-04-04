@@ -5,6 +5,8 @@ using UnityEngine;
 
 public static class Consts
 {
+	public const float Epsilon = 0.0001f;
+	
 	public static float B2WCurve(float time)
 		=> Mathf.Pow(Mathf.Clamp01(time), 2.33f);
 	

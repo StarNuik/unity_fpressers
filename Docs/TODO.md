@@ -1,10 +1,5 @@
 # ITER
 [] reverse.ending writing
-[] выключать poster overlay
-	[] либо во время сигарет
-	[] либо когда ShaderSauce.Strength <= 0f
-[] outlines are being weird
-	[] pc.outline didn't start
 [] review
 	[] return the logo to the splash screen
 	[] hide outside.window when entering the club
@@ -12,21 +7,27 @@
 	[] change projector.club's cookie
 	[] new fullscreen icon
 	[] outside light's position
+		[] cleanup the script
 		[] poster - lights up the poster
 		[] cigs - the other side of the room
 		[x] + color (room light's color)
 	[x] change outside.window colors
+	[x] change the outside quad color
 [] Run in background - true
 	[] splash must wait for focus
+[x] выключать poster overlay
+	[x] либо когда ShaderSauce.Strength <= 0f
+	[DENY] либо во время сигарет
 
 [] bgm didn't start (hard to track down)
 [] отписаться от всех событий в Locator
-[] outside.window
-	[LATER] change the light's color
-	[LATER] change the light's position
-	[x] falling leaves
-	[x] change the outside quad color
 
+[x] outside.window
+	[x] change the light's color
+	[x] falling leaves
+[x] outlines are being weird
+	[x] remove static batching from overlined meshes
+	[x] pc.outline didn't start
 [x] web loader draft
 [x] projector's image
 [x] interaction outline?

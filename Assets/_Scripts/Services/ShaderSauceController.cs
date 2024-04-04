@@ -11,8 +11,9 @@ using Editor = UnityEngine.SerializeField;
 [ExecuteInEditMode]
 public class ShaderSauceController : MonoBehaviour
 {
-	[Editor] ScriptableRendererData targetParent;
-	[Editor] FullScreenPassRendererFeature target;
+	[Editor] ScriptableRendererData renderer;
+	[Editor] FullScreenPassRendererFeature sauceFeature;
+	[Editor] RenderObjects posterFeature;
 	[Editor] Material matOriginal;
 
 	public float Strength { get; set; } = 0f;
@@ -30,7 +31,7 @@ public class ShaderSauceController : MonoBehaviour
 		}
 
 		mat.SetFloat("_Strength", Strength);
-		// mat.SetFloat("_FogMilkRatio", FogMilkRatio);
+		posterFeature.SetActive(Strength > Consts.Epsilon);
 	}
 
 	private void OnDestroy()
@@ -47,7 +48,7 @@ public class ShaderSauceController : MonoBehaviour
 
 	private void SetFeatureMaterial(Material material)
 	{
-		target.passMaterial = material;
-		targetParent.SetDirty();
+		sauceFeature.passMaterial = material;
+		renderer.SetDirty();
 	}
 }
