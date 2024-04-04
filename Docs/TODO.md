@@ -1,9 +1,7 @@
 # ITER
-[] reverse.ending writing
 [] review
-	[] return the logo to the splash screen
 	[] hide outside.window when entering the club
-	[] change leaves.window sprite
+	[] return the logo to the splash screen
 	[] change projector.club's cookie
 	[] new fullscreen icon
 	[] outside light's position
@@ -11,10 +9,12 @@
 		[] poster - lights up the poster
 		[] cigs - the other side of the room
 		[x] + color (room light's color)
+	[x] change leaves.window sprite
 	[x] change outside.window colors
 	[x] change the outside quad color
 [] Run in background - true
 	[] splash must wait for focus
+[x] reverse.ending writing
 [x] выключать poster overlay
 	[x] либо когда ShaderSauce.Strength <= 0f
 	[DENY] либо во время сигарет
