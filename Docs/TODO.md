@@ -1,10 +1,10 @@
 # ITER
 [] review
 	[] return the logo to the splash screen
-	[] outside light's position
-		[] cleanup the script
-		[] poster - lights up the poster
-		[] cigs - the other side of the room
+	[x] outside light's position
+		[x] cleanup the script
+		[x] poster - lights up the poster
+		[x] cigs - the other side of the room
 		[x] + color (room light's color)
 	[x] hide outside.window when entering the club
 	[x] change projector.club's cookie

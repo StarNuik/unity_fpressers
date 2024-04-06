@@ -42,6 +42,9 @@ public class OutsidePropsController : MonoBehaviour
 		// implicit clone
 		matTarget = quadMesh.material;
 		
+		// questionable but quick setup
+		from = frames[0];
+		to = frames[0];
 		TargetFrame = 0;
 	}
 
