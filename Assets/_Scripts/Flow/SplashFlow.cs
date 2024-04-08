@@ -11,8 +11,7 @@ public class SplashFlow : MonoBehaviour
 {
 	[Editor] SceneReference roomScene;
 	[Editor] Image fadeImage;
-	[Editor] Image logoImage;
-	[Editor] CanvasGroup headphonesGroup;
+	[Editor] List<CanvasGroup> groups = new();
 
 	[Min(0f)]
 	[Editor] float fadeDuration = 1f;
@@ -28,20 +27,15 @@ public class SplashFlow : MonoBehaviour
 	{
 		// SETUP
 		fadeImage.SetAlpha(0f);
-		logoImage.SetAlpha(0f);
 
-		headphonesGroup.alpha = 0f;
+		groups.ForEach(g => g.gameObject.SetActive(false));
 
-		// setup a logo fade
-		// runs in parallel
-		var tLogo = logoImage
-			.DOFade(1f, fadeDuration)
-			.SetEase(Consts.B2WTweenEase);
-
-		// turn this into a list, if doing more than one group
 		// MAIN "LOOP"
-		var group = headphonesGroup;
+		foreach (var group in groups)
 		{
+			group.alpha = 0f;
+			group.gameObject.SetActive(true);
+
 			var tIn = group
 				.DOFade(1f, fadeDuration)
 				.SetEase(Consts.B2WTweenEase);
@@ -55,6 +49,8 @@ public class SplashFlow : MonoBehaviour
 				.SetEase(Consts.W2BTweenEase);
 			
 			yield return tOut.WaitForCompletion();
+
+			group.gameObject.SetActive(false);
 		}
 		
 		// BG FADE
