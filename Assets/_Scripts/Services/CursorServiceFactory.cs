@@ -2,12 +2,12 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using SystemInfo = UnityEngine.Device.SystemInfo;
 
 public class CursorServiceFactory : MonoBehaviour
 {
-	private void Start()
+	private void Awake()
 	{
-		Debug.Log($"{SystemInfo.deviceType}");
 		var t = Platform.SwitchIfHandheld(
 			typeof(NoopCursorService),
 			typeof(DesktopCursorService)
