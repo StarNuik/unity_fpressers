@@ -8,18 +8,15 @@ using Editor = UnityEngine.SerializeField;
 public class FullscreenOverlayService : MonoBehaviour
 {
 	[Editor] Image buttonImage;
-	[Editor] Button button;
 	[Editor] TMP_Text text;
 	[Editor] Sprite enableSrite;
 	[Editor] Sprite disableSprite;
 
-	private FullscreenService platform => Locator.Fullscreen;
-
 	private void Update()
 	{
-		text.enabled = !platform.IsMobile && platform.IsFullscreen;
+		text.enabled = !Platform.IsHandheld && Platform.IsFullscreen;
 
-		var sprite = platform.IsFullscreen ? disableSprite : enableSrite;
+		var sprite = Platform.IsFullscreen ? disableSprite : enableSrite;
 		buttonImage.sprite = sprite;
 	}
 

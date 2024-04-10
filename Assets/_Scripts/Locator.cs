@@ -14,8 +14,8 @@ public static class Locator
 	public static CutscenesContainer Cutscenes;
 
 	// services
+	public static ICursorService Cursor;
 	public static FullscreenService Fullscreen;
-	public static CursorService Cursor;
 	public static ShaderSauceService ShaderSauce;
 	public static AudioMixerService AudioMixer;
 	public static BgmStartService Bgm;

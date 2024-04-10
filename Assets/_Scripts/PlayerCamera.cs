@@ -8,7 +8,7 @@ public class PlayerCamera : MonoBehaviour
 {
 	[Editor] Transform rotationTargetY;
 	[Editor] Transform rotationTargetX;
-	[Editor] float mouseSensitivity = 1f;
+	[Editor] FloatPlatformDependent sensitivity;
 
 	private float targetX;
 	private float targetY;
@@ -17,6 +17,7 @@ public class PlayerCamera : MonoBehaviour
 	private InputService input => Locator.Input;
 
 	private bool isSuppressed => Locator.State.SuppressPlayer;
+	private float mouseSensitivity => sensitivity.Value;
 
 	private void Update()
 	{

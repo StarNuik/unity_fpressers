@@ -24,7 +24,7 @@ public class AppFlow : MonoBehaviour
 	private AppState state => Locator.State;
 	private CutscenesContainer cutscenes => Locator.Cutscenes;
 	private BgmStartService bgm => Locator.Bgm;
-	private CursorService cursor => Locator.Cursor;
+	private ICursorService cursor => Locator.Cursor;
 	
 	
 	private bool hasMoreInteractions => Locator.RouteTracker.HasInteractionsLeft;

@@ -2,18 +2,13 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Screen = UnityEngine.Device.Screen;
 
 public class FullscreenService : MonoBehaviour
 {
-	public bool IsMobile
-		=> false; // for now
-	
-	public bool IsFullscreen
-		=> Screen.fullScreen;
-	
 	public void TryToggle()
 	{
-		Screen.fullScreen = !IsFullscreen;
+		Screen.fullScreen = !Platform.IsFullscreen;
 	}
 
 	private void Awake()

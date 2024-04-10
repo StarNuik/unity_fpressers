@@ -1,52 +1,49 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
+using UnityEngine.InputSystem.EnhancedTouch;
 using UnityEngine.InputSystem.Layouts;
 using UnityEngine.InputSystem.OnScreen;
+using UnityEngine.UI;
 using Editor = UnityEngine.SerializeField;
+using Touch = UnityEngine.InputSystem.EnhancedTouch.Touch;
 
-public class OnscreenJoystick : MonoBehaviour //OnScreenControl, IBeginDragHandler, IEndDragHandler, IDragHandler
+public class OnscreenJoystick : OnscreenDrag
 {
-	[InputControl(layout = "Vector2")]
-	[Editor] string controlPath;
+	[Editor] Image stickBg;
+	[Editor] Image stickFg;
+	[Editor] float stickRange;
 
-	// private Vector2? start;
+	protected override Vector2 FingerDownValue()
+	{
+		var finger = activeFinger;
+		stickBg.gameObject.SetActive(true);
+		stickBg.rectTransform.anchoredPosition = ToCanvas(
+			GetComponent<RectTransform>(),
+			finger.screenPosition
+		);
 
-	// public void OnBeginDrag(PointerEventData eventData)
-	// {
-	// 	// unity sends the message multiple times per drag
-	// 	if (start.HasValue)
-	// 		return;
-		
-	// 	start = eventData.position;
+		return default(Vector2);
+	}
 
-	// 	Debug.Log("[ OnscreenJoystick.OnBeginDrag ]");
-	// }
+	protected override Vector2 FingerMoveValue()
+	{
+		var finger = activeFinger;
+		var stickPos = ToCanvas(stickBg.rectTransform, finger.screenPosition);
+		var dir = stickPos.normalized;
+		var length = Mathf.Min(stickRange, stickPos.magnitude);
+		var clamped = dir * length;
 
-	// public void OnEndDrag(PointerEventData eventData)
-	// {
-	// 	start = null;
-	// 	SendValueToControl(Vector2.zero);
+		stickFg.rectTransform.anchoredPosition = clamped;
+		return clamped / stickRange;
+	}
 
-	// 	Debug.Log("[ OnscreenJoystick.OnEndDrag ]");
-	// }
+	protected override Vector2 FingerUpValue()
+	{
+		stickBg.gameObject.SetActive(false);
+		stickFg.rectTransform.anchoredPosition = Vector2.zero;
 
-	// public void OnDrag(PointerEventData eventData)
-	// {
-	// 	if (!start.HasValue)
-	// 		return;
-		
-	// 	var diff = eventData.position - start.Value;
-	// 	var dir = diff.normalized;
-	// 	SendValueToControl(dir);
-
-	// 	// Debug.Log($"[ OnscreenJoystick.OnDrag ] dir: {dir}");
-	// }
-	
-	// protected override string controlPathInternal
-	// {
-	// 	get => controlPath;
-	// 	set => controlPath = value;
-	// }
+		return default(Vector2);
+	}
 }

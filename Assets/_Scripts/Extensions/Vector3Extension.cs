@@ -13,4 +13,13 @@ public static class Vector3Extension
 	{
 		return new(vec.x, 0f, vec.z);
 	}
+
+	public static Vector3 MultiplyMemberwise(Vector3 left, Vector3 right)
+	{
+		return new(
+			left.x * right.x,
+			left.y * right.y,
+			left.z * right.z
+		);
+	}
 }

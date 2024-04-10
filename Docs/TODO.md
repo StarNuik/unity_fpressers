@@ -1,45 +1,18 @@
 # ITER
-[] review
-	[] return the logo to the splash screen
-	[x] outside light's position
-		[x] cleanup the script
-		[x] poster - lights up the poster
-		[x] cigs - the other side of the room
-		[x] + color (room light's color)
-	[x] hide outside.window when entering the club
-	[x] change projector.club's cookie
-	[x] new fullscreen icon
-	[x] change leaves.window sprite
-	[x] change outside.window colors
-	[x] change the outside quad color
+[] blur leaves
+[] build size
+	[] new guitar
+	[] new uku
+	[] slim down the mic scene
+[] mobile controls
+	[] joystick
+	[] right half screen to look around
+	[] tap to interact
+
 [] Run in background - true
 	[] splash must wait for focus
-[x] reverse.ending writing
-[x] выключать poster overlay
-	[x] либо когда ShaderSauce.Strength <= 0f
-	[DENY] либо во время сигарет
-
 [] bgm didn't start (hard to track down)
 [] отписаться от всех событий в Locator
-
-[x] outside.window
-	[x] change the light's color
-	[x] falling leaves
-[x] outlines are being weird
-	[x] remove static batching from overlined meshes
-	[x] pc.outline didn't start
-[x] web loader draft
-[x] projector's image
-[x] interaction outline?
-	[x] up the alpha
-	[x] 4px -> 5px
-	[x] add a curve
-[x] a better Esc/Fullscreen/"Invisible cursor" system / tracking
-	[x] fullscreen service
-	[x] cursor visibility service
-[x] fullscreen button
-[x] send current reverse.ending texts
-[DENY] отписаться от всех событий из AppState
 
 # TBD
 ## polish iter
@@ -48,12 +21,9 @@
 	[] ssao
 [] performance
 [] memory consumption
-[] build size
 
 ## mobile iter
 [] text size
-[] joystick
-[] tap to interact
 [] rotate phone into horizontal
 
 # INFO
@@ -269,3 +239,41 @@
 [x] crunch all club textures (check the 2d folder as well)
 [x] move all club assets to the Art/3d.Club folder
 [x] new .shadervariants
+
+## v6
+[x] review
+	[x] return the logo to the splash screen
+		[x] move the logo to a full fledged splash slide
+	[x] outside light's position
+		[x] cleanup the script
+		[x] poster - lights up the poster
+		[x] cigs - the other side of the room
+		[x] + color (room light's color)
+	[x] hide outside.window when entering the club
+	[x] change projector.club's cookie
+	[x] new fullscreen icon
+	[x] change leaves.window sprite
+	[x] change outside.window colors
+	[x] change the outside quad color
+[x] reverse.ending writing
+[x] выключать poster overlay
+	[x] либо когда ShaderSauce.Strength <= 0f
+	[DENY] либо во время сигарет
+[x] outside.window
+	[x] change the light's color
+	[x] falling leaves
+[x] outlines are being weird
+	[x] remove static batching from overlined meshes
+	[x] pc.outline didn't start
+[x] web loader draft
+[x] projector's image
+[x] interaction outline?
+	[x] up the alpha
+	[x] 4px -> 5px
+	[x] add a curve
+[x] a better Esc/Fullscreen/"Invisible cursor" system / tracking
+	[x] fullscreen service
+	[x] cursor visibility service
+[x] fullscreen button
+[x] send current reverse.ending texts
+[DENY] отписаться от всех событий из AppState

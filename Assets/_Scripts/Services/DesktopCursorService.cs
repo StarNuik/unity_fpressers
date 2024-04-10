@@ -7,7 +7,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CursorService : MonoBehaviour
+public class DesktopCursorService : MonoBehaviour, ICursorService
 {
 	private AppState state => Locator.State;
 
