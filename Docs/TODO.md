@@ -1,9 +1,16 @@
 # ITER
+[x] build size fixes
+[] interior movie
+[] wall's shader fix
+[] ios memory (500mb)
+[x] after the first cutscene "mobile look controls" are off
+[x] ios doesnt show the touchscreen controls ("iPhoneOS")
+
 [x] blur leaves
-[] build size
+[x] build size
 	[x] new guitar
 	[x] new uku
-	[] slim down the mic scene
+	[x] slim down the mic scene
 [x] mobile controls
 	[x] joystick
 	[x] right half screen to look around

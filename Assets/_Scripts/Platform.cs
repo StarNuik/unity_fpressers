@@ -7,7 +7,8 @@ using Screen = UnityEngine.Device.Screen;
 public static class Platform
 {
 	public static bool IsHandheld
-		=> SystemInfo.operatingSystem.Contains("Android") || SystemInfo.operatingSystem.Contains("iOS");
+		=> SystemInfo.operatingSystem.Contains("Android")
+		|| SystemInfo.operatingSystem.Contains("iPhoneOS");
 	
 	public static bool IsFullscreen
 		=> Screen.fullScreen;

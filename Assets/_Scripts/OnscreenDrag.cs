@@ -39,6 +39,9 @@ public class OnscreenDrag : OnScreenControl
 		Touch.onFingerMove -= OnFingerMove;
 		Touch.onFingerUp -= OnFingerUp;
 		EnhancedTouchSupportExtension.DisableManaged(this);
+
+		activeFinger = null;
+		SendValueToControl(default(Vector2));
 	}
 
 	private void OnFingerDown(Finger finger)
