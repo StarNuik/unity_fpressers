@@ -1,13 +1,13 @@
 # ITER
-[] blur leaves
+[x] blur leaves
 [] build size
 	[] new guitar
 	[] new uku
 	[] slim down the mic scene
-[] mobile controls
-	[] joystick
-	[] right half screen to look around
-	[] tap to interact
+[x] mobile controls
+	[x] joystick
+	[x] right half screen to look around
+	[x] tap to interact
 
 [] Run in background - true
 	[] splash must wait for focus
