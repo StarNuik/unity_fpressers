@@ -1,8 +1,8 @@
 # ITER
 [x] blur leaves
 [] build size
-	[] new guitar
-	[] new uku
+	[x] new guitar
+	[x] new uku
 	[] slim down the mic scene
 [x] mobile controls
 	[x] joystick
