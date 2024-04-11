@@ -1,7 +1,7 @@
 # ITER
-[x] build size fixes
 [] interior movie
 [] wall's shader fix
+[x] build size fixes
 [] ios memory (500mb)
 [x] after the first cutscene "mobile look controls" are off
 [x] ios doesnt show the touchscreen controls ("iPhoneOS")
