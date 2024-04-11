@@ -8,105 +8,29 @@ using Editor = UnityEngine.SerializeField;
 using Touch = UnityEngine.InputSystem.EnhancedTouch.Touch;
 using Screen = UnityEngine.Device.Screen;
 
-public class OnscreenDrag : OnScreenControl
+public class OnscreenDrag : OnscreenBase
 {
-	[Editor] Bounds activationBounds;
-	[InputControl(layout = "Vector2")]
-	[Editor] string controlPath;
+	private Vector2 lastPos;
+	private int frame = -1;
+	private int hits;
 
-	protected override string controlPathInternal
+	protected override Vector2 FingerDownValue()
 	{
-		get => controlPath;
-		set => controlPath = value;
+		lastPos = activeFinger.currentTouch.screenPosition;
+		return default(Vector2);
 	}
 
-	protected Finger activeFinger;
-
-	protected override void OnEnable()
+	protected override Vector2 FingerMoveValue()
 	{
-		base.OnEnable();
-
-		EnhancedTouchSupportExtension.EnableManaged(this);
-		Touch.onFingerDown += OnFingerDown;
-		Touch.onFingerMove += OnFingerMove;
-		Touch.onFingerUp += OnFingerUp;
-	}
-
-	protected override void OnDisable()
-	{
-		base.OnDisable();
-		Touch.onFingerDown -= OnFingerDown;
-		Touch.onFingerMove -= OnFingerMove;
-		Touch.onFingerUp -= OnFingerUp;
-		EnhancedTouchSupportExtension.DisableManaged(this);
-
-		activeFinger = null;
-		SendValueToControl(default(Vector2));
-	}
-
-	private void OnFingerDown(Finger finger)
-	{
-		if (activeFinger != null)
-			return;
+		// if (!(activeFinger.lastTouch.valid && activeFinger.currentTouch.valid))
+		// 	return default(Vector2);
+		var currentPos = activeFinger.currentTouch.screenPosition;
+		var delta = currentPos - lastPos;
 		
-		var sizeReverse = new Vector3(1f / Screen.width, 1f / Screen.height, 0f);
-		var pos = Vector2.Scale(finger.screenPosition, sizeReverse);
-
-		if (!activationBounds.Contains(pos))
-			return;
-		
-		activeFinger = finger;
-
-		SendValueToControl(FingerDownValue());
-	}
-
-	private void OnFingerMove(Finger finger)
-	{
-		if (activeFinger == null || finger != activeFinger)
-			return;
-		
-		SendValueToControl(FingerMoveValue());
-	}
-
-	private void OnFingerUp(Finger finger)
-	{
-		if (activeFinger == null || finger != activeFinger)
-			return;
-
-		activeFinger = null;
-		SendValueToControl(FingerUpValue());
-	}
-
-	protected virtual Vector2 FingerDownValue()
-		=> default(Vector2);
-
-	protected virtual Vector2 FingerMoveValue()
-	{
-		if (!(activeFinger.lastTouch.valid && activeFinger.currentTouch.valid))
-			return default(Vector2);
-		
-		var delta = activeFinger.currentTouch.delta;
+		lastPos = currentPos;
 		return delta;
 	}
 
-	protected virtual Vector2 FingerUpValue()
+	protected override Vector2 FingerUpValue()
 		=> default(Vector2);
-
-	protected Vector2 ToCanvas(RectTransform rect, Vector2 screenPos)
-	{
-		RectTransformUtility.ScreenPointToLocalPointInRectangle(
-			rect, screenPos, null, out var anchored
-		);
-		return anchored;
-	}
-
-	private void OnDrawGizmos()
-	{
-		var size = new Vector3(Screen.width, Screen.height, 0f);
-		Gizmos.color = Color.green;
-		Gizmos.DrawWireCube(
-			Vector3.Scale(activationBounds.center, size),
-			Vector3.Scale(activationBounds.size, size)
-		);
-	}
 }

@@ -24,7 +24,6 @@ public class PlayerMovement : MonoBehaviour
 	{
 		if (isActive)
 		{
-			
 			var move = input.Movement.ToX0Y();
 			
 			var worldMove = player.TransformDirection(move);

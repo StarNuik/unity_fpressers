@@ -9,7 +9,7 @@ using UnityEngine.UI;
 using Editor = UnityEngine.SerializeField;
 using Touch = UnityEngine.InputSystem.EnhancedTouch.Touch;
 
-public class OnscreenJoystick : OnscreenDrag
+public class OnscreenJoystick : OnscreenBase
 {
 	[Editor] Image stickBg;
 	[Editor] Image stickFg;
@@ -30,7 +30,7 @@ public class OnscreenJoystick : OnscreenDrag
 	protected override Vector2 FingerMoveValue()
 	{
 		var finger = activeFinger;
-		var stickPos = ToCanvas(stickBg.rectTransform, finger.screenPosition);
+		var stickPos = ToCanvas(stickBg.rectTransform, finger.currentTouch.screenPosition);
 		var dir = stickPos.normalized;
 		var length = Mathf.Min(stickRange, stickPos.magnitude);
 		var clamped = dir * length;
