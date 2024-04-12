@@ -1,10 +1,12 @@
 # ITER
 [] interior movie
+[] new mic.club model
 [] wall's shader fix
+[] mobile resolution scaling
 [x] build size fixes
-[] ios memory (500mb)
 [x] after the first cutscene "mobile look controls" are off
 [x] ios doesnt show the touchscreen controls ("iPhoneOS")
+[DENY] ios memory (500mb)
 
 [x] blur leaves
 [x] build size
