@@ -1,8 +1,8 @@
 # ITER
-[] interior movie
 [] new mic.club model
 [] wall's shader fix
 [] mobile resolution scaling
+[x] interior movie
 [x] build size fixes
 [x] after the first cutscene "mobile look controls" are off
 [x] ios doesnt show the touchscreen controls ("iPhoneOS")
