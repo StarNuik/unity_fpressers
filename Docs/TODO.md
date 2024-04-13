@@ -1,13 +1,16 @@
 # ITER
+[] qa
+	[] wall shader fix
+	[] render scale performance improvements
 [] new mic.club model
-[] wall's shader fix
-[] mobile resolution scaling
 [] screenshots
-[] remove zoom from the club cutscene
+[x] mobile resolution scaling
+[x] wall's shader fix
 [x] interior movie
 [x] build size fixes
 [x] after the first cutscene "mobile look controls" are off
 [x] ios doesnt show the touchscreen controls ("iPhoneOS")
+[DENY] remove zoom from the club cutscene
 [DENY] ios memory (500mb)
 
 [x] blur leaves
