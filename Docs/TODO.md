@@ -2,6 +2,8 @@
 [] new mic.club model
 [] wall's shader fix
 [] mobile resolution scaling
+[] screenshots
+[] remove zoom from the club cutscene
 [x] interior movie
 [x] build size fixes
 [x] after the first cutscene "mobile look controls" are off
