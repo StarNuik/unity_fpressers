@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b84bd892011e37f4dbff8cbd66bef1de, type: 3}
   m_Name: Render Scale
   m_EditorClassIdentifier: 
-  handheld: 0.75
+  handheld: 0.666
   desktop: 1
