@@ -1,9 +1,10 @@
 # ITER
-[] qa
-	[] wall shader fix
-	[] render scale performance improvements
-[] new mic.club model
 [] screenshots
+[] new mic.club model
+[x] fix light leaks
+[x] qa
+	[x] wall shader fix
+	[x] render scale performance improvements
 [x] mobile resolution scaling
 [x] wall's shader fix
 [x] interior movie
