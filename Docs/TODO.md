@@ -1,29 +1,5 @@
 # ITER
-[] screenshots
-[] new mic.club model
-[x] fix light leaks
-[x] qa
-	[x] wall shader fix
-	[x] render scale performance improvements
-[x] mobile resolution scaling
-[x] wall's shader fix
-[x] interior movie
-[x] build size fixes
-[x] after the first cutscene "mobile look controls" are off
-[x] ios doesnt show the touchscreen controls ("iPhoneOS")
-[DENY] remove zoom from the club cutscene
-[DENY] ios memory (500mb)
-
-[x] blur leaves
-[x] build size
-	[x] new guitar
-	[x] new uku
-	[x] slim down the mic scene
-[x] mobile controls
-	[x] joystick
-	[x] right half screen to look around
-	[x] tap to interact
-
+[] mobile projector.club light cookie
 [] Run in background - true
 	[] splash must wait for focus
 [] bgm didn't start (hard to track down)
@@ -229,7 +205,7 @@
 [x] gay lame unknown bug, that lowers some white balance until the first interaction
 
 ## v5
-[DISAPPEARED] poster 0.01 alpha lag spike
+
 [x] replace the Room's ceiling lamp
 [x] light / shadow leaks (shadow maps)
 [x] revert the title in every ending
@@ -292,3 +268,30 @@
 [x] fullscreen button
 [x] send current reverse.ending texts
 [DENY] отписаться от всех событий из AppState
+
+## release
+[x] neutral ending last frame bgm leak
+[x] poster 0.01 alpha lag spike
+[x] screenshots
+[x] fix light leaks
+[x] qa
+	[x] wall shader fix
+	[x] render scale performance improvements
+[x] mobile resolution scaling
+[x] wall's shader fix
+[x] interior movie
+[x] build size fixes
+[x] after the first cutscene "mobile look controls" are off
+[x] ios doesnt show the touchscreen controls ("iPhoneOS")
+[x] blur leaves
+[x] build size
+	[x] new guitar
+	[x] new uku
+	[x] slim down the mic scene
+[x] mobile controls
+	[x] joystick
+	[x] right half screen to look around
+	[x] tap to interact
+[DENY] new mic.club model
+[DENY] remove zoom from the club cutscene
+[DENY] ios memory (500mb)
