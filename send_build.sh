@@ -7,7 +7,7 @@ build_src="./Builds/fpressers/Build"
 
 # remote
 ssh_dest=`cat dest.secret | tr -d '\n'`
-remote_dest="~/personal-cloud/static@root/Unity"
+remote_dest="~/personal-cloud/static@root/Build"
 
 hash=`tar c $build_src | md5sum | head -c 32`
 tar="$sign$hash.tar"

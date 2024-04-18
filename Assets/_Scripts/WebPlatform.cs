@@ -18,6 +18,9 @@ public static class WebPlatform
 	[DllImport("__Internal")]
 	private static extern void WebNotifyLoaded();
 
+	[DllImport("__Internal")]
+	private static extern double WebGetStartupDelay();
+
 	public static void SendLoadProgress(float value)
 	{
 		var remapped = Mathf.Clamp01(value) + 1f;
@@ -38,48 +41,14 @@ public static class WebPlatform
 		#endif
 	}
 
-	// [DllImport("__Internal")]
-	// private static extern bool WebIsMobile();
-
-	// [DllImport("__Internal")]
-	// private static extern bool WebIsLandscape();
-
-	// public static bool IsMobile
-	// {
-	// 	get
-	// 	{
-	// 		#if WEBGL_BUILD
-	// 		return WebIsMobile();
-	// 		#endif
-
-	// 		return false;
-	// 	}
-	// }
-
-	// public static bool IsLandscape
-	// {
-	// 	get
-	// 	{
-	// 		#if WEBGL_BUILD
-	// 		return WebIsLandscape();
-	// 		#endif
-
-	// 		return true;
-	// 	}
-	// }
-
-	public static bool IsMobile
-		=> SystemInfo.deviceType == DeviceType.Handheld;
-	
-	public static bool IsLandscape
-		=> Screen.orientation != ScreenOrientation.Portrait
-		&& Screen.orientation != ScreenOrientation.PortraitUpsideDown;
-	
-	public static bool IsFullscreen
-		=> Screen.fullScreen;
-
-	public static void SetFullscreen(bool isFullscreen)
+	public static float GetStartupDelay()
 	{
-		throw new NotImplementedException();
+		return 
+		#if WEBGL_BUILD
+			(float)WebGetStartupDelay()
+		#else
+			0f
+		#endif
+		;
 	}
 }

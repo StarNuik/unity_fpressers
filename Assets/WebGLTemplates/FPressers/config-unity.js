@@ -39,6 +39,8 @@ var NotifyLoaded = function()
 	elemCover.style.display = "none";
 };
 
+var StartupDelay = 2.0;
+
 let script = document.createElement("script");
 script.src = loaderUrl;
 script.onload = () => {

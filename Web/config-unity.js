@@ -1,4 +1,4 @@
-let buildUrl = "Unity";
+let buildUrl = "Build";
 let loaderUrl = buildUrl + "/fpressers.loader.js";
 let config = {
 	dataUrl: buildUrl + "/fpressers.data",
@@ -38,6 +38,8 @@ var NotifyLoaded = function()
 	let elemCover = document.querySelector("#loading-cover");
 	elemCover.style.display = "none";
 };
+
+var StartupDelay = 2.0;
 
 let script = document.createElement("script");
 script.src = loaderUrl;

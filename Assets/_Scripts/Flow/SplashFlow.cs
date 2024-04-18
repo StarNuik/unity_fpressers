@@ -30,6 +30,8 @@ public class SplashFlow : MonoBehaviour
 
 		groups.ForEach(g => g.gameObject.SetActive(false));
 
+		yield return new WaitForSeconds(WebPlatform.GetStartupDelay());
+
 		// MAIN "LOOP"
 		foreach (var group in groups)
 		{
