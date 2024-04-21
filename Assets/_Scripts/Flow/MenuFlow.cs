@@ -66,6 +66,7 @@ public class MenuFlow : MonoBehaviour
 		yield return tOut.WaitForCompletion();
 
 		vcam.Priority = lastPriority;
+		guiGroup.gameObject.SetActive(false);
 		isEnabled = false;
 	}
 
